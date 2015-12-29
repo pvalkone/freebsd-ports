@@ -1,0 +1,9 @@
+share/doc/xss-lock/NEWS
+bin/xss-lock
+man/man1/xss-lock.1.gz
+share/doc/xss-lock/dim-screen.sh
+share/doc/xss-lock/xdg-screensaver.patch
+share/doc/xss-lock/transfer-sleep-lock-i3lock.sh
+share/doc/xss-lock/transfer-sleep-lock-generic-delay.sh
+share/zsh/site-functions/_xss-lock
+share/bash-completion/completions/xss-lock

@@ -1,0 +1,4 @@
+xss-lock hooks up your favorite locker to the MIT screen saver
+extension for X and also to systemd's login manager.
+
+WWW: https://bitbucket.org/raymonad/xss-lock
