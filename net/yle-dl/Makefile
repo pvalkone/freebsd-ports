@@ -1,0 +1,22 @@
+# $FreeBSD$
+
+# vim: ts=8 noet
+
+PORTNAME=	yle-dl
+PORTVERSION=	2.10.0
+CATEGORIES=	net
+
+MAINTAINER=	petteri.valkonen@iki.fi
+COMMENT=	Download videos from Yle servers
+
+LICENSE=	GPLv3
+
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/Crypto/__init__.py:${PORTSDIR}/security/py-pycrypto \
+		rtmpdump:${PORTSDIR}/multimedia/rtmpdump
+
+USES=		python
+USE_PHP=	bcmath curl mcrypt simplexml
+USE_GITHUB=	yes
+GH_ACCOUNT=	aajanki
+
+.include <bsd.port.mk>
