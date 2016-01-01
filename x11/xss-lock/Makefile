@@ -1,5 +1,7 @@
 # $FreeBSD$
 
+# vim: ts=8 noet
+
 PORTNAME=	xss-lock
 PORTVERSION=	0.3.0
 CATEGORIES=	x11
