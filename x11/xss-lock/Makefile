@@ -17,11 +17,10 @@ LIB_DEPENDS=	libxcb-util.so:${PORTSDIR}/x11/xcb-util \
 		libintl.so:${PORTSDIR}/devel/gettext-runtime \
 		libglib-2.0.so:${PORTSDIR}/devel/glib20 \
 		libgobject-2.0.so:${PORTSDIR}/devel/glib20 \
-		libgio-2.0.so:${PORTSDIR}/devel/glib20 \
-		libxcb.so:${PORTSDIR}/x11/libxcb \
-		libxcb-screensaver.so:${PORTSDIR}/x11/libxcb
+		libgio-2.0.so:${PORTSDIR}/devel/glib20
 
 WRKSRC=		${WRKDIR}/raymonad-xss-lock-94aec045ffd6
+USE_XORG=	xcb
 USES=		cmake
 
 post-patch:
