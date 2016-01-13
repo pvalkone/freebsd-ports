@@ -15,7 +15,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/Crypto/__init__.py:${PORTSDIR}/security/py-pyc
 		rtmpdump:${PORTSDIR}/multimedia/rtmpdump
 
 USES=		python
-USE_PHP=	bcmath curl mcrypt simplexml
+USE_PHP=	bcmath curl hash mcrypt simplexml
 USE_GITHUB=	yes
 GH_ACCOUNT=	aajanki
 
