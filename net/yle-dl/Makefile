@@ -12,6 +12,7 @@ COMMENT=	Download videos from Yle servers
 LICENSE=	GPLv3
 
 RUN_DEPENDS=	${PYTHON_SITELIBDIR}/Crypto/__init__.py:${PORTSDIR}/security/py-pycrypto \
+		${PYTHON_SITELIBDIR}/youtube_dl/__init__.py:${PORTSDIR}/www/py-youtube_dl \
 		rtmpdump:${PORTSDIR}/multimedia/rtmpdump
 
 USES=		python
