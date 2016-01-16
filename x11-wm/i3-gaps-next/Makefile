@@ -7,7 +7,7 @@ PORTVERSION=	 4.11.20160111
 CATEGORIES=	 x11-wm
 
 MAINTAINER=	 petteri.valkonen@iki.fi
-COMMENT=	 A fork of the i3wm tiling window manager (next branch)
+COMMENT=	 Fork of the i3wm tiling window manager (next branch)
 
 LICENSE=	 BSD3CLAUSE
 
