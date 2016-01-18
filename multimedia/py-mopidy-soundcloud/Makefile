@@ -6,8 +6,8 @@ PORTNAME=	mopidy-soundcloud
 PORTVERSION=	2.0.2
 CATEGORIES=	multimedia python
 MASTER_SITES=	CHEESESHOP
-DISTNAME=	Mopidy-SoundCloud-${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	Mopidy-SoundCloud-${PORTVERSION}
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Mopidy extension for playing music from SoundCloud

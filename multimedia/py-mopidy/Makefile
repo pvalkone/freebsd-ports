@@ -6,8 +6,8 @@ PORTNAME=	mopidy
 PORTVERSION=	1.1.1
 CATEGORIES=	multimedia python
 MASTER_SITES=	CHEESESHOP
-DISTNAME=	Mopidy-${PORTVERSION}
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
+DISTNAME=	Mopidy-${PORTVERSION}
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Extensible music server written in Python
