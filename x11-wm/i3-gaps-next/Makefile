@@ -31,9 +31,9 @@ GH_ACCOUNT=	 Airblader
 GH_PROJECT=	 i3
 GH_TAGNAME=	 3cfb461
 
-RELEASE_VERSION= ${PORTVERSION}
-RELEASE_DATE=    `${ECHO_CMD} "${PORTVERSION}" | ${SED} -n 's/.*\.\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)$$/\1-\2-\3/p'`
-RELEASE_BRANCH=  `${SED} -n 's/export RELEASE_BRANCH="\(.*\)"/\1/p' ${WRKSRC}/release.sh`
+RELEASE_VERSION=${PORTVERSION}
+RELEASE_DATE=	`${ECHO_CMD} "${PORTVERSION}" | ${SED} -n 's/.*\.\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)$$/\1-\2-\3/p'`
+RELEASE_BRANCH=	`${SED} -n 's/export RELEASE_BRANCH="\(.*\)"/\1/p' ${WRKSRC}/release.sh`
 
 post-patch:
 	${ECHO_CMD} "${RELEASE_VERSION}" > ${WRKSRC}/VERSION
