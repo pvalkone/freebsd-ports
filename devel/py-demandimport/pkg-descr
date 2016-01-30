@@ -1,0 +1,5 @@
+Delays loading of modules until they are actually used. Perfect for
+Python apps that need to be snappy like command-line utils.
+Source-code derived from Mercurial.
+
+WWW: http://github.com/bwesterb/py-demandimport/

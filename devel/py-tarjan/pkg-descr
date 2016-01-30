@@ -1,0 +1,7 @@
+Python implementation of Tarjan's algorithm.
+
+Tarjan's algorithm takes as input a directed (possibly cyclic!)
+graph and returns as output its strongly connected components
+in a topological order.
+
+WWW: https://github.com/bwesterb/py-tarjan/
