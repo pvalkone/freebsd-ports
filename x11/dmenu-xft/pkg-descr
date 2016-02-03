@@ -1,0 +1,5 @@
+Dynamic menu for X, originally designed for dwm. It manages large
+numbers of user-defined menu items efficiently. Patched for Xft
+support.
+
+WWW: http://tools.suckless.org/dmenu/
