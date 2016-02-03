@@ -39,4 +39,13 @@ post-patch:
 	${ECHO_CMD} "${RELEASE_VERSION}" > ${WRKSRC}/VERSION
 	${ECHO_CMD} "${RELEASE_VERSION} (${RELEASE_DATE}, branch \\\"${RELEASE_BRANCH}\\\")" > ${WRKSRC}/I3_VERSION
 
+post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/i3-config-wizard \
+	${STAGEDIR}${PREFIX}/bin/i3-nagbar \
+	${STAGEDIR}${PREFIX}/bin/i3bar \
+	${STAGEDIR}${PREFIX}/bin/i3 \
+	${STAGEDIR}${PREFIX}/bin/i3-input \
+	${STAGEDIR}${PREFIX}/bin/i3-msg \
+	${STAGEDIR}${PREFIX}/bin/i3-dump-log
+
 .include <bsd.port.mk>
