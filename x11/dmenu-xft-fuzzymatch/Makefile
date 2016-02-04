@@ -2,7 +2,7 @@
 
 # vim: ts=8 noet
 
-PORTNAME=		dmenu-xft
+PORTNAME=		dmenu-xft-fuzzymatch
 PORTVERSION=		4.5
 CATEGORIES=		x11
 MASTER_SITES=		http://dl.suckless.org/tools/
