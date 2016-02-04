@@ -9,7 +9,9 @@ MASTER_SITES=		http://dl.suckless.org/tools/
 DISTNAME=		dmenu-${PORTVERSION}
 
 PATCH_SITES=		http://tools.suckless.org/dmenu/patches/
-PATCHFILES=		${DISTNAME}-xft.diff:-p1 ${DISTNAME}-fuzzymatch.diff:-p1
+PATCHFILES=		${DISTNAME}-xft.diff \
+			${DISTNAME}-fuzzymatch.diff
+PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		petteri.valkonen@iki.fi
 COMMENT=		Dynamic X menu with Xft support
