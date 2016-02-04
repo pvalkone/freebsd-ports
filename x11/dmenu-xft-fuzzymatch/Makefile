@@ -14,7 +14,7 @@ PATCHFILES=		${DISTNAME}-xft.diff \
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		petteri.valkonen@iki.fi
-COMMENT=		Dynamic X menu with Xft support
+COMMENT=		Dynamic X menu with Xft and fuzzy matching support
 
 LICENSE=		MIT
 
