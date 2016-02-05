@@ -20,7 +20,7 @@ LICENSE=		MIT
 
 LIB_DEPENDS=		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig
 
-USE_XORG=		x11 xft
+USE_XORG=		x11 xft xinerama
 MAKE_ARGS=		CC="${CC}" PREFIX="${PREFIX}" MANPREFIX="${MANPREFIX}/man" \
 			X11INC="${LOCALBASE}/include" X11LIB="${LOCALBASE}/lib"
 
