@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	mopidy
-PORTVERSION=	1.1.2
+PORTVERSION=	2.0.0
 CATEGORIES=	multimedia python
 MASTER_SITES=	CHEESESHOP
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
@@ -19,10 +19,10 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/tornado/__init__.py:${PORTSDIR}/www/py-tornado
 		${PYTHON_SITELIBDIR}/pykka/__init__.py:${PORTSDIR}/devel/py-pykka \
 		${PYTHON_SITELIBDIR}/six.py:${PORTSDIR}/devel/py-six \
 		${PYTHON_SITELIBDIR}/gobject/__init__.py:${PORTSDIR}/devel/py-gobject \
-		${PYTHON_SITELIBDIR}/gst-0.10/gst/__init__.py:${PORTSDIR}/multimedia/py-gstreamer
+		${PYTHON_SITELIBDIR}/gi/overrides/Gst.py:${PORTSDIR}/multimedia/py-gstreamer1
 
 USES=		python
 USE_PYTHON=	distutils autoplist
-USE_GSTREAMER=	core
+USE_GSTREAMER1=	core
 
 .include <bsd.port.mk>
