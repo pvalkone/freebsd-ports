@@ -17,7 +17,10 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 BUILD_DEPENDS=	lein:${PORTSDIR}/devel/leiningen
 
 JARFILE=	${PORTNAME}.jar
-PLIST_FILES=	%%JAVAJARDIR%%/${JARFILE}
+PLIST_FILES=	%%JAVAJARDIR%%/${JARFILE} \
+		bin/${PORTNAME}
+SUB_FILES=	${PORTNAME}
+SUB_LIST=	JARFILE=${JARFILE}
 
 NO_ARCH=	yes
 
@@ -33,5 +36,6 @@ do-build:
 do-install:
 	${MKDIR} ${STAGEDIR}${JAVAJARDIR}
 	${INSTALL_DATA} ${WRKSRC}/target/${PORTNAME}-${PORTVERSION}-standalone.jar ${STAGEDIR}${JAVAJARDIR}/${JARFILE}
+	${INSTALL_SCRIPT} ${WRKDIR}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
