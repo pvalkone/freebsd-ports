@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	 i3-gaps-next
-PORTVERSION=	 4.11.20160309
+PORTVERSION=	 4.12.20160309
 CATEGORIES=	 x11-wm
 
 MAINTAINER=	 petteri.valkonen@iki.fi
