@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Nightcode
+Type=Application
+Comment=Simple IDE for Clojure
+Exec=%%SCRIPT_FILE%%
+Icon=%%ICON_FILE%%
+Terminal=false
+StartupNotify=true
+Categories=Application;Development;

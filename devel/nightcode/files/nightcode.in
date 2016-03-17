@@ -1,2 +1,2 @@
 #!/bin/sh
-exec %%LOCALBASE%%/bin/java -jar %%JAVAJARDIR%%/%%JARFILE%% $@
+exec %%LOCALBASE%%/bin/java -jar %%JAVAJARDIR%%/%%JAR_FILE%% $@
