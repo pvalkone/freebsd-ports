@@ -11,17 +11,17 @@ COMMENT=	 Fork of the i3wm tiling window manager (next branch)
 
 LICENSE=	 BSD3CLAUSE
 
-LIB_DEPENDS=	 libstartup-notification-1.so:${PORTSDIR}/x11/startup-notification \
-		 libxcb-util.so:${PORTSDIR}/x11/xcb-util \
-		 libxcb-keysyms.so:${PORTSDIR}/x11/xcb-util-keysyms \
-		 libxcb-icccm.so:${PORTSDIR}/x11/xcb-util-wm \
-		 libev.so:${PORTSDIR}/devel/libev \
-		 libyajl.so:${PORTSDIR}/devel/yajl \
-		 libcairo.so:${PORTSDIR}/graphics/cairo \
-		 libpangocairo-1.0.so:${PORTSDIR}/x11-toolkits/pango \
-		 libpcre.so:${PORTSDIR}/devel/pcre \
-		 libxcb-cursor.so:${PORTSDIR}/x11/xcb-util-cursor \
-		 libxkbcommon.so:${PORTSDIR}/x11/libxkbcommon
+LIB_DEPENDS=	 libstartup-notification-1.so:x11/startup-notification \
+		 libxcb-util.so:x11/xcb-util \
+		 libxcb-keysyms.so:x11/xcb-util-keysyms \
+		 libxcb-icccm.so:x11/xcb-util-wm \
+		 libev.so:devel/libev \
+		 libyajl.so:devel/yajl \
+		 libcairo.so:graphics/cairo \
+		 libpangocairo-1.0.so:x11-toolkits/pango \
+		 libpcre.so:devel/pcre \
+		 libxcb-cursor.so:x11/xcb-util-cursor \
+		 libxkbcommon.so:x11/libxkbcommon
 
 CFLAGS+=	 -I${LOCALBASE}/include
 USES=		 gmake pkgconfig
