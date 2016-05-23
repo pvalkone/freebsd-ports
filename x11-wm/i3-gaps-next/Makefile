@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	 i3-gaps-next
-PORTVERSION=	 4.12.20160505
+PORTVERSION=	 4.12.20160511
 CATEGORIES=	 x11-wm
 
 MAINTAINER=	 petteri.valkonen@iki.fi
@@ -21,7 +21,8 @@ LIB_DEPENDS=	 libstartup-notification-1.so:x11/startup-notification \
 		 libpangocairo-1.0.so:x11-toolkits/pango \
 		 libpcre.so:devel/pcre \
 		 libxcb-cursor.so:x11/xcb-util-cursor \
-		 libxkbcommon.so:x11/libxkbcommon
+		 libxkbcommon.so:x11/libxkbcommon \
+		 libxcb-xrm.so:x11/xcb-util-xrm
 
 CFLAGS+=	 -I${LOCALBASE}/include
 USES=		 gmake pkgconfig
@@ -29,7 +30,7 @@ USE_XORG=	 xcb
 USE_GITHUB=	 yes
 GH_ACCOUNT=	 Airblader
 GH_PROJECT=	 i3
-GH_TAGNAME=	 290d739
+GH_TAGNAME=	 af1ab57
 
 RELEASE_VERSION=${PORTVERSION}
 RELEASE_DATE=	`${ECHO_CMD} "${PORTVERSION}" | ${SED} -n 's/.*\.\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)$$/\1-\2-\3/p'`
