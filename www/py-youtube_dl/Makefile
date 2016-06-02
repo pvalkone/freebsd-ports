@@ -18,5 +18,6 @@ LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 USES=		python
 USE_PYTHON=	distutils autoplist
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
