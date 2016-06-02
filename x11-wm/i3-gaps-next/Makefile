@@ -22,7 +22,10 @@ LIB_DEPENDS=	 libstartup-notification-1.so:x11/startup-notification \
 		 libpcre.so:devel/pcre \
 		 libxcb-cursor.so:x11/xcb-util-cursor \
 		 libxkbcommon.so:x11/libxkbcommon \
-		 libxcb-xrm.so:x11/xcb-util-xrm
+		 libxcb-xrm.so:x11/xcb-util-xrm \
+		 libiconv.so:converters/libiconv \
+		 libgobject-2.0.so:devel/glib20 \
+		 libintl.so.8:devel/gettext-runtime
 
 CFLAGS+=	 -I${LOCALBASE}/include
 USES=		 gmake pkgconfig
