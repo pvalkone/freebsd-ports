@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	 i3-gaps-next
-PORTVERSION=	 4.12.20160511
+PORTVERSION=	 4.12.20160601
 CATEGORIES=	 x11-wm
 
 MAINTAINER=	 petteri.valkonen@iki.fi
@@ -30,7 +30,7 @@ USE_XORG=	 xcb
 USE_GITHUB=	 yes
 GH_ACCOUNT=	 Airblader
 GH_PROJECT=	 i3
-GH_TAGNAME=	 af1ab57
+GH_TAGNAME=	 4ee3235
 
 RELEASE_VERSION=${PORTVERSION}
 RELEASE_DATE=	`${ECHO_CMD} "${PORTVERSION}" | ${SED} -n 's/.*\.\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)$$/\1-\2-\3/p'`
