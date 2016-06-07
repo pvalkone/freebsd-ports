@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	nightcode
-PORTVERSION=	1.3.0
+PORTVERSION=	1.3.1
 CATEGORIES=	devel java
 
 MAINTAINER=	petteri.valkonen@iki.fi
