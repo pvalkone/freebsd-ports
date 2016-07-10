@@ -12,9 +12,12 @@ COMMENT=		XCB utility functions for the X resource manager
 
 LICENSE=		MIT
 
+LIB_DEPENDS=		libxcb-util.so:x11/xcb-util
+
 USE_GITHUB=		yes
 GH_ACCOUNT=		Airblader
 USES=			libtool
+USE_XORG=		xcb
 
 # https://lists.freebsd.org/pipermail/freebsd-ports/2015-May/099220.html
 post-extract:
