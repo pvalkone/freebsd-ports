@@ -1,2 +1,3 @@
 bin/yle-dl
-share/yle-dl/AdobeHDS.php
+%%DATADIR%%/AdobeHDS.php
+%%DATADIR%%/muxmp4
