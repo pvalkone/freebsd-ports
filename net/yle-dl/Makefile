@@ -15,7 +15,7 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/Crypto/__init__.py:security/py-pycrypto \
 		${PYTHON_SITELIBDIR}/youtube_dl/__init__.py:www/py-youtube_dl \
 		rtmpdump:multimedia/rtmpdump
 
-USES=		python
+USES=		python php
 USE_PHP=	bcmath curl hash mcrypt simplexml
 USE_GITHUB=	yes
 GH_ACCOUNT=	aajanki
