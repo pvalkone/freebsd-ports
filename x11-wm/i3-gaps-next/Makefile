@@ -25,7 +25,7 @@ LIB_DEPENDS=	 libstartup-notification-1.so:x11/startup-notification \
 		 libxcb-xrm.so:x11/xcb-util-xrm \
 		 libiconv.so:converters/libiconv \
 		 libgobject-2.0.so:devel/glib20 \
-		 libintl.so.8:devel/gettext-runtime
+		 libintl.so:devel/gettext-runtime
 
 CFLAGS+=	 -I${LOCALBASE}/include
 USE_GCC=	 yes
