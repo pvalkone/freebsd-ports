@@ -28,6 +28,7 @@ LIB_DEPENDS=	 libstartup-notification-1.so:x11/startup-notification \
 		 libintl.so.8:devel/gettext-runtime
 
 CFLAGS+=	 -I${LOCALBASE}/include
+USE_GCC=	 yes
 USES=		 gmake pkgconfig
 USE_XORG=	 xcb
 USE_GITHUB=	 yes
