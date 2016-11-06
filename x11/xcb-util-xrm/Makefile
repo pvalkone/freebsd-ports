@@ -12,6 +12,7 @@ COMMENT=		XCB utility functions for the X resource manager
 
 LICENSE=		MIT
 
+EXTRACT_DEPENDS=	git:devel/git
 LIB_DEPENDS=		libxcb-util.so:x11/xcb-util
 
 USE_GITHUB=		yes
