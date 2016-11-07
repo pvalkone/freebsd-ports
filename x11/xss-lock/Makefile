@@ -21,7 +21,7 @@ LIB_DEPENDS=	libxcb-util.so:x11/xcb-util \
 
 WRKSRC=		${WRKDIR}/raymonad-xss-lock-${DISTNAME}
 USE_XORG=	xcb
-USES=		cmake zip
+USES=		cmake zip pkgconfig
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|share/man/man1|man/man1|' ${WRKSRC}/doc/CMakeLists.txt
