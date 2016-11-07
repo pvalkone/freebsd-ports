@@ -21,5 +21,6 @@ RUN_DEPENDS=	git:${PORTSDIR}/devel/git \
 WRKSRC=		${WRKDIR}/${PORTNAME}-`echo "${DISTVERSION}" | ${SED} 's/_[0-9+]$$//'`
 USES=		python:3.2+
 USE_PYTHON=	distutils autoplist
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

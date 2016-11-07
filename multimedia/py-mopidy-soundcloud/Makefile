@@ -19,5 +19,6 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/mopidy/__init__.py:${PORTSDIR}/multimedia/py-m
 USES=		python
 USE_PYTHON=	distutils autoplist
 USE_GSTREAMER1=	ugly soup
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

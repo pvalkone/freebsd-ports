@@ -15,5 +15,6 @@ LICENSE=	GPLv2
 
 USES=		python
 USE_PYTHON=	distutils autoplist
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

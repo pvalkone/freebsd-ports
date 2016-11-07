@@ -20,5 +20,6 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/tarjan/__init__.py:${PORTSDIR}/devel/py-tarjan
 
 USES=		python
 USE_PYTHON=	distutils autoplist
+NO_ARCH=	yes
 
 .include <bsd.port.mk>

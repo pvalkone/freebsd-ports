@@ -24,5 +24,6 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/tornado/__init__.py:${PORTSDIR}/www/py-tornado
 USES=		python
 USE_PYTHON=	distutils autoplist
 USE_GSTREAMER1=	core
+NO_ARCH=	yes
 
 .include <bsd.port.mk>
