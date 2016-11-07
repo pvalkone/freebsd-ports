@@ -1,0 +1,5 @@
+TIMESTAMP = 1478545042
+SHA256 (dmenu-4.6.tar.gz) = 4a7a24008a621c3cd656155ad91ab8136db8f0d3b9ec56dafeec518cabda96b3
+SIZE (dmenu-4.6.tar.gz) = 15057
+SHA256 (dmenu-fuzzymatch-4.6.diff) = 4cb6ca498921df1d92e55484dc7c280d66aeaa2bdd4f6335d1865450056a0f6a
+SIZE (dmenu-fuzzymatch-4.6.diff) = 3611

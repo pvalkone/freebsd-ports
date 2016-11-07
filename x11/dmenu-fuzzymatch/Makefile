@@ -2,23 +2,22 @@
 
 # vim: ts=8 noet
 
-PORTNAME=		dmenu-xft-fuzzymatch
-PORTVERSION=		4.5
+PORTNAME=		dmenu-fuzzymatch
+PORTVERSION=		4.6
 CATEGORIES=		x11
 MASTER_SITES=		http://dl.suckless.org/tools/
 DISTNAME=		dmenu-${PORTVERSION}
 
 PATCH_SITES=		http://tools.suckless.org/dmenu/patches/
-PATCHFILES=		${DISTNAME}-xft.diff \
-			${DISTNAME}-fuzzymatch.diff
+PATCHFILES=		${PORTNAME}-${PORTVERSION}.diff
 PATCH_DIST_STRIP=	-p1
 
 MAINTAINER=		petteri.valkonen@iki.fi
-COMMENT=		Dynamic X menu with Xft and fuzzy matching support
+COMMENT=		Dynamic X menu with fuzzy matching support
 
 LICENSE=		MIT
 
-LIB_DEPENDS=		libfontconfig.so:${PORTSDIR}/x11-fonts/fontconfig
+LIB_DEPENDS=		libfontconfig.so:x11-fonts/fontconfig
 
 USE_XORG=		x11 xft xinerama
 MAKE_ARGS=		CC="${CC}" PREFIX="${PREFIX}" MANPREFIX="${MANPREFIX}/man" \
