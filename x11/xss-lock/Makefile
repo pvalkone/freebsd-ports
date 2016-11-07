@@ -13,11 +13,11 @@ COMMENT=	Use external locker as X screen saver
 
 LICENSE=	MIT
 
-LIB_DEPENDS=	libxcb-util.so:${PORTSDIR}/x11/xcb-util \
-		libintl.so:${PORTSDIR}/devel/gettext-runtime \
-		libglib-2.0.so:${PORTSDIR}/devel/glib20 \
-		libgobject-2.0.so:${PORTSDIR}/devel/glib20 \
-		libgio-2.0.so:${PORTSDIR}/devel/glib20
+LIB_DEPENDS=	libxcb-util.so:x11/xcb-util \
+		libintl.so:devel/gettext-runtime \
+		libglib-2.0.so:devel/glib20 \
+		libgobject-2.0.so:devel/glib20 \
+		libgio-2.0.so:devel/glib20
 
 WRKSRC=		${WRKDIR}/raymonad-xss-lock-${DISTNAME}
 USE_XORG=	xcb
