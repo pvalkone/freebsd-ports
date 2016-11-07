@@ -13,6 +13,7 @@ COMMENT=	Use external locker as X screen saver
 
 LICENSE=	MIT
 
+BUILD_DEPENDS=	rst2man:textproc/py-docutils
 LIB_DEPENDS=	libxcb-util.so:x11/xcb-util \
 		libintl.so:devel/gettext-runtime \
 		libglib-2.0.so:devel/glib20 \
