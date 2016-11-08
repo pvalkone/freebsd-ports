@@ -14,7 +14,7 @@ COMMENT=	Mopidy extension for playing music from SoundCloud
 
 LICENSE=	MIT
 
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/mopidy/__init__.py:${PORTSDIR}/multimedia/py-mopidy
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/mopidy/__init__.py:multimedia/py-mopidy
 
 USES=		python
 USE_PYTHON=	distutils autoplist
