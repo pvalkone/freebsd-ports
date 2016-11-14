@@ -19,17 +19,18 @@ GH_ACCOUNT=		digitalocean
 PLIST_FILES=		bin/doctl
 USES=			go
 GO_PKGNAME=		github.com/${GH_ACCOUNT}/${PORTNAME}
+GO_TARGET=		${GO_PKGNAME}/cmd/doctl
 
 do-build:
-	cd ${WRKSRC} && \
-	${GO_ENV} go build \
+	cd ${GO_WRKSRC} && \
+	${GO_ENV} ${GO_CMD} build \
 		-ldflags "-X ${GO_PKGNAME}.Major=${PORTVERSION:R:R} \
 			-X ${GO_PKGNAME}.Minor=${PORTVERSION:R:E} \
 			-X ${GO_PKGNAME}.Patch=${PORTVERSION:E} \
 			-X ${GO_PKGNAME}.Label=release" \
-		${GO_PKGNAME}/cmd/doctl
+		${GO_TARGET}
 
 do-install:
-	${INSTALL_PROGRAM} ${WRKSRC}/doctl ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_PROGRAM} ${GO_WRKSRC}/doctl ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>
