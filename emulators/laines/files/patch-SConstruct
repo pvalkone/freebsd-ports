@@ -1,0 +1,14 @@
+--- SConstruct.orig	2016-11-29 10:36:15 UTC
++++ SConstruct
+@@ -4,9 +4,10 @@ flags = ['-O3', '-march=native', '-std=c
+ 
+ env = Environment(ENV       = environ,
+                   CXX       = 'clang++',
+-                  CPPPATH   = 'src',
++                  CPPPATH   = ['src', '%%LOCALBASE%%/include'],
+                   CPPFLAGS  = ['-Wno-unused-value'],
+                   CXXFLAGS  = flags,
++                  LIBPATH   = ['%%LOCALBASE%%/lib'],
+                   LINKFLAGS = flags,
+                   LIBS      = ['SDL2', 'SDL2_image', 'SDL2_ttf'])
+ 
