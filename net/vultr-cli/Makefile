@@ -2,8 +2,9 @@
 
 # vim: ts=8 noet
 
-PORTNAME=		vultr
+PORTNAME=		vultr-cli
 PORTVERSION=		1.11
+#DISTNAME=		vultr-${PORTVERSION}
 DISTVERSIONPREFIX=	v
 CATEGORIES=		net
 
@@ -14,10 +15,11 @@ LICENSE=		MIT
 
 USE_GITHUB=		yes
 GH_ACCOUNT=		JamesClonk
+GH_PROJECT=		vultr
 
 PLIST_FILES=		bin/vultr
 USES=			go
-GO_PKGNAME=		github.com/${GH_ACCOUNT}/${PORTNAME}
+GO_PKGNAME=		github.com/${GH_ACCOUNT}/${GH_PROJECT}
 
 do-install:
 	${INSTALL_PROGRAM} ${GO_WRKDIR_BIN}/vultr ${STAGEDIR}${PREFIX}/bin
