@@ -8,7 +8,7 @@ DISTVERSIONPREFIX=	v
 CATEGORIES=		net
 
 MAINTAINER=		petteri.valkonen@iki.fi
-COMMENT=		Vultr CLI and API client library
+COMMENT=		Vultr command-line interface
 
 LICENSE=		MIT
 
