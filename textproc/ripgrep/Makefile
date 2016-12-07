@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	ripgrep
-PORTVERSION=	0.3.1
+PORTVERSION=	0.3.2
 CATEGORIES=	textproc
 
 MAINTAINER=	petteri.valkonen@iki.fi
