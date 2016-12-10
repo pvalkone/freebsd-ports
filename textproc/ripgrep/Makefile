@@ -21,6 +21,10 @@ BUILD_DEPENDS=		cargo:devel/cargo
 USE_GITHUB=		yes
 GH_ACCOUNT=		BurntSushi
 
+PLIST_FILES=		bin/rg \
+			man/man1/rg.1.gz
+PORTDOCS=		COPYING README.md CHANGELOG.md
+
 do-build:
 	cd ${WRKSRC} && \
 	CARGO_HOME='${WRKDIR}/.cargo' cargo build --release
@@ -31,8 +35,6 @@ do-install:
 
 post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
-.for i in COPYING README.md CHANGELOG.md
-	${INSTALL_MAN} ${WRKSRC}/${i} ${STAGEDIR}${DOCSDIR}
-.endfor
+	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
