@@ -1,0 +1,5 @@
+bin/rg
+man/man1/rg.1.gz
+%%PORTDOCS%%%%DOCSDIR%%/CHANGELOG.md
+%%PORTDOCS%%%%DOCSDIR%%/COPYING
+%%PORTDOCS%%%%DOCSDIR%%/README.md
