@@ -1,6 +1,6 @@
---- src/gui.cpp.orig	2016-11-29 10:36:15 UTC
+--- src/gui.cpp.orig	2016-12-04 19:21:14 UTC
 +++ src/gui.cpp
-@@ -90,11 +90,11 @@ void init()
+@@ -72,11 +72,11 @@ void init()
                                       SDL_PIXELFORMAT_ARGB8888, SDL_TEXTUREACCESS_STREAMING,
                                       WIDTH, HEIGHT);
  

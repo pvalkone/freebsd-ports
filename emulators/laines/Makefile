@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	laines
-PORTVERSION=	20161201
+PORTVERSION=	20161204
 PORTEPOCH=	0
 CATEGORIES=	emulators
 
@@ -19,7 +19,8 @@ PLIST_FILES=	bin/laines \
 USE_GITHUB=	yes
 GH_ACCOUNT=	AndreaOrru
 GH_PROJECT=	LaiNES
-GH_TAGNAME=	621aa65
+GH_TAGNAME=	7c7ae08
+GH_TUPLE=	brofield:simpleini:03e27b2:simpleini
 
 USES=		scons
 USE_SDL+=	sdl2 ttf2 image2
@@ -28,7 +29,9 @@ post-patch:
 .for i in SConstruct src/gui.cpp
 	@${REINPLACE_CMD} -e \
 		's|%%DATADIR%%|${DATADIR}| ; \
-		 s|%%LOCALBASE%%|${LOCALBASE}|' ${WRKSRC}/${i}
+ 	 	 s|%%LOCALBASE%%|${LOCALBASE}| ; \
+		 s|%%WRKSRC_simpleini%%|${WRKSRC_simpleini}|' \
+		${WRKSRC}/${i}
 .endfor
 
 do-install:
