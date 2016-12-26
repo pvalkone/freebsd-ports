@@ -1,0 +1,57 @@
+#!/bin/sh
+
+# $FreeBSD$
+#
+# vim: ts=2 et
+#
+# PROVIDE: dyfi_update
+# REQUIRE: DAEMON NETWORKING
+# KEYWORD: shutdown
+#
+# Add these lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# dyfi_update_enable (bool):  Set to NO by default.
+#                             Set it to YES to enable dyfi-update.
+# dyfi_update_config (path):  Set to %%PREFIX%%/etc/%%CONF_FILE%%
+#                             by default.
+
+. /etc/rc.subr
+
+name=dyfi_update
+rcvar=dyfi_update_enable
+
+load_rc_config ${name}
+
+: ${dyfi_update_enable:="NO"}
+: ${dyfi_update_config="%%PREFIX%%/etc/%%CONF_FILE%%"}
+
+required_files=${dyfi_update_config}
+start_precmd=dyfi_update_precmd
+status_precmd=dyfi_update_precmd
+stop_precmd=dyfi_update_precmd
+start_cmd=dyfi_update_start
+stop_cmd=dyfi_update_stop
+extra_commands="status"
+
+dyfi_update_precmd() {
+  get_pidfile_from_conf Pidfile ${dyfi_update_config}
+  pidfile="$_pidfile_from_conf"
+  if [ -f ${pidfile} ]; then
+    rc_pid=$(cat ${pidfile})
+  fi 
+}
+
+dyfi_update_start() {
+  /usr/sbin/daemon -cf %%PREFIX%%/bin/%%SCRIPT_FILE%% -f ${dyfi_update_config}
+}
+
+dyfi_update_stop() {
+  if [ -f ${pidfile} ] && [ -n ${rc_pid} ]; then
+    kill -TERM ${rc_pid}
+    wait_for_pids ${rc_pid}
+    rm ${pidfile}
+  fi
+}
+
+run_rc_command "$1"
