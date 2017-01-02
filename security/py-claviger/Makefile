@@ -13,10 +13,10 @@ COMMENT=	Synchronise remote SSH authorised_keys
 
 LICENSE=	GPLv3
 
-RUN_DEPENDS=	${PYTHON_SITELIBDIR}/tarjan/__init__.py:${PORTSDIR}/devel/py-tarjan \
-		${PYTHON_SITELIBDIR}/yaml/__init__.py:${PORTSDIR}/devel/py-yaml \
-		${PYTHON_SITELIBDIR}/demandimport/__init__.py:${PORTSDIR}/devel/py-demandimport \
-		${PYTHON_SITELIBDIR}/jsonschema/__init__.py:${PORTSDIR}/devel/py-jsonschema
+RUN_DEPENDS=	${PYTHON_SITELIBDIR}/tarjan/__init__.py:devel/py-tarjan \
+		${PYTHON_SITELIBDIR}/yaml/__init__.py:devel/py-yaml \
+		${PYTHON_SITELIBDIR}/demandimport/__init__.py:devel/py-demandimport \
+		${PYTHON_SITELIBDIR}/jsonschema/__init__.py:devel/py-jsonschema
 
 USES=		python
 USE_PYTHON=	distutils autoplist
