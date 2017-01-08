@@ -1,3 +1,4 @@
-Compact, cycle-accurate NES emulator in ~1000 lines of C++.
+Compact, cycle-accurate Nintendo Entertainment System (NES)
+emulator in ~1000 lines of C++.
 
 WWW: https://github.com/AndreaOrru/LaiNES
