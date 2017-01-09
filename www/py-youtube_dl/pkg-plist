@@ -616,9 +616,6 @@
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/freespeech.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/freespeech.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/freespeech.pyo
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/freevideo.py
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/freevideo.pyc
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/freevideo.pyo
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/funimation.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/funimation.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/funimation.pyo
