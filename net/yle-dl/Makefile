@@ -4,6 +4,7 @@
 
 PORTNAME=	yle-dl
 PORTVERSION=	2.13
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -20,7 +21,15 @@ USE_PHP=	bcmath curl hash mcrypt simplexml
 USE_GITHUB=	yes
 GH_ACCOUNT=	aajanki
 
+OPTIONS_DEFINE=	MUXMP4
+MUXMP4_DESC=	Install post-processing script for muxing a video into a mp4
+OPTIONS_DEFAULT=MUXMP4
+
+.include <bsd.port.options.mk>
+
 post-install:
-		${INSTALL_SCRIPT} ${WRKSRC}/scripts/muxmp4 ${STAGEDIR}${DATADIR}
+.if ${PORT_OPTIONS:MMUXMP4}
+	${INSTALL_SCRIPT} ${WRKSRC}/scripts/muxmp4 ${STAGEDIR}${DATADIR}
+.endif
 
 .include <bsd.port.mk>
