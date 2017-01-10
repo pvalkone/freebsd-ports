@@ -4,6 +4,7 @@
 
 PORTNAME=		sterm-scrollback-base16
 PORTVERSION=		0.7
+PORTREVISION=		1
 CATEGORIES=		x11
 MASTER_SITES=		http://dl.suckless.org/st/
 DISTNAME=		st-${PORTVERSION}
