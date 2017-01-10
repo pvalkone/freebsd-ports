@@ -14,7 +14,7 @@ LICENSE=	GPLv3
 PLIST_FILES=	bin/interrobang \
 		bin/percontation \
 		man/man1/interrobang.1.gz \
-		"@sample %%ETCDIR%%/config.sample" \
+		"@sample %%ETCDIR%%/config.sample"
 PORTDOCS=	COPYING README.md
 
 USE_GITHUB=	yes
