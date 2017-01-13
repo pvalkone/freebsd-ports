@@ -9,7 +9,7 @@ CATEGORIES=		games
 MAINTAINER=		petteri.valkonen@iki.fi
 COMMENT=		Graphical player for Interactive Fiction games
 
-LICENSE=		GPLv1
+LICENSE=		GPLv2
 
 BUILD_DEPENDS=		jam:devel/jam \
 			pkg-config:devel/pkgconf
