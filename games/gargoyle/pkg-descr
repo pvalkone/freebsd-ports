@@ -1,0 +1,10 @@
+Gargoyle is an Interactive Fiction (text adventure) player that
+supports all the major interactive fiction formats.
+
+Most interactive fiction is distributed as portable game files.
+These portable game files come in many formats. In the past, you
+used to have to download a separate player (interpreter) for
+each format of IF you wanted to play. Instead, Gargoyle provides
+a unified player.
+
+WWW: http://ccxvii.net/gargoyle/

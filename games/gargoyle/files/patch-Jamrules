@@ -1,0 +1,30 @@
+--- Jamrules.orig	2016-10-17 11:47:20 UTC
++++ Jamrules
+@@ -80,6 +80,27 @@ switch $(OS)
+         }
+ 
+ 
++    case FREEBSD :
++        Echo "OS is FREEBSD ($(GUILIB))" ;
++        if $(GUILIB) = EFL {
++            PKGCONFIG = "pkg-config freetype2 evas ecore ecore-evas elementary fontconfig" ;
++        } else {
++            PKGCONFIG = "pkg-config freetype2 gtk+-x11-2.0 gdk-x11-2.0 gobject-2.0 glib-2.0 fontconfig" ;
++        }
++        GARGLKCCFLAGS = "`$(PKGCONFIG) --cflags`" -fPIC ;
++        GARGLKLIBS = "`$(PKGCONFIG) --libs`" -ljpeg -lpng -lz ;
++        LINKLIBS = -lz -lm "`$(PKGCONFIG) --libs`" ;
++
++        if $(USESDL) = yes
++        {
++            GARGLKCCFLAGS += -I/usr/local/include/SDL ;
++            GARGLKLIBS += -lSDL_mixer -lSDL_sound -lSDL -lsmpeg -lvorbisfile ;
++        }
++
++        if $(STATIC) { LINKLIBS += $(GARGLKLIBS) ; }
++        else      { SHRLINKLIBS += $(GARGLKLIBS) ; }
++
++
+     case LINUX :
+         Echo "OS is LINUX ($(GUILIB))" ;
+         if $(GUILIB) = EFL {

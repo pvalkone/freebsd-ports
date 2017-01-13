@@ -1,0 +1,20 @@
+bin/garglk/advsys
+bin/garglk/agility
+bin/garglk/alan2
+bin/garglk/alan3
+bin/garglk/bocfel
+bin/garglk/frotz
+bin/garglk/gargoyle
+bin/garglk/git
+bin/garglk/glulxe
+bin/garglk/hugo
+bin/garglk/jacl
+bin/garglk/level9
+bin/garglk/magnetic
+bin/garglk/nitfol
+bin/garglk/scare
+bin/garglk/scott
+bin/garglk/tadsr
+bin/gargoyle
+@sample etc/garglk.ini.sample
+lib/libgarglk.so
