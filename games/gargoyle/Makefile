@@ -36,7 +36,7 @@ OPTIONS_DEFAULT=	SDL ADVSYS AGILITY ALAN2 ALAN3 BOCFEL FROTZ \
 			SCARE SCOTT
 OPTIONS_SUB=		yes
 
-SDL_DESC=		Enable SDL support
+SDL_DESC=		Enable SDL sound support
 SDL_VARS=		USESDL=yes
 SDL_VARS_OFF=		USESDL=no
 SDL_LIB_DEPENDS=	libsmpeg.so:multimedia/smpeg \
@@ -46,25 +46,25 @@ SDL_USE=		SDL=sdl,mixer,sound
 ADVSYS_DESC=		Enable AdvSys interpreter
 ADVSYS_VARS=		MAKE_ADVSYS=yes
 ADVSYS_VARS_OFF=	MAKE_ADVSYS=no
-AGILITY_DESC=		Enable AGiliTy interpreter
+AGILITY_DESC=		Enable AGiliTy interpreter (AGT)
 AGILITY_VARS=		MAKE_AGILITY=yes
 AGILITY_VARS_OFF=	MAKE_AGILITY=no
-ALAN2_DESC=		Enable Alan2 interpreter
+ALAN2_DESC=		Enable Alan v2 interpreter
 ALAN2_VARS=		MAKE_ALAN2=yes
 ALAN2_VARS_OFF=		MAKE_ALAN2=no
-ALAN3_DESC=		Enable Alan3 interpreter
+ALAN3_DESC=		Enable Alan v3 interpreter
 ALAN3_VARS=		MAKE_ALAN3=yes
 ALAN3_VARS_OFF=		MAKE_ALAN3=no
-BOCFEL_DESC=		Enable Bocfel interpreter
+BOCFEL_DESC=		Enable Bocfel interpreter (Z-machine)
 BOCFEL_VARS=		MAKE_BOCFEL=yes
 BOCFEL_VARS_OFF=	MAKE_BOCFEL=no
-FROTZ_DESC=		Enable Frotz interpreter
+FROTZ_DESC=		Enable Frotz interpreter (Z-machine)
 FROTZ_VARS=		MAKE_FROTZ=yes
 FROTZ_VARS_OFF=		MAKE_FROTZ=no
-GIT_DESC=		Enable Git interpreter
+GIT_DESC=		Enable Git interpreter (Glulx)
 GIT_VARS=		MAKE_GIT=yes
 GIT_VARS_OFF=		MAKE_GIT=no
-GLULXE_DESC=		Enable Glulxe interpreter
+GLULXE_DESC=		Enable Glulxe interpreter (Glulx)
 GLULXE_VARS=		MAKE_GLULXE=yes
 GLULXE_VARS_OFF=	MAKE_GLULXE=no
 HUGO_DESC=		Enable HUGO interpreter
@@ -79,10 +79,10 @@ LEVEL9_VARS_OFF=	MAKE_LEVEL9=no
 MAGNETIC_DESC=		Enable Magnetic Scrolls interpreter
 MAGNETIC_VARS=		MAKE_MAGNETIC=yes
 MAGNETIC_VARS_OFF=	MAKE_MAGNETIC=no
-NITFOL_DESC=		Enable Nitfol interpreter
+NITFOL_DESC=		Enable Nitfol interpreter (Z-machine)
 NITFOL_VARS=		MAKE_NITFOL=yes
 NITFOL_VARS_OFF=	MAKE_NITFOL=no
-SCARE_DESC=		Enable SCARE interpreter
+SCARE_DESC=		Enable SCARE interpreter (ADRIFT)
 SCARE_VARS=		MAKE_SCARE=yes
 SCARE_VARS_OFF=		MAKE_SCARE=no
 SCOTT_DESC=		Enable Scott Adams Grand Adventures interpreter
