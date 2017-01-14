@@ -5,6 +5,7 @@
 %%BOCFEL%%bin/garglk/bocfel
 %%FROTZ%%bin/garglk/frotz
 bin/garglk/gargoyle
+%%GEAS%%bin/garglk/geas
 %%GIT%%bin/garglk/git
 %%GLULXE%%bin/garglk/glulxe
 %%HUGO%%bin/garglk/hugo
