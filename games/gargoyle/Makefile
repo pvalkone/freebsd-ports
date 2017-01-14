@@ -160,7 +160,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/scott ${STAGEDIR}${PREFIX}/bin/garglk
 .endif
 	${LN} -s garglk/gargoyle ${STAGEDIR}${PREFIX}/bin/gargoyle
-	${INSTALL_LIB} ${WRKSRC}/build/dist/libgarglk.so ${STAGEDIR}${PREFIX}/lib	
+	${INSTALL_LIB} ${WRKSRC}/build/dist/libgarglk.so ${STAGEDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/garglk/garglk.ini ${STAGEDIR}${PREFIX}/etc/garglk.ini.sample
 
 .include <bsd.port.mk>
