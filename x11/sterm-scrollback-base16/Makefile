@@ -2,39 +2,43 @@
 
 # vim: ts=8 noet
 
-PORTNAME=		sterm-scrollback-base16
-PORTVERSION=		0.7
-PORTREVISION=		1
-CATEGORIES=		x11
-MASTER_SITES=		http://dl.suckless.org/st/
-DISTNAME=		st-${PORTVERSION}
+PORTNAME=			sterm-scrollback-base16
+PORTVERSION=			0.7
+PORTREVISION=			2
+CATEGORIES=			x11
+MASTER_SITES=			http://dl.suckless.org/st/
+DISTNAME=			st-${PORTVERSION}
 
-PATCH_SITES=		http://st.suckless.org/patches/
-PATCHFILES=		st-scrollback-${PORTVERSION}.diff
-PATCH_DIST_STRIP=	-p1
+PATCH_SITES=			http://st.suckless.org/patches/
+PATCHFILES=			st-scrollback-${PORTVERSION}.diff
+PATCH_DIST_STRIP=		-p1
 
-MAINTAINER=		petteri.valkonen@iki.fi
-COMMENT=		Simple X terminal
+MAINTAINER=			petteri.valkonen@iki.fi
+COMMENT=			Simple X terminal
 
-LICENSE=		MITX
-LICENSE_NAME=		MIT/X Consortium License
-LICENSE_FILE=		${WRKSRC}/LICENSE
-LICENSE_PERMS=		dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+LICENSE=			MITX
+LICENSE_NAME=			MIT/X Consortium License
+LICENSE_FILE=			${WRKSRC}/LICENSE
+LICENSE_PERMS=			dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-LIB_DEPENDS=		libfontconfig.so:x11-fonts/fontconfig \
-			libfreetype.so:print/freetype2
+LIB_DEPENDS=			libfontconfig.so:x11-fonts/fontconfig \
+				libfreetype.so:print/freetype2
 
-USES=			pkgconfig
-USE_XORG=		x11 xext xft
+USES=				pkgconfig
+USE_XORG=			x11 xext xft
 
-PLIST_FILES=		bin/st man/man1/st.1.gz
+PLIST_FILES=			bin/st man/man1/st.1.gz
 
-PORTDOCS=		README
+PORTDOCS=			README
 
-OPTIONS_DEFINE=		DOCS BASE16_BRIGHT_DARK
-OPTIONS_DEFAULT=	BASE16_BRIGHT_DARK
-BASE16_BRIGHT_DARK_DESC=Use Base16 bright dark 256 colour scheme
-BASE16_BRIGHT_DARK_VARS=ST_CONF=${PATCHDIR}/config-base16-bright-256-dark.h
+OPTIONS_DEFINE=			DOCS BASE16_BRIGHT_DARK BASE16_OCEAN_DARK
+OPTIONS_DEFAULT=		BASE16_BRIGHT_DARK
+BASE16_BRIGHT_DARK_DESC=	Use Base16 bright dark 256 colour scheme
+BASE16_BRIGHT_DARK_VARS=	ST_CONF=${PATCHDIR}/config-base16-bright-256-dark.h
+BASE16_BRIGHT_DARK_PREVENTS=	BASE16_OCEAN_DARK
+BASE16_OCEAN_DARK_DESC=		Use Base16 ocean dark 256 colour scheme
+BASE16_OCEAN_DARK_VARS=		ST_CONF=${PATCHDIR}/config-base16-ocean-256-dark.h
+BASE16_OCEAN_DARK_PREVENTS=	BASE16_BRIGHT_DARK
 
 .include <bsd.port.options.mk>
 
