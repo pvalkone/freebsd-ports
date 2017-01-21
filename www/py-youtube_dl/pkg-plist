@@ -1462,9 +1462,6 @@
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/screencastomatic.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/screencastomatic.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/screencastomatic.pyo
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/screenjunkies.py
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/screenjunkies.pyc
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/screenjunkies.pyo
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/seeker.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/seeker.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/seeker.pyo
@@ -1486,9 +1483,6 @@
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/shared.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/shared.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/shared.pyo
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/sharesix.py
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/sharesix.pyc
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/sharesix.pyo
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/sina.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/sina.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/sina.pyo
@@ -1882,9 +1876,6 @@
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/videopremium.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/videopremium.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/videopremium.pyo
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/videott.py
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/videott.pyc
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/videott.pyo
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/vidio.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/vidio.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/vidio.pyo
