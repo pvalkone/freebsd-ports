@@ -4,12 +4,16 @@
 
 PORTNAME=	 i3-gaps-next
 PORTVERSION=	 4.13.20170125
+PORTREVISION=	 1
 CATEGORIES=	 x11-wm
 
 MAINTAINER=	 petteri.valkonen@iki.fi
 COMMENT=	 Fork of the i3wm tiling window manager (next branch)
 
 LICENSE=	 BSD3CLAUSE
+
+BUILD_DEPENDS=	 asciidoc:textproc/asciidoc \
+		 xmlto:textproc/xmlto
 
 LIB_DEPENDS=	 libstartup-notification-1.so:x11/startup-notification \
 		 libxcb-util.so:x11/xcb-util \
@@ -29,10 +33,11 @@ LIB_DEPENDS=	 libstartup-notification-1.so:x11/startup-notification \
 
 CFLAGS+=	 -I${LOCALBASE}/include
 LDFLAGS+=	 -L${LOCALBASE}/lib -liconv
-USES=		 gmake pkgconfig autoreconf
+USES=		 gmake pkgconfig autoreconf perl5
 USE_GCC=	 yes
 GNU_CONFIGURE=	 yes
 USE_XORG=	 xcb
+USE_PERL5=	 build
 USE_GITHUB=	 yes
 GH_ACCOUNT=	 Airblader
 GH_PROJECT=	 i3
@@ -53,7 +58,7 @@ do-configure:
 	${AUTORECONF} -fi && \
 	${MKDIR} ${BUILDDIR} && \
 	cd ${BUILDDIR} && \
-	LDFLAGS="${LDFLAGS}" ../configure
+	LDFLAGS="${LDFLAGS}" ../configure ${CONFIGURE_ARGS}
 
 do-build:
 	cd ${BUILDDIR} && ${GMAKE}
@@ -69,5 +74,6 @@ post-install:
 	${STAGEDIR}${PREFIX}/bin/i3-input \
 	${STAGEDIR}${PREFIX}/bin/i3-msg \
 	${STAGEDIR}${PREFIX}/bin/i3-dump-log
+	${INSTALL_DATA} ${WRKSRC}/build/man/*.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>
