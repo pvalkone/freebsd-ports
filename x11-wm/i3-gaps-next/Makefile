@@ -47,7 +47,7 @@ RELEASE_VERSION=${PORTVERSION}
 RELEASE_DATE=	`${ECHO_CMD} "${PORTVERSION}" | ${SED} -n 's/.*\.\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)$$/\1-\2-\3/p'`
 RELEASE_BRANCH=	`${SED} -n 's/export RELEASE_BRANCH="\(.*\)"/\1/p' ${WRKSRC}/release.sh`
 
-BUILDDIR=${WRKSRC}/build
+BUILDDIR=	${WRKSRC}/build
 INSTALL_TARGET=	install-strip
 
 post-patch:
