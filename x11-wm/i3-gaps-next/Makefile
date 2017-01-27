@@ -48,6 +48,7 @@ RELEASE_DATE=	`${ECHO_CMD} "${PORTVERSION}" | ${SED} -n 's/.*\.\([0-9]\{4\}\)\([
 RELEASE_BRANCH=	`${SED} -n 's/export RELEASE_BRANCH="\(.*\)"/\1/p' ${WRKSRC}/release.sh`
 
 BUILDDIR=${WRKSRC}/build
+INSTALL_TARGET=	install-strip
 
 post-patch:
 	${ECHO_CMD} "${RELEASE_VERSION}" > ${WRKSRC}/VERSION
@@ -64,16 +65,9 @@ do-build:
 	cd ${BUILDDIR} && ${GMAKE}
 
 do-install:
-	cd ${BUILDDIR} && ${GMAKE} install DESTDIR="${STAGEDIR}"
+	cd ${BUILDDIR} && ${GMAKE} ${INSTALL_TARGET} DESTDIR="${STAGEDIR}"
 
 post-install:
-	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/i3-config-wizard \
-	${STAGEDIR}${PREFIX}/bin/i3-nagbar \
-	${STAGEDIR}${PREFIX}/bin/i3bar \
-	${STAGEDIR}${PREFIX}/bin/i3 \
-	${STAGEDIR}${PREFIX}/bin/i3-input \
-	${STAGEDIR}${PREFIX}/bin/i3-msg \
-	${STAGEDIR}${PREFIX}/bin/i3-dump-log
 	${INSTALL_DATA} ${WRKSRC}/build/man/*.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>
