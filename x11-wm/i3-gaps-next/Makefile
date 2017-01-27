@@ -68,6 +68,6 @@ do-install:
 	cd ${BUILDDIR} && ${GMAKE} ${INSTALL_TARGET} DESTDIR="${STAGEDIR}"
 
 post-install:
-	${INSTALL_DATA} ${WRKSRC}/build/man/*.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+	${INSTALL_DATA} ${BUILDDIR}/man/*.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 .include <bsd.port.mk>
