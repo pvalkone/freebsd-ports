@@ -4,8 +4,8 @@
 
 PORTNAME=		ripgrep
 PORTVERSION=		0.3.2
-PORTREVISION=		2
 CATEGORIES=		textproc
+MASTER_SITES=		#
 
 MAINTAINER=		petteri.valkonen@iki.fi
 COMMENT=		Command line search tool
@@ -18,16 +18,31 @@ LICENSE_PERMS_UNLICENSE=dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 BUILD_DEPENDS=		cargo:devel/cargo
 
-USE_GITHUB=		yes
-GH_ACCOUNT=		BurntSushi
-
 PLIST_FILES=		bin/rg \
 			man/man1/rg.1.gz
 PORTDOCS=		COPYING README.md CHANGELOG.md
 
+.include <bsd.port.pre.mk>
+
+do-fetch:
+.if !exists(${DISTDIR}/${DISTNAME}${EXTRACT_SUFX})
+	${FETCH_CMD} -o ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX} \
+		https://github.com/BurntSushi/${PORTNAME}/archive/${PORTVERSION}${EXTRACT_SUFX}
+.endif
+.if !exists(${DISTDIR}/${DISTNAME}-registry${EXTRACT_SUFX})
+	${MKDIR} ${WRKDIR}
+	${TAR} -C ${WRKDIR} -xf ${DISTDIR}/${DISTNAME}${EXTRACT_SUFX}
+	cd ${WRKSRC} && \
+	CARGO_HOME='${WRKDIR}/.cargo' cargo fetch
+	${TAR} -C ${WRKDIR} --exclude .git -czf ${DISTDIR}/${DISTNAME}-registry${EXTRACT_SUFX} .cargo
+.endif
+
+post-extract:
+	${TAR} -C ${WRKSRC} -xf ${DISTDIR}/${DISTNAME}-registry${EXTRACT_SUFX}
+
 do-build:
 	cd ${WRKSRC} && \
-	CARGO_HOME='${WRKDIR}/.cargo' cargo build --release
+	CARGO_HOME='${WRKSRC}/.cargo' cargo build --frozen --release
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/target/release/rg ${STAGEDIR}${PREFIX}/bin
@@ -37,4 +52,4 @@ post-install:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 
-.include <bsd.port.mk>
+.include <bsd.port.post.mk>
