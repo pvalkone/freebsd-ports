@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=		ripgrep
-PORTVERSION=		0.3.2
+PORTVERSION=		0.4.0
 CATEGORIES=		textproc
 MASTER_SITES=		#
 
