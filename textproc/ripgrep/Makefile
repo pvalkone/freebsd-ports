@@ -1,3 +1,4 @@
+# Created by: Petteri Valkonen <petteri.valkonen@iki.fi>
 # $FreeBSD$
 
 # vim: ts=8 noet
