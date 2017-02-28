@@ -16,7 +16,9 @@ LICENSE_NAME_UNLICENSE=	The Unlicense
 LICENSE_FILE_UNLICENSE=	${WRKSRC}/UNLICENSE
 LICENSE_PERMS_UNLICENSE=dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-BUILD_DEPENDS=		cargo:devel/cargo
+CARGO_DEPENDENCY=	cargo:devel/cargo
+FETCH_DEPENDS=		${CARGO_DEPENDENCY}
+BUILD_DEPENDS=		${CARGO_DEPENDENCY}
 
 PLIST_FILES=		bin/rg \
 			man/man1/rg.1.gz
