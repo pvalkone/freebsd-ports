@@ -1,0 +1,7 @@
+Browserpass is a Chrome extension for zx2c4's pass, a UNIX based
+password manager. It retrieves your decrypted passwords for the
+current domain and allows you to auto-fill login forms. If you have
+multiple logins for the current site, the extension shows you a list
+of usernames to choose from.
+
+WWW: https://github.com/dannyvankooten/browserpass
