@@ -31,11 +31,9 @@ APP_NAME=	com.dannyvankooten.browserpass
 PLIST_FILES=	${NATIVE_MSG_DIR}/${PORTNAME} \
 		${NATIVE_MSG_DIR}/${APP_NAME}.json \
 		${POLICY_DIR}/${APP_NAME}.json
-#		%%DATADIR%%/${PORTNAME}.crx
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/bin/bash|${LOCALBASE}/bin/bash|' \
-			  -e 's|google-chrome --pack-extension=./chrome --pack-extension-key=./chrome-browserpass.pem|chrome --pack-extension=${WRKSRC}/chrome|' \
 			  -e 's|browserify chrome/script.browserify.js|${WRKSRC}/node_modules/.bin/browserify chrome/script.browserify.js|' ${WRKSRC}/makefile
 	@${REINPLACE_CMD} -e 's|%%replace%%|${PREFIX}/${NATIVE_MSG_DIR}/${PORTNAME}|' ${WRKSRC}/chrome/host.json
 
@@ -56,7 +54,5 @@ do-install:
 	${INSTALL_DATA} ${WRKSRC}/chrome-host.json ${STAGEDIR}${PREFIX}/${NATIVE_MSG_DIR}/${APP_NAME}.json
 	${MKDIR} ${STAGEDIR}${PREFIX}/${POLICY_DIR}
 	${INSTALL_DATA} ${WRKSRC}/chrome-policy.json ${STAGEDIR}${PREFIX}/${POLICY_DIR}/${APP_NAME}.json
-#	${MKDIR} ${STAGEDIR}${DATADIR}
-#	${INSTALL_DATA} ${WRKSRC}/${PORTNAME}.crx ${STAGEDIR}${DATADIR}/${PORTNAME}.crx
 
 .include <bsd.port.mk>
