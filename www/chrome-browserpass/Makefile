@@ -37,7 +37,7 @@ post-patch:
 			  -e 's|browserify chrome/script.browserify.js|${WRKSRC}/node_modules/.bin/browserify chrome/script.browserify.js|' ${WRKSRC}/makefile
 	@${REINPLACE_CMD} -e 's|%%replace%%|${PREFIX}/${NATIVE_MSG_DIR}/${PORTNAME}|' ${WRKSRC}/chrome/host.json
 
-post-extract:
+pre-build:
 	cd ${WRKSRC} && \
 	npm install browserify && \
 	npm install && \
