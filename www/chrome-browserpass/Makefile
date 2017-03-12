@@ -39,8 +39,8 @@ post-patch:
 
 pre-build:
 	cd ${WRKSRC} && \
-	npm install browserify && \
-	npm install && \
+	${SETENV} HOME=${WRKDIR} npm install browserify && \
+	${SETENV} HOME=${WRKDIR} npm install && \
 	GOPATH="${WRKSRC}" go get github.com/mattn/go-zglob
 
 do-build:
