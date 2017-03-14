@@ -37,16 +37,13 @@ post-patch:
 			  -e 's|browserify chrome/script.browserify.js|${WRKSRC}/node_modules/.bin/browserify chrome/script.browserify.js|' ${WRKSRC}/makefile
 	@${REINPLACE_CMD} -e 's|%%replace%%|${PREFIX}/${NATIVE_MSG_DIR}/${PORTNAME}|' ${WRKSRC}/chrome/host.json
 
-pre-build:
+do-build:
 	cd ${WRKSRC} && \
 	${SETENV} HOME=${WRKDIR} npm install browserify && \
 	${SETENV} HOME=${WRKDIR} npm install && \
-	GOPATH="${WRKSRC}" go get github.com/mattn/go-zglob
-
-do-build:
-	cd ${WRKSRC} && \
+	${SETENV} GOPATH="${WRKSRC}" go get github.com/mattn/go-zglob && \
 	make static-files js && \
-	GOPATH="${WRKSRC}" go build -v -o ${PORTNAME}
+	${SETENV} GOPATH="${WRKSRC}" go build -v -o ${PORTNAME}
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/${NATIVE_MSG_DIR}
