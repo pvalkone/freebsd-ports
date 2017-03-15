@@ -11,9 +11,7 @@ COMMENT=	Chrome browser extension for pass, a UNIX password manager
 
 LICENSE=	MIT
 
-BUILD_DEPENDS=	bash:shells/bash \
-		npm:www/npm \
-		chrome:www/chromium \
+BUILD_DEPENDS=	chrome:www/chromium \
 		go:lang/go \
 		git:devel/git
 
@@ -34,23 +32,18 @@ PLIST_FILES=	${NATIVE_MSG_DIR}/${PORTNAME} \
 		${POLICY_DIR}/${APP_NAME}.json
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/bin/bash|${LOCALBASE}/bin/bash|' \
-			  -e 's|browserify chrome/script.browserify.js|${WRKSRC}/node_modules/.bin/browserify chrome/script.browserify.js|' ${WRKSRC}/makefile
 	@${REINPLACE_CMD} -e 's|%%replace%%|${PREFIX}/${NATIVE_MSG_DIR}/${PORTNAME}|' ${WRKSRC}/chrome/host.json
 
 do-build:
 	cd ${WRKSRC} && \
-	${SETENV} HOME=${WRKDIR} npm install browserify && \
-	${SETENV} HOME=${WRKDIR} npm install && \
 	${SETENV} GOPATH="${WRKSRC}" go get github.com/mattn/go-zglob && \
-	make static-files js && \
 	${SETENV} GOPATH="${WRKSRC}" go build -v -o ${PORTNAME}
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/${NATIVE_MSG_DIR}
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/${NATIVE_MSG_DIR}/${PORTNAME}
-	${INSTALL_DATA} ${WRKSRC}/chrome-host.json ${STAGEDIR}${PREFIX}/${NATIVE_MSG_DIR}/${APP_NAME}.json
+	${INSTALL_DATA} ${WRKSRC}/chrome/host.json ${STAGEDIR}${PREFIX}/${NATIVE_MSG_DIR}/${APP_NAME}.json
 	${MKDIR} ${STAGEDIR}${PREFIX}/${POLICY_DIR}
-	${INSTALL_DATA} ${WRKSRC}/chrome-policy.json ${STAGEDIR}${PREFIX}/${POLICY_DIR}/${APP_NAME}.json
+	${INSTALL_DATA} ${WRKSRC}/chrome/policy.json ${STAGEDIR}${PREFIX}/${POLICY_DIR}/${APP_NAME}.json
 
 .include <bsd.port.mk>
