@@ -14,7 +14,8 @@ LICENSE=	MIT
 BUILD_DEPENDS=	bash:shells/bash \
 		npm:www/npm \
 		chrome:www/chromium \
-		go:lang/go
+		go:lang/go \
+		git:devel/git
 
 RUN_DEPENDS=	chrome:www/chromium \
 		pass:sysutils/password-store
