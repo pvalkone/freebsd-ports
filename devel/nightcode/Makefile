@@ -14,7 +14,8 @@ LICENSE_NAME=	The Unlicense
 LICENSE_FILE=	${WRKSRC}/UNLICENSE
 LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
-BUILD_DEPENDS=	lein:devel/leiningen
+BUILD_DEPENDS=	lein:devel/leiningen \
+		bash:shells/bash
 
 JAR_FILE=	${PORTNAME}.jar
 SCRIPT_FILE=	${PORTNAME}
