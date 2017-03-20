@@ -1453,9 +1453,6 @@
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/sbs.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/sbs.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/sbs.pyo
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/scivee.py
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/scivee.pyc
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/scivee.pyo
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/screencast.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/screencast.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/screencast.pyo
@@ -1687,9 +1684,6 @@
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/tinypic.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/tinypic.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/tinypic.pyo
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/tlc.py
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/tlc.pyc
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/tlc.pyo
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/tmz.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/tmz.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/tmz.pyo
