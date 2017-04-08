@@ -3,9 +3,8 @@
 # vim: ts=8 noet
 
 PORTNAME=		doctl
-PORTVERSION=		1.5.0
+PORTVERSION=		1.6.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=		1
 CATEGORIES=		net
 
 MAINTAINER=		petteri.valkonen@iki.fi
