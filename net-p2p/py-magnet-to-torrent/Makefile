@@ -3,8 +3,8 @@
 # vim: ts=8 noet
 
 PORTNAME=	magnet2torrent
-PORTVERSION=	20170213
-PORTEPOCH=	0
+PORTVERSION=	20160702
+PORTEPOCH=	1
 CATEGORIES=	net-p2p
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
@@ -18,16 +18,16 @@ RUN_DEPENDS=	${PYTHON_SITELIBDIR}/libtorrent.so:net-p2p/libtorrent-rasterbar-pyt
 PLIST_FILES=	bin/magnet2torrent
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	danfolkes
+GH_ACCOUNT=	LordAro
 GH_PROJECT=	Magnet2Torrent
-GH_TAGNAME=	8a31931
+GH_TAGNAME=	8edd5c2
 
 USES=		python shebangfix
 NO_ARCH=	yes
 NO_BUILD=	yes
-SHEBANG_FILES=	Magnet_To_Torrent2.py
+SHEBANG_FILES=	Magnet2Torrent.py
 
 do-install:
-	${INSTALL_SCRIPT} ${WRKSRC}/Magnet_To_Torrent2.py ${STAGEDIR}${PREFIX}/bin/magnet2torrent
+	${INSTALL_SCRIPT} ${WRKSRC}/Magnet2Torrent.py ${STAGEDIR}${PREFIX}/bin/magnet2torrent
 
 .include <bsd.port.mk>
