@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=		gargoyle
-PORTVERSION=		2011.1.20170319
+PORTVERSION=		2011.1.20170420
 CATEGORIES=		games
 
 MAINTAINER=		petteri.valkonen@iki.fi
@@ -21,7 +21,7 @@ LIB_DEPENDS=		libfontconfig.so:x11-fonts/fontconfig \
 USE_GITHUB=		yes
 GH_ACCOUNT=		garglk
 GH_PROJECT=		garglk
-GH_TAGNAME=		61dac57
+GH_TAGNAME=		5660612
 
 USE_GNOME=		gtk20 atk glib20 pango cairo gdkpixbuf2
 USES=			gettext-runtime jpeg
