@@ -20,8 +20,11 @@ PORTDOCS=	COPYING README.md
 USE_GITHUB=	yes
 GH_ACCOUNT=	TrilbyWhite
 GH_TAGNAME=	321cd9d
-USE_GCC=	yes
+USE_GCC=	5
 USE_XORG=	x11
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|gcc|gcc5|g' ${WRKSRC}/Makefile
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/interrobang ${STAGEDIR}${PREFIX}/bin
