@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=		doctl
-PORTVERSION=		1.6.0
+PORTVERSION=		1.6.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=		net
 
