@@ -1,4 +1,3 @@
-%%PYTHON_SITELIBDIR%%/youtube_dl/YoutubeDL.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/YoutubeDL.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/YoutubeDL.pyo
 %%PYTHON_SITELIBDIR%%/youtube_dl/__init__.py
@@ -157,9 +156,6 @@
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/awaan.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/awaan.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/awaan.pyo
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/azubu.py
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/azubu.pyc
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/azubu.pyo
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/baidu.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/baidu.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/baidu.pyo
