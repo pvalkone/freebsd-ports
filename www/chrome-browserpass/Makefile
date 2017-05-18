@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	chrome-browserpass
-PORTVERSION=	1.0.2.20170502
+PORTVERSION=	1.0.4
 CATEGORIES=	www
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -17,7 +17,6 @@ RUN_DEPENDS=	chrome:www/chromium \
 USE_GITHUB=	yes
 GH_ACCOUNT=	dannyvankooten
 GH_PROJECT=	browserpass
-GH_TAGNAME=	e114bf1
 USES=		go
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/${GH_PROJECT}
 
