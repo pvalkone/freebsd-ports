@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	chrome-browserpass
-PORTVERSION=	1.0.4
+PORTVERSION=	1.0.6
 CATEGORIES=	www
 
 MAINTAINER=	petteri.valkonen@iki.fi
