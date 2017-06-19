@@ -669,9 +669,6 @@
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/godtube.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/godtube.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/godtube.pyo
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/godtv.py
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/godtv.pyc
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/godtv.pyo
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/golem.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/golem.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/golem.pyo
