@@ -1,5 +1,5 @@
-This is a fast-paced action strategy game for Linux implemented using 
-ncurses user interface.
+This is a fast-paced action strategy game implemented using the ncurses
+user interface.
 
 Unlike most RTS, you are not controlling units, but focus on high-level 
 strategic planning: Building infrastructure, securing resources, 
