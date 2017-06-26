@@ -4,6 +4,7 @@
 
 PORTNAME=	dnscontrol
 PORTVERSION=	20170619
+PORTREVISION=	1
 PORTEPOCH=	0
 CATEGORIES=	dns
 
@@ -19,9 +20,17 @@ GH_TAGNAME=	06461d3
 USES=		go
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
 
-PLIST_FILES=	bin/dnscontrol
+PLIST_FILES=	bin/dnscontrol \
+		"@sample etc/dnsconfig.js.sample" \
+		"@sample etc/creds.json.sample"
 
 do-install:
 	${INSTALL_PROGRAM} ${WRKDIR}/bin/dnscontrol ${STAGEDIR}${PREFIX}/bin
+
+post-install:
+	${INSTALL_DATA} ${WRKSRC}/docs/assets/dnsconfig.js-example.txt \
+		${STAGEDIR}${PREFIX}/etc/dnsconfig.js.sample
+	${INSTALL_DATA} ${WRKSRC}/docs/assets/creds.json-example.txt \
+		${STAGEDIR}${PREFIX}/etc/creds.json.sample
 
 .include <bsd.port.mk>
