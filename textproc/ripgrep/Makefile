@@ -74,6 +74,7 @@ CARGO_CRATES=	aho-corasick-0.6.3 \
 .include <bsd.port.options.mk>
 
 post-install:
+	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/rg
 	${INSTALL_MAN} ${WRKSRC}/doc/rg.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 .if ${PORT_OPTIONS:MBASH}
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d/
