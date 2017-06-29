@@ -28,11 +28,9 @@ FISH_DESC=	Install programmable completions for Fish
 
 PLIST_FILES=	bin/rg \
 		man/man1/rg.1.gz
-
 BASH_PLIST_FILES= etc/bash_completion.d/rg.bash-completion
 FISH_PLIST_FILES= share/fish/completions/rg.fish
 ZSH_PLIST_FILES=  share/zsh/site-functions/_rg
-
 
 CARGO_CRATES=	aho-corasick-0.6.3 \
 		ansi_term-0.9.0 \
