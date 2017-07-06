@@ -68,25 +68,23 @@ CARGO_CRATES=	aho-corasick-0.6.3 \
 		winapi-0.2.8 \
 		winapi-build-0.1.1
 
-.include <bsd.port.options.mk>
-
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/rg
 	${INSTALL_MAN} ${WRKSRC}/doc/rg.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
-.if ${PORT_OPTIONS:MBASH}
+
+post-install-BASH-on:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d/
 	${INSTALL_DATA} ${WRKDIR}/target/release/build/ripgrep-*/out/rg.bash-completion \
 		${STAGEDIR}${PREFIX}/etc/bash_completion.d/
-.endif
-.if ${PORT_OPTIONS:MFISH}
+
+post-install-FISH-on:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/fish/completions/
 	${INSTALL_DATA} ${WRKDIR}/target/release/build/ripgrep-*/out/rg.fish \
 		${STAGEDIR}${PREFIX}/share/fish/completions/
-.endif
-.if ${PORT_OPTIONS:MZSH}
+
+post-install-ZSH-on:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions/
 	${INSTALL_DATA} ${WRKDIR}/target/release/build/ripgrep-*/out/_rg \
 		${STAGEDIR}${PREFIX}/share/zsh/site-functions/
-.endif
 
 .include <bsd.port.mk>
