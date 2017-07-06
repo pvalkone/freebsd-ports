@@ -68,23 +68,29 @@ CARGO_CRATES=	aho-corasick-0.6.3 \
 		winapi-0.2.8 \
 		winapi-build-0.1.1
 
+CARGO_OUTDIR=${WRKDIR}/cargo-out
+
+post-patch:
+	@${REINPLACE_CMD} -e 's|%%CARGO_OUTDIR%%|${CARGO_OUTDIR}|' \
+		${WRKSRC}/build.rs
+
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/rg
 	${INSTALL_MAN} ${WRKSRC}/doc/rg.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
 
 post-install-BASH-on:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d/
-	${INSTALL_DATA} ${WRKDIR}/target/release/build/ripgrep-*/out/rg.bash-completion \
+	${INSTALL_DATA} ${CARGO_OUTDIR}/rg.bash-completion \
 		${STAGEDIR}${PREFIX}/etc/bash_completion.d/
 
 post-install-FISH-on:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/fish/completions/
-	${INSTALL_DATA} ${WRKDIR}/target/release/build/ripgrep-*/out/rg.fish \
+	${INSTALL_DATA} ${CARGO_OUTDIR}/rg.fish \
 		${STAGEDIR}${PREFIX}/share/fish/completions/
 
 post-install-ZSH-on:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions/
-	${INSTALL_DATA} ${WRKDIR}/target/release/build/ripgrep-*/out/_rg \
+	${INSTALL_DATA} ${CARGO_OUTDIR}/_rg \
 		${STAGEDIR}${PREFIX}/share/zsh/site-functions/
 
 .include <bsd.port.mk>
