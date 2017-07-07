@@ -30,11 +30,11 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/interrobang ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_PROGRAM} ${WRKSRC}/percontation ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/interrobang.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
-	${MKDIR} ${STAGEDIR}${ETCDIR}
+	@${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${WRKSRC}/config ${STAGEDIR}${ETCDIR}/config.sample
 
 post-install:
-	${MKDIR} ${STAGEDIR}${DOCSDIR}
+	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
 
 .include <bsd.port.mk>
