@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=		3270font
-PORTVERSION=		1.2.20
+PORTVERSION=		1.2.23
 DISTVERSIONPREFIX=	v
 CATEGORIES=		x11-fonts
 PKGNAMESUFFIX=		-ttf
@@ -27,7 +27,7 @@ do-build:
 	cd ${WRKSRC} && ${GMAKE} test
 
 do-install:
-	${MKDIR} ${STAGEDIR}${FONTSDIR}
-	${INSTALL_DATA} ${WRKSRC}/*.ttf ${STAGEDIR}${FONTSDIR}
+	@${MKDIR} ${STAGEDIR}${FONTSDIR}
+	${INSTALL_DATA} ${WRKSRC}/build/*.ttf ${STAGEDIR}${FONTSDIR}
 
 .include <bsd.port.mk>
