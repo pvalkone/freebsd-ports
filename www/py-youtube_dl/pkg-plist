@@ -2010,9 +2010,6 @@
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/yahoo.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/yahoo.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/yahoo.pyo
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/yam.py
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/yam.pyc
-%%PYTHON_SITELIBDIR%%/youtube_dl/extractor/yam.pyo
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/yandexmusic.py
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/yandexmusic.pyc
 %%PYTHON_SITELIBDIR%%/youtube_dl/extractor/yandexmusic.pyo
