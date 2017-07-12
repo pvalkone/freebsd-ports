@@ -1,5 +1,5 @@
 # Created by: Petteri Valkonen <petteri.valkonen@iki.fi>
-# $FreeBSD: head/textproc/ripgrep/Makefile 445082 2017-07-05 14:58:11Z tobik $
+# $FreeBSD: head/textproc/ripgrep/Makefile 445321 2017-07-08 11:27:54Z tobik $
 
 # vim: ts=8 noet
 
@@ -13,7 +13,6 @@ COMMENT=	Command line search tool
 
 LICENSE=	MIT UNLICENSE
 LICENSE_COMB=	dual
-LICENSE_FILE=	${WRKSRC}/COPYING
 LICENSE_FILE_MIT=	${WRKSRC}/LICENSE-MIT
 LICENSE_FILE_UNLICENSE=	${WRKSRC}/UNLICENSE
 
@@ -69,7 +68,7 @@ CARGO_CRATES=	aho-corasick-0.6.3 \
 		winapi-build-0.1.1
 
 RIPGREP_OUTDIR=	${WRKDIR}/cargo-out
-CARGO_ENV+=	RIPGREP_OUTDIR=${RIPGREP_OUTDIR}
+CARGO_ENV=	RIPGREP_OUTDIR=${RIPGREP_OUTDIR}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|OUT_DIR|RIPGREP_OUTDIR|' ${WRKSRC}/build.rs
