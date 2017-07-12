@@ -12,9 +12,6 @@ MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	YouTube video downloader (Python library)
 
 LICENSE=	UNLICENSE
-LICENSE_NAME=	The Unlicense
-LICENSE_TEXT=	http://unlicense.org/
-LICENSE_PERMS=	dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
 
 USES=		python
 USE_PYTHON=	distutils
