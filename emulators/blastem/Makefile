@@ -27,7 +27,7 @@ PLIST_FILES=	bin/blastem \
 
 USES=		gmake python:2,build shebangfix
 USE_GCC=	5+
-USE_SDL=	sdl2
+USE_SDL=	sdl sdl2
 USE_GL=		glew glu gl
 SHEBANG_FILES=	img2tiles.py
 
