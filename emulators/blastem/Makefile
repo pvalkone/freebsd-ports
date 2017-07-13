@@ -25,7 +25,7 @@ PLIST_FILES=	bin/blastem \
 		%%DATADIR%%/menu.bin \
 		"@sample %%ETCDIR%%/blastem.cfg.sample"
 
-USES=		gmake python:2,build shebangfix
+USES=		gmake pkgconfig python:2,build shebangfix
 USE_GCC=	5+
 USE_SDL=	sdl sdl2
 USE_GL=		glew glu gl
