@@ -5,7 +5,7 @@
  	free(shader_path);
  	if (!f) {
 -		parts[0] = get_exe_dir();
-+		parts[0] = "/usr/local/share/blastem";
++		parts[0] = "%%DATADIR%%";
  		parts[1] = "/shaders/";
  		shader_path = alloc_concat_m(3, parts);
  		f = fopen(shader_path, "rb");

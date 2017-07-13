@@ -5,7 +5,7 @@
  char *read_bundled_file(char *name, uint32_t *sizeret)
  {
 -	char *exe_dir = get_exe_dir();
-+	char *exe_dir = "/usr/local/share/blastem";
++	char *exe_dir = "%%DATADIR%%";
  	if (!exe_dir) {
  		if (sizeret) {
  			*sizeret = -1;
@@ -21,7 +21,7 @@
 -		}
 -	}
 -	return confdir;
-+	return "/usr/local/etc/blastem";
++	return "%%ETCDIR%%";
  }
  
  char const *get_userdata_dir()
