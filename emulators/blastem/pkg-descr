@@ -1,0 +1,9 @@
+BlastEm is an open source, higly accurate emulator for the
+Genesis/Megadrive that runs on modest hardware. It is the first emulator
+to properly run Titan's impressive Overdrive 2 demo and it is the only
+other emulator besides Genesis Plus GX that can properly run the original
+Overdrive. It is the only emulator other than Exodus that passes Nemesis'
+VDP FIFO Testing ROM, can display "Direct Color DMA" demos and emulates
+CRAM contention (aka CRAM dots).
+
+WWW: https://www.retrodev.com/blastem/
