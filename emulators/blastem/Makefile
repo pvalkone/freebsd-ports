@@ -51,9 +51,9 @@ post-install:
 	@${MKDIR} ${STAGEDIR}${ETCDIR}
 	${INSTALL_DATA} ${WRKSRC}/default.cfg ${STAGEDIR}${ETCDIR}/blastem.cfg.sample
 	@${MKDIR} ${STAGEDIR}${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/rom.db ${STAGEDIR}${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/gamecontrollerdb.txt ${STAGEDIR}${DATADIR}
-	${INSTALL_DATA} ${WRKSRC}/menu.bin ${STAGEDIR}${DATADIR}
+.for i in rom.db gamecontrollerdb.txt menu.bin
+	${INSTALL_DATA} ${WRKSRC}/${i} ${STAGEDIR}${DATADIR}
+.endfor
 	(cd ${WRKSRC} && ${COPYTREE_SHARE} shaders ${STAGEDIR}${DATADIR})
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	(cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR})
