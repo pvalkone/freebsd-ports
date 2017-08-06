@@ -20,15 +20,15 @@ USE_PHP=	bcmath curl hash mcrypt simplexml
 USE_GITHUB=	yes
 GH_ACCOUNT=	aajanki
 
-OPTIONS_DEFINE=	MUXMP4
-MUXMP4_DESC=	Install post-processing script for muxing a video into a mp4
-OPTIONS_DEFAULT=MUXMP4
+OPTIONS_DEFINE=		MUXMP4
+MUXMP4_DESC=		Install post-processing script for muxing a video into a mp4
+OPTIONS_DEFAULT=	MUXMP4
+MUXMP4_PLIST_FILES=	%%DATADIR%%/muxmp4
 
-.include <bsd.port.options.mk>
+PLIST_FILES=		bin/yle-dl \
+			%%DATADIR%%/AdobeHDS.php
 
-post-install:
-.if ${PORT_OPTIONS:MMUXMP4}
+post-install-MUXMP4-on:
 	${INSTALL_SCRIPT} ${WRKSRC}/scripts/muxmp4 ${STAGEDIR}${DATADIR}
-.endif
 
 .include <bsd.port.mk>
