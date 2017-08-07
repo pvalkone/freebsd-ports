@@ -90,8 +90,6 @@ SCOTT_DESC=		Enable Scott Adams Grand Adventures interpreter
 SCOTT_VARS=		MAKE_SCOTT=yes
 SCOTT_VARS_OFF=		MAKE_SCOTT=no
 
-.include <bsd.port.options.mk>
-
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 		${WRKSRC}/garglk/launchgtk.c
@@ -124,54 +122,55 @@ do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/bin/garglk
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/gargoyle ${STAGEDIR}${PREFIX}/bin/garglk
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/tadsr ${STAGEDIR}${PREFIX}/bin/garglk
-.if ${PORT_OPTIONS:MADVSYS}
+
+do-install-ADVSYS-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/advsys ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MAGILITY}
+
+do-install-AGILITY-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/agility ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MALAN2}
+
+do-install-ALAN2-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/alan2 ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MALAN3}
+
+do-install-ALAN3-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/alan3 ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MBOCFEL}
+
+do-install-BOCFEL-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/bocfel ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MFROTZ}
+
+do-install-FROTZ-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/frotz ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MGEAS}
+
+do-install-GEAS-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/geas ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MGIT}
+
+do-install-GIT-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/git ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MGLULXE}
+
+do-install-GLULXE-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/glulxe ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MHUGO}
+
+do-install-HUGO-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/hugo ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MJACL}
+
+do-install-JACL-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/jacl ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MLEVEL9}
+
+do-install-LEVEL9-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/level9 ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MMAGNETIC}
+
+do-install-MAGNETIC-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/magnetic ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MNITFOL}
+
+do-install-NITFOL-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/nitfol ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MSCARE}
+
+do-install-SCARE-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/scare ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
-.if ${PORT_OPTIONS:MSCOTT}
+
+do-install-SCOTT-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/build/dist/scott ${STAGEDIR}${PREFIX}/bin/garglk
-.endif
+
 	${LN} -s garglk/gargoyle ${STAGEDIR}${PREFIX}/bin/gargoyle
 	${INSTALL_LIB} ${WRKSRC}/build/dist/libgarglk.so ${STAGEDIR}${PREFIX}/lib
 	${INSTALL_DATA} ${WRKSRC}/garglk/garglk.ini ${STAGEDIR}${PREFIX}/etc/garglk.ini.sample
