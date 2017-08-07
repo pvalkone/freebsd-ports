@@ -110,13 +110,14 @@ JAM_ENV=	CC=clang \
 		MAKE_SCARE=${MAKE_SCARE} \
 		MAKE_SCOTT=${MAKE_SCOTT} \
 		GARGLKINI=${LOCALBASE}/etc/garglk.ini
+JAM_ARGS=	-j${MAKE_JOBS_NUMBER}
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|%%LOCALBASE%%|${LOCALBASE}|' \
 		${WRKSRC}/garglk/launchgtk.c
 
 do-build:
-	 @(cd ${BUILD_WRKSRC}; ${SETENV} ${JAM_ENV} jam install)
+	 @(cd ${BUILD_WRKSRC}; ${SETENV} ${JAM_ENV} jam ${JAM_ARGS} install)
 
 do-install:
 	${MKDIR} ${STAGEDIR}${PREFIX}/bin/garglk
