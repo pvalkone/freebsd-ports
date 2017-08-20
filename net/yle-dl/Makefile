@@ -12,7 +12,7 @@ COMMENT=	Download videos from Yle servers
 LICENSE=	GPLv3
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycrypto>=0:security/py-pycrypto \
-		${PYTHON_PKGNAMEPREFIX}progress>=0:misc/py-progress
+		${PYTHON_PKGNAMEPREFIX}progress>=0:devel/py-progress
 
 USES=		python php
 USE_PYTHON=	distutils autoplist
