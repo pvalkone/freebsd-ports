@@ -4,13 +4,14 @@
 
 PORTNAME=			sterm-scrollback-base16
 PORTVERSION=			0.7
-PORTREVISION=			2
+PORTREVISION=			3
 CATEGORIES=			x11
 MASTER_SITES=			http://dl.suckless.org/st/
 DISTNAME=			st-${PORTVERSION}
 
 PATCH_SITES=			http://st.suckless.org/patches/
-PATCHFILES=			st-scrollback-${PORTVERSION}.diff
+PATCHFILES=			scrollback/st-scrollback-${PORTVERSION}.diff \
+				clipboard/st-clipboard-${PORTVERSION}.diff
 PATCH_DIST_STRIP=		-p1
 
 MAINTAINER=			petteri.valkonen@iki.fi

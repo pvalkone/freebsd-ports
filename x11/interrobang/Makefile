@@ -20,7 +20,7 @@ PORTDOCS=	COPYING README.md
 USE_GITHUB=	yes
 GH_ACCOUNT=	TrilbyWhite
 GH_TAGNAME=	321cd9d
-USE_GCC=	5+
+USE_GCC=	yes
 USE_XORG=	x11
 
 post-patch:

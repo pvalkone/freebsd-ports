@@ -1,5 +1,7 @@
-TIMESTAMP = 1483391111
+TIMESTAMP = 1504621277
 SHA256 (st-0.7.tar.gz) = f7870d906ccc988926eef2cc98950a99cc78725b685e934c422c03c1234e6000
 SIZE (st-0.7.tar.gz) = 42418
-SHA256 (st-scrollback-0.7.diff) = f721b15a5aa8d77a4b6b44713131c5f55e7fca04006bc0a3cb140ed51c14cfb6
-SIZE (st-scrollback-0.7.diff) = 10362
+SHA256 (scrollback/st-scrollback-0.7.diff) = f721b15a5aa8d77a4b6b44713131c5f55e7fca04006bc0a3cb140ed51c14cfb6
+SIZE (scrollback/st-scrollback-0.7.diff) = 10362
+SHA256 (clipboard/st-clipboard-0.7.diff) = de258e67688b2541785a837b20aab0937695fad59ada8cd0ad1789fddbbdffb9
+SIZE (clipboard/st-clipboard-0.7.diff) = 282
