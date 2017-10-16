@@ -4,7 +4,6 @@
 
 PORTNAME=	yle-dl
 PORTVERSION=	2.26
-PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
