@@ -2,10 +2,10 @@
 
 # vim: ts=8 noet
 
-PORTNAME=	dnscontrol
-PORTVERSION=	20170711
-PORTEPOCH=	0
-CATEGORIES=	dns
+PORTNAME=		dnscontrol
+PORTVERSION=		0.2.3
+DISTVERSIONPREFIX=	v
+CATEGORIES=		dns
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Synchronize your DNS to multiple providers from a simple DSL
