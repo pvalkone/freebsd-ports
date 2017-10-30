@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	yle-dl
-PORTVERSION=	2.26
+PORTVERSION=	2.27
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
