@@ -4,6 +4,7 @@
 
 PORTNAME=	yle-dl
 PORTVERSION=	2.27
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -13,7 +14,9 @@ LICENSE=	GPLv3
 
 RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycrypto>=0:security/py-pycrypto \
 		${PYTHON_PKGNAMEPREFIX}progress>=0:devel/py-progress \
-		${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml
+		${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml \
+		${PYTHON_PKGNAMEPREFIX}amf>=0:www/py-amf \
+		${PYTHON_PKGNAMEPREFIX}defusedxml>=0:devel/py-defusedxml
 
 USES=		python php
 USE_PYTHON=	distutils autoplist
