@@ -81,14 +81,13 @@ AVX_IMPLIES=	SIMD
 
 BASH_PLIST_FILES=	etc/bash_completion.d/rg.bash-completion
 FISH_PLIST_FILES=	share/fish/completions/rg.fish
+ZSH_PLIST_FILES=	share/zsh/site-functions/_rg
 
 # simd crate uses cfg_target_feature which isn't stable yet, so unlock
 # unstable features similar to how lang/rust bootstraps. www/firefox
 # uses the same hack when building with --enable-rust-simd.
 SIMD_MAKE_ENV=	RUSTC_BOOTSTRAP=1
 SIMD_VARS=	CARGO_FEATURES+=simd-accel
-
-ZSH_PLIST_FILES=	share/zsh/site-functions/_rg
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|OUT_DIR|RIPGREP_OUTDIR|' ${WRKSRC}/build.rs
