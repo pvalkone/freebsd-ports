@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=		vultr-cli
-PORTVERSION=		1.13.0
+PORTVERSION=		1.15.0
 CATEGORIES=		net
 
 MAINTAINER=		petteri.valkonen@iki.fi
