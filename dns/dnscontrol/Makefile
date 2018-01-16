@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=		dnscontrol
-PORTVERSION=		0.2.3
+PORTVERSION=		0.2.4
 DISTVERSIONPREFIX=	v
 CATEGORIES=		dns
 
