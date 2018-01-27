@@ -21,6 +21,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycrypto>=0:security/py-pycrypto \
 
 USES=		python php
 USE_PYTHON=	distutils autoplist
+FLAVORS=	py27
 USE_PHP=	bcmath curl hash mcrypt simplexml
 USE_GITHUB=	yes
 GH_ACCOUNT=	aajanki
