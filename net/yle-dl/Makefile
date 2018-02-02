@@ -4,7 +4,7 @@
 
 PORTNAME=	yle-dl
 PORTVERSION=	2.30
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -20,8 +20,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycrypto>=0:security/py-pycrypto \
 		${PYTHON_PKGNAMEPREFIX}future>=0:devel/py-future
 
 USES=		python php
-USE_PYTHON=	distutils autoplist
-FLAVORS=	py27
+USE_PYTHON=	distutils autoplist noflavors
 USE_PHP=	bcmath curl hash mcrypt simplexml
 USE_GITHUB=	yes
 GH_ACCOUNT=	aajanki
