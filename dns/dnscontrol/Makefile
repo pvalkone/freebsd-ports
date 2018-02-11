@@ -12,12 +12,12 @@ COMMENT=	Synchronize your DNS to multiple providers from a simple DSL
 
 LICENSE=	MIT
 
+USES=		go
+GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	StackExchange
 GH_TAGNAME=	e563c536
-
-USES=		go
-GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
 
 PLIST_FILES=	bin/dnscontrol \
 		"@sample etc/dnsconfig.js.sample" \
