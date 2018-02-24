@@ -66,11 +66,14 @@ RIPGREP_OUTDIR=	${WRKDIR}/cargo-out
 CARGO_ENV=	RIPGREP_OUTDIR=${RIPGREP_OUTDIR}
 
 PLIST_FILES=	bin/rg \
-		man/man1/rg.1.gz
+		man/man1/rg.1.gz \
+		etc/bash_completion.d/rg.bash \
+		share/fish/completions/rg.fish \
+		share/zsh/site-functions/_rg
+
 PORTDOCS=	CHANGELOG.md FAQ.md GUIDE.md
 
-OPTIONS_DEFINE=	BASH DOCS FISH SIMD ZSH
-OPTIONS_DEFAULT=BASH FISH ZSH
+OPTIONS_DEFINE=	DOCS SIMD
 
 OPTIONS_DEFINE_amd64=	AVX
 OPTIONS_DEFINE_i386=	AVX
@@ -83,10 +86,6 @@ AVX_DESC=	${SSE_DESC:S/SSE/AVX/}
 
 AVX_VARS=	CARGO_FEATURES+=avx-accel RUSTFLAGS+="-C target-feature=+avx"
 AVX_IMPLIES=	SIMD
-
-BASH_PLIST_FILES=	etc/bash_completion.d/rg.bash
-FISH_PLIST_FILES=	share/fish/completions/rg.fish
-ZSH_PLIST_FILES=	share/zsh/site-functions/_rg
 
 # simd crate uses cfg_target_feature which isn't stable yet, so unlock
 # unstable features similar to how lang/rust bootstraps. www/firefox
@@ -101,24 +100,18 @@ post-patch:
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/rg
 	${INSTALL_MAN} ${RIPGREP_OUTDIR}/rg.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
-
-post-install-BASH-on:
 	@${MKDIR} ${STAGEDIR}${PREFIX}/etc/bash_completion.d/
 	${INSTALL_DATA} ${RIPGREP_OUTDIR}/rg.bash \
 		${STAGEDIR}${PREFIX}/etc/bash_completion.d/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/fish/completions/
+	${INSTALL_DATA} ${RIPGREP_OUTDIR}/rg.fish \
+		${STAGEDIR}${PREFIX}/share/fish/completions/
+	@${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions/
+	${INSTALL_DATA} ${WRKSRC}/complete/_rg \
+		${STAGEDIR}${PREFIX}/share/zsh/site-functions/
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
-
-post-install-FISH-on:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/fish/completions/
-	${INSTALL_DATA} ${RIPGREP_OUTDIR}/rg.fish \
-		${STAGEDIR}${PREFIX}/share/fish/completions/
-
-post-install-ZSH-on:
-	@${MKDIR} ${STAGEDIR}${PREFIX}/share/zsh/site-functions/
-	${INSTALL_DATA} ${WRKSRC}/complete/_rg \
-		${STAGEDIR}${PREFIX}/share/zsh/site-functions/
 
 .include <bsd.port.mk>
