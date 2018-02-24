@@ -27,7 +27,7 @@ CARGO_CRATES=	aho-corasick-0.6.4 \
 		bitflags-1.0.1 \
 		bytecount-0.3.1 \
 		cfg-if-0.1.2 \
-		clap-2.29.4 \
+		clap-2.30.0 \
 		crossbeam-0.3.2 \
 		encoding_rs-0.7.2 \
 		fnv-1.0.6 \
@@ -57,7 +57,7 @@ CARGO_CRATES=	aho-corasick-0.6.4 \
 		unreachable-1.0.0 \
 		utf8-ranges-1.0.0 \
 		void-1.0.2 \
-		walkdir-2.1.3 \
+		walkdir-2.1.4 \
 		winapi-0.3.4 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
 		winapi-x86_64-pc-windows-gnu-0.4.0
