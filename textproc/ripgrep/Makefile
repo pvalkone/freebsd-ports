@@ -4,7 +4,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	ripgrep
-DISTVERSION=	0.8.0
+DISTVERSION=	0.8.1
 CATEGORIES=	textproc
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -86,6 +86,7 @@ AVX_IMPLIES=	SIMD
 
 BASH_PLIST_FILES=	etc/bash_completion.d/rg.bash
 FISH_PLIST_FILES=	share/fish/completions/rg.fish
+ZSH_PLIST_FILES=	share/zsh/site-functions/_rg
 
 # simd crate uses cfg_target_feature which isn't stable yet, so unlock
 # unstable features similar to how lang/rust bootstraps. www/firefox
@@ -93,8 +94,6 @@ FISH_PLIST_FILES=	share/fish/completions/rg.fish
 SIMD_MAKE_ENV=	RUSTC_BOOTSTRAP=1
 SIMD_VARS=	CARGO_FEATURES+=simd-accel ${SIMD_VARS_${ARCH}}
 SIMD_VARS_i386=	RUSTFLAGS+="-C target-feature=+sse2"
-
-ZSH_PLIST_FILES=	share/zsh/site-functions/_rg
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|OUT_DIR|RIPGREP_OUTDIR|' ${WRKSRC}/build.rs

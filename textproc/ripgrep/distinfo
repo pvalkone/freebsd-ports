@@ -1,4 +1,4 @@
-TIMESTAMP = 1518468285
+TIMESTAMP = 1519469648
 SHA256 (rust/crates/aho-corasick-0.6.4.tar.gz) = d6531d44de723825aa81398a6415283229725a00fa30713812ab9323faa82fc4
 SIZE (rust/crates/aho-corasick-0.6.4.tar.gz) = 25443
 SHA256 (rust/crates/ansi_term-0.10.2.tar.gz) = 6b3568b48b7cefa6b8ce125f9bb4989e52fbcc29ebea88df04cc7c5f12f70455
@@ -79,5 +79,5 @@ SHA256 (rust/crates/winapi-i686-pc-windows-gnu-0.4.0.tar.gz) = ac3b87c63620426dd
 SIZE (rust/crates/winapi-i686-pc-windows-gnu-0.4.0.tar.gz) = 2918815
 SHA256 (rust/crates/winapi-x86_64-pc-windows-gnu-0.4.0.tar.gz) = 712e227841d057c1ee1cd2fb22fa7e5a5461ae8e48fa2ca79ec42cfc1931183f
 SIZE (rust/crates/winapi-x86_64-pc-windows-gnu-0.4.0.tar.gz) = 2947998
-SHA256 (BurntSushi-ripgrep-0.8.0_GH0.tar.gz) = c26391013522dfce3d870aec911fc602425e2eb385b75802b5b44440f4c32e24
-SIZE (BurntSushi-ripgrep-0.8.0_GH0.tar.gz) = 518238
+SHA256 (BurntSushi-ripgrep-0.8.1_GH0.tar.gz) = 7035379fce0c1e32552e8ee528b92c3d01b8d3935ea31d26c51a73287be74bb3
+SIZE (BurntSushi-ripgrep-0.8.1_GH0.tar.gz) = 521088
