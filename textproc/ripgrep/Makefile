@@ -1,5 +1,5 @@
 # Created by: Petteri Valkonen <petteri.valkonen@iki.fi>
-# $FreeBSD: head/textproc/ripgrep/Makefile 461765 2018-02-14 07:58:11Z tobik $
+# $FreeBSD: head/textproc/ripgrep/Makefile 462870 2018-02-24 22:26:15Z tobik $
 
 # vim: ts=8 noet
 
@@ -66,8 +66,8 @@ RIPGREP_OUTDIR=	${WRKDIR}/cargo-out
 CARGO_ENV=	RIPGREP_OUTDIR=${RIPGREP_OUTDIR}
 
 PLIST_FILES=	bin/rg \
-		man/man1/rg.1.gz \
 		etc/bash_completion.d/rg.bash \
+		man/man1/rg.1.gz \
 		share/fish/completions/rg.fish \
 		share/zsh/site-functions/_rg
 
