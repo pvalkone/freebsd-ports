@@ -13,10 +13,11 @@ LICENSE=		GPLv2
 
 BUILD_DEPENDS=		jam:devel/jam \
 			pkg-config:devel/pkgconf
-
 LIB_DEPENDS=		libfontconfig.so:x11-fonts/fontconfig \
 			libfreetype.so:print/freetype2 \
 			libpng16.so:graphics/png
+
+USES=			gettext-runtime jpeg
 
 USE_GITHUB=		yes
 GH_ACCOUNT=		garglk
@@ -24,7 +25,6 @@ GH_PROJECT=		garglk
 GH_TAGNAME=		b5d458b
 
 USE_GNOME=		gtk20 atk glib20 pango cairo gdkpixbuf2
-USES=			gettext-runtime jpeg
 
 OPTIONS_DEFINE=		SDL ADVSYS AGILITY ALAN2 ALAN3 BOCFEL FROTZ \
 			GEAS GIT GLULXE HUGO JACL LEVEL9 MAGNETIC \
