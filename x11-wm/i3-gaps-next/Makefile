@@ -52,8 +52,8 @@ BUILDDIR=	  ${WRKSRC}/build
 INSTALL_TARGET=	  install-strip
 
 post-patch:
-	${ECHO_CMD} "${RELEASE_VERSION}" > ${WRKSRC}/VERSION
-	${ECHO_CMD} "${RELEASE_VERSION} (${RELEASE_DATE}, branch \"${RELEASE_BRANCH}\")" > ${WRKSRC}/I3_VERSION
+	@${ECHO_CMD} "${RELEASE_VERSION}" > ${WRKSRC}/VERSION
+	@${ECHO_CMD} "${RELEASE_VERSION} (${RELEASE_DATE}, branch \"${RELEASE_BRANCH}\")" > ${WRKSRC}/I3_VERSION
 
 do-configure:
 	cd ${WRKSRC} && \
