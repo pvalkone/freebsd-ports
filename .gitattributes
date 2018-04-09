@@ -1,1 +1,3 @@
 *.h linguist-language=C
+**/files/*.in linguist-language=Diff
+patch-* linguist-language=Diff
