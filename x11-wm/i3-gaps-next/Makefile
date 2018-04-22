@@ -11,11 +11,8 @@ COMMENT=		Fork of the i3wm tiling window manager (next branch)
 
 LICENSE=		BSD3CLAUSE
 
-CONFLICTS_INSTALL=	i3-*
-
 BUILD_DEPENDS=		asciidoc:textproc/asciidoc \
 			xmlto:textproc/xmlto
-
 LIB_DEPENDS=		libstartup-notification-1.so:x11/startup-notification \
 			libxcb-util.so:x11/xcb-util \
 			libxcb-keysyms.so:x11/xcb-util-keysyms \
@@ -31,6 +28,8 @@ LIB_DEPENDS=		libstartup-notification-1.so:x11/startup-notification \
 			libiconv.so:converters/libiconv \
 			libgobject-2.0.so:devel/glib20 \
 			libintl.so:devel/gettext-runtime
+
+CONFLICTS_INSTALL=	i3-*
 
 CFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib -liconv
