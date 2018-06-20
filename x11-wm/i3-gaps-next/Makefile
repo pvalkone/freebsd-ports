@@ -49,6 +49,7 @@ RELEASE_BRANCH=		`${SED} -n 's/export RELEASE_BRANCH="\(.*\)"/\1/p' ${WRKSRC}/re
 
 BUILDDIR=		${WRKSRC}/build
 INSTALL_TARGET=		install-strip
+CONFIGURE_ARGS+=	--disable-dependency-tracking
 
 post-patch:
 	@${ECHO_CMD} "${RELEASE_VERSION}" > ${WRKSRC}/VERSION
