@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	yle-dl
-PORTVERSION=	2.32
+PORTVERSION=	2.33
 PORTREVISION=	1
 CATEGORIES=	net
 
