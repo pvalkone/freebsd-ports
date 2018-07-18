@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	yle-dl
-PORTVERSION=	2.33
+PORTVERSION=	2.34
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -16,7 +16,8 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycryptodomex>=0:security/py-pycryptodomex \
 		${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml \
 		${PYTHON_PKGNAMEPREFIX}mini_amf>=0:www/py-mini_amf \
 		${PYTHON_PKGNAMEPREFIX}defusedxml>=0:devel/py-defusedxml \
-		${PYTHON_PKGNAMEPREFIX}future>=0:devel/py-future
+		${PYTHON_PKGNAMEPREFIX}future>=0:devel/py-future \
+		${PYTHON_PKGNAMEPREFIX}attrs>=:devel/py-attrs
 
 USES=		python php
 USE_PYTHON=	distutils autoplist noflavors
