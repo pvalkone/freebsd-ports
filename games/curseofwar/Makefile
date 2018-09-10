@@ -15,6 +15,7 @@ LICENSE=		GPLv3
 USE_GITHUB=		yes
 GH_ACCOUNT=		a-nikolaev
 USES=			cmake
+USE_CXXSTD=		gnu++98
 USE_SDL=		sdl
 
 post-patch:
