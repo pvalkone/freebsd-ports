@@ -5,4 +5,4 @@ man/man6/curseofwar.6.gz
 %%DATADIR%%/images/tileset.bmp
 %%DATADIR%%/images/type.bmp
 %%DATADIR%%/images/ui.bmp
-%%PORTDOCS%%%%DOCSDIR%%/changelog.gz
+%%DOCSDIR%%/changelog.gz
