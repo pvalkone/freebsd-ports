@@ -3,9 +3,8 @@
 # vim: ts=8 noet
 
 PORTNAME=		kepubify
-PORTVERSION=		2.2.0
+PORTVERSION=		2.3.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=		1
 CATEGORIES=		textproc
 
 MAINTAINER=	petteri.valkonen@iki.fi
