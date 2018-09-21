@@ -13,12 +13,13 @@ COMMENT=	ePub to kepub converter
 LICENSE=	MIT
 
 USES=		go
-GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
-GO_TARGET=	${GO_PKGNAME} \
-		${GO_PKGNAME}/seriesmeta
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	geek1011
+
+GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
+GO_TARGET=	${GO_PKGNAME} \
+		${GO_PKGNAME}/seriesmeta
 
 PLIST_FILES=	bin/kepubify \
 		bin/seriesmeta
