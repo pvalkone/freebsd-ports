@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=		i3-gaps-next
-PORTVERSION=		4.15.0.1.20180906
+PORTVERSION=		4.15.0.1.20180920
 CATEGORIES=		x11-wm
 
 MAINTAINER=		petteri.valkonen@iki.fi
@@ -28,6 +28,7 @@ LIB_DEPENDS=		libstartup-notification-1.so:x11/startup-notification \
 			libiconv.so:converters/libiconv \
 			libgobject-2.0.so:devel/glib20 \
 			libintl.so:devel/gettext-runtime
+RUN_DEPENDS=		glib>=2.52.0:devel/glib20
 
 CONFLICTS_INSTALL=	i3-*
 
@@ -41,7 +42,7 @@ USE_PERL5=		build
 USE_GITHUB=		yes
 GH_ACCOUNT=		Airblader
 GH_PROJECT=		i3
-GH_TAGNAME=		3595bda
+GH_TAGNAME=		52240a0
 
 RELEASE_VERSION=	${PORTVERSION}
 RELEASE_DATE=		`${ECHO_CMD} "${PORTVERSION}" | ${SED} -n 's/.*\.\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)$$/\1-\2-\3/p'`
