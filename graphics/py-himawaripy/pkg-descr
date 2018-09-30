@@ -1,5 +1,5 @@
-Himawaripy is a Python 3 script that fetches near-realtime (10 minutes
-delayed) picture of Earth as its taken by Himawari 8 and sets it as
-your desktop background.
+Himawaripy is a Python 3 script that fetches a near-realtime picture
+of Earth as it's taken by Himawari 8 (a Japanese weather satellite),
+and sets it as your desktop background.
 
 WWW: http://labs.boramalper.org/himawaripy

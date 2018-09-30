@@ -9,7 +9,7 @@ CATEGORIES=	graphics python
 PKGNAMEPREFIX=	${PYTHON_PKGNAMEPREFIX}
 
 MAINTAINER=	petteri.valkonen@iki.fi
-COMMENT=	Set near-realtime picture of Earth as your desktop background
+COMMENT=	Set a near-realtime picture of Earth as your desktop background
 
 LICENSE=	MIT
 
