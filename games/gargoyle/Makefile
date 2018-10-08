@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=		gargoyle
-PORTVERSION=		2011.1.20180912
+PORTVERSION=		2011.1.20181006
 CATEGORIES=		games
 
 MAINTAINER=		petteri.valkonen@iki.fi
@@ -22,7 +22,7 @@ USES=			gettext-runtime jpeg
 USE_GITHUB=		yes
 GH_ACCOUNT=		garglk
 GH_PROJECT=		garglk
-GH_TAGNAME=		e355ecb
+GH_TAGNAME=		d033915
 
 USE_GNOME=		gtk20 atk glib20 pango cairo gdkpixbuf2
 
