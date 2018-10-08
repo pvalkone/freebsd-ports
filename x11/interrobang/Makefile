@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	interrobang
-PORTVERSION=	0.2.20161224
+PORTVERSION=	0.2.20180816
 CATEGORIES=	x11
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -17,9 +17,11 @@ PLIST_FILES=	bin/interrobang \
 		"@sample %%ETCDIR%%/config.sample"
 PORTDOCS=	COPYING README.md
 
+OPTIONS_DEFINE=	DOCS
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	TrilbyWhite
-GH_TAGNAME=	321cd9d
+GH_TAGNAME=	39d2716
 USE_GCC=	yes
 USE_XORG=	x11
 
