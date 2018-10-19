@@ -32,15 +32,15 @@ BINARY_ALIAS=		tic=true
 PORTDATA=		config.def.h st.info
 PORTDOCS=		FAQ LEGACY README TODO
 
-OPTIONS_DEFINE=				DOCS
-OPTIONS_RADIO=				BASE16
-OPTIONS_RADIO_BASE16=			BASE16_3024 BASE16_DEFAULT_DARK BASE16_OCEAN
-BASE16_3024_DESC=			3024 colour theme
-BASE16_3024_EXTRA_PATCHES=		${PATCHDIR}/extra-base16-3024-patch-config.def.h
-BASE16_DEFAULT_DARK_DESC=		Default dark colour theme
-BASE16_DEFAULT_DARK_EXTRA_PATCHES=	${PATCHDIR}/extra-base16-default-dark-patch-config.def.h
-BASE16_OCEAN_DESC=			Ocean colour theme
-BASE16_OCEAN_EXTRA_PATCHES=		${PATCHDIR}/extra-base16-ocean-patch-config.def.h
+OPTIONS_DEFINE=			DOCS
+OPTIONS_RADIO=			BASE16
+OPTIONS_RADIO_BASE16=		BASE16_3024 BASE16_DEFAULT_DARK BASE16_OCEAN
+BASE16_3024_DESC=		3024 colour theme
+BASE16_3024_EXTRA_PATCHES=	${PATCHDIR}/extra-base16-3024-patch-config.def.h
+BASE16_DEFAULT_DARK_DESC=	Default dark colour theme
+BASE16_DEFAULT_DARK_EXTRA_PATCHES=${PATCHDIR}/extra-base16-default-dark-patch-config.def.h
+BASE16_OCEAN_DESC=		Ocean colour theme
+BASE16_OCEAN_EXTRA_PATCHES=	${PATCHDIR}/extra-base16-ocean-patch-config.def.h
 
 pre-everything::
 	@${ECHO_MSG} "You can build st with your own config.h using the ST_CONF knob:"
