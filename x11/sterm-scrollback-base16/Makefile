@@ -1,61 +1,46 @@
 # $FreeBSD$
 
-# vim: ts=8 noet
+PORTNAME=		sterm-scrollback-base16
+DISTVERSION=		0.8.1
+CATEGORIES=		x11
+MASTER_SITES=		http://dl.suckless.org/st/
+DISTNAME=		st-${PORTVERSION}
 
-PORTNAME=			sterm-scrollback-base16
-PORTVERSION=			0.7
-PORTREVISION=			3
-CATEGORIES=			x11
-MASTER_SITES=			http://dl.suckless.org/st/
-DISTNAME=			st-${PORTVERSION}
+PATCH_SITES=		http://st.suckless.org/patches/
+PATCHFILES=		scrollback/st-scrollback-0.8.diff
+PATCH_DIST_STRIP=	-p1
 
-PATCH_SITES=			http://st.suckless.org/patches/
-PATCHFILES=			scrollback/st-scrollback-${PORTVERSION}.diff \
-				clipboard/st-clipboard-${PORTVERSION}.diff
-PATCH_DIST_STRIP=		-p1
+MAINTAINER=		petteri.valkonen@iki.fi
+COMMENT=		Simple X terminal
 
-MAINTAINER=			petteri.valkonen@iki.fi
-COMMENT=			Simple X terminal
+LICENSE=		MIT
+LICENSE_FILE=		${WRKSRC}/LICENSE
 
-LICENSE=			MITX
-LICENSE_NAME=			MIT/X Consortium License
-LICENSE_FILE=			${WRKSRC}/LICENSE
-LICENSE_PERMS=			dist-mirror dist-sell pkg-mirror pkg-sell auto-accept
+LIB_DEPENDS=		libfontconfig.so:x11-fonts/fontconfig \
+			libfreetype.so:print/freetype2
 
-LIB_DEPENDS=			libfontconfig.so:x11-fonts/fontconfig \
-				libfreetype.so:print/freetype2
+CONFLICTS_INSTALL=	sterm
 
-USES=				pkgconfig
-USE_XORG=			x11 xext xft
+USES=			pkgconfig
+USE_XORG=		x11 xext xft
 
-PLIST_FILES=			bin/st man/man1/st.1.gz
+PLIST_FILES=		bin/st man/man1/st.1.gz
 
-PORTDOCS=			README
+# This way we avoid running tic on st.info which does not work as expected.
+BINARY_ALIAS=		tic=true
 
-OPTIONS_DEFINE=			DOCS BASE16_3024_DARK BASE16_BRIGHT_DARK BASE16_DEFAULT_DARK BASE16_MATERIA_DARK BASE16_OCEAN_DARK
-OPTIONS_DEFAULT=		BASE16_DEFAULT_DARK
+PORTDATA=		config.def.h st.info
+PORTDOCS=		FAQ LEGACY README TODO
 
-BASE16_3024_DARK_DESC=		Use Base16 3024 dark 256 colour scheme
-BASE16_3024_DARK_VARS=		ST_CONF=${PATCHDIR}/config-base16-3024-256-dark.h
-BASE16_3024_DARK_PREVENTS=	BASE16_BRIGHT_DARK BASE16_DEFAULT_DARK BASE16_MATERIA_DARK BASE16_OCEAN_DARK
-
-BASE16_BRIGHT_DARK_DESC=	Use Base16 bright dark 256 colour scheme
-BASE16_BRIGHT_DARK_VARS=	ST_CONF=${PATCHDIR}/config-base16-bright-256-dark.h
-BASE16_BRIGHT_DARK_PREVENTS=	BASE16_3024_DARK BASE16_DEFAULT_DARK BASE16_MATERIA_DARK BASE16_OCEAN_DARK
-
-BASE16_DEFAULT_DARK_DESC=       Use Base16 default dark 256 colour scheme
-BASE16_DEFAULT_DARK_VARS=       ST_CONF=${PATCHDIR}/config-base16-default-256-dark.h
-BASE16_DEFAULT_DARK_PREVENTS=   BASE16_3024_DARK BASE16_BRIGHT BASE16_MATERIA_DARK BASE16_OCEAN_DARK
-
-BASE16_MATERIA_DARK_DESC=       Use Base16 materia dark 256 colour scheme
-BASE16_MATERIA_DARK_VARS=       ST_CONF=${PATCHDIR}/config-base16-materia-256-dark.h
-BASE16_MATERIA_DARK_PREVENTS=   BASE16_3024_DARK BASE16_BRIGHT BASE16_DEFAULT BASE16_OCEAN_DARK
-
-BASE16_OCEAN_DARK_DESC=		Use Base16 ocean dark 256 colour scheme
-BASE16_OCEAN_DARK_VARS=		ST_CONF=${PATCHDIR}/config-base16-ocean-256-dark.h
-BASE16_OCEAN_DARK_PREVENTS=	BASE16_3024_DARK BASE16_BRIGHT_DARK BASE16_DEFAULT_DARK BASE16_MATERIA_DARK
-
-.include <bsd.port.options.mk>
+OPTIONS_DEFINE=				DOCS
+OPTIONS_RADIO=				BASE16
+OPTIONS_RADIO_BASE16=			BASE16_3024 BASE16_DEFAULT_DARK BASE16_OCEAN
+BASE16_3024_DESC=			3024 colour theme
+BASE16_3024_EXTRA_PATCHES=		${PATCHDIR}/extra-base16-3024-patch-config.def.h
+BASE16_DEFAULT_DARK_DESC=		Default dark colour theme
+BASE16_DEFAULT_DARK_EXTRA_PATCHES=	${PATCHDIR}/extra-base16-default-dark-patch-config.def.h
+BASE16_OCEAN_DESC=			Ocean colour theme
+BASE16_OCEAN_EXTRA_PATCHES=		${PATCHDIR}/extra-base16-ocean-patch-config.def.h
 
 pre-everything::
 	@${ECHO_MSG} "You can build st with your own config.h using the ST_CONF knob:"
@@ -64,23 +49,23 @@ pre-everything::
 post-patch:
 .if defined(ST_CONF)
 	@${ECHO_MSG} "creating config.h from ${ST_CONF}"
-	@${CP} ${ST_CONF} ${WRKSRC}/config.h
+	@${LN} -sf ${ST_CONF} ${WRKSRC}/config.h
 .endif
 	@${REINPLACE_CMD} -e 's|^VERSION = .*|VERSION = ${PORTVERSION}|' \
 		-e 's|^PREFIX = .*|PREFIX = ${PREFIX}|' \
-		-e 's|^LOCALBASE = .*|LOCALBASE = ${LOCALBASE}|' \
 		-e "s|^MANPREFIX = .*|MANPREFIX = ${MANPREFIX}/man|" \
 		-e "s|^X11INC = .*|X11INC = ${LOCALBASE}/include|" \
 		-e "s|^X11LIB = .*|X11LIB = ${LOCALBASE}/lib|" \
+		-e "s|^CPPFLAGS =|CPPFLAGS +=|" \
 		${WRKSRC}/config.mk
 
 post-install:
 	@${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/st
+	@${MKDIR} ${STAGEDIR}${DATADIR}
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDATA} ${STAGEDIR}${DATADIR}
 
 post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
-.for doc in ${PORTDOCS}
-	${INSTALL_DATA} ${WRKSRC}/${doc} ${STAGEDIR}${DOCSDIR}
-.endfor
+	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
 .include <bsd.port.mk>
