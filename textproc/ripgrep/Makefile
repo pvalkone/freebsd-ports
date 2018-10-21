@@ -1,5 +1,5 @@
 # Created by: Petteri Valkonen <petteri.valkonen@iki.fi>
-# $FreeBSD: head/textproc/ripgrep/Makefile 481921 2018-10-12 19:01:02Z jbeich $
+# $FreeBSD: head/textproc/ripgrep/Makefile 482607 2018-10-20 17:42:32Z tobik $
 
 # vim: ts=8 noet
 
