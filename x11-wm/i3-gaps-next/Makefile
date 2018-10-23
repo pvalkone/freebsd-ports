@@ -4,6 +4,7 @@
 
 PORTNAME=		i3-gaps-next
 PORTVERSION=		4.15.0.1.20180928
+PORTREVISION=		1
 CATEGORIES=		x11-wm
 
 MAINTAINER=		petteri.valkonen@iki.fi
@@ -35,7 +36,6 @@ CONFLICTS_INSTALL=	i3-*
 CFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib -liconv
 USES=			gmake pkgconfig autoreconf perl5
-USE_GCC=		yes
 GNU_CONFIGURE=		yes
 USE_XORG=		xcb
 USE_PERL5=		build
