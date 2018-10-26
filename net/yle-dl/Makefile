@@ -22,8 +22,10 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycryptodomex>=0:security/py-pycryptodomex \
 USES=		python php
 USE_PYTHON=	distutils autoplist noflavors
 USE_PHP=	bcmath curl hash mcrypt simplexml
+
 USE_GITHUB=	yes
 GH_ACCOUNT=	aajanki
+
 NO_ARCH=	yes
 
 PLIST_FILES=	"@sample etc/yledl.conf.sample"
@@ -32,7 +34,7 @@ OPTIONS_DEFINE=		MUXMP4 RTMPDUMP
 MUXMP4_DESC=		Install post-processing script for muxing a video into a mp4
 RTMPDUMP_DESC=		Download Areena audio streams using RTMPDump
 OPTIONS_DEFAULT=	MUXMP4
-MUXMP4_PLIST_FILES=	%%DATADIR%%/muxmp4
+MUXMP4_PLIST_FILES=	${DATADIR}/muxmp4
 RTMPDUMP_RUN_DEPENDS=	rtmpdump>=2.4:multimedia/rtmpdump
 
 post-install:
