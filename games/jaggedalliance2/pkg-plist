@@ -1,6 +1,7 @@
 bin/ja2
 man/man6/ja2.6.gz
 share/applications/ja2-stracciatella.desktop
+share/icons/hicolor/scalable/apps/ja2-stracciatella.svg
 %%DATADIR%%/_unittests/datatypes/doubles.bin
 %%DATADIR%%/_unittests/datatypes/floats.bin
 %%DATADIR%%/_unittests/find-files/file-without-extension

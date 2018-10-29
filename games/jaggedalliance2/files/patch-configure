@@ -1,9 +1,9 @@
---- configure.orig	2014-05-09 20:51:45 UTC
+--- configure.orig	2016-09-11 10:13:27 UTC
 +++ configure
-@@ -47,7 +47,7 @@ fi
- # writing Makefile.config
+@@ -48,7 +48,7 @@ fi
  echo "# configuration options"                                  >Makefile.config
  echo "BINARY_DIR               := $PREFIX/bin"                  >>Makefile.config
+ echo "SHARED_DIR               := $PREFIX/share"                >>Makefile.config
 -echo "MANPAGE_DIR              := $PREFIX/share/man/man6"       >>Makefile.config
 +echo "MANPAGE_DIR              := $PREFIX/man/man6"             >>Makefile.config
  echo "FULL_PATH_EXTRA_DATA_DIR := $PREFIX/share/ja2"            >>Makefile.config

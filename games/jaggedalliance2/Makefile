@@ -4,9 +4,8 @@
 # vim: ts=8 noet
 
 PORTNAME=		ja2
-PORTVERSION=		0.14.01
+PORTVERSION=		0.15.1
 DISTVERSIONPREFIX=	v
-PORTREVISION=		2
 CATEGORIES=		games
 
 MAINTAINER=	petteri.valkonen@iki.fi
