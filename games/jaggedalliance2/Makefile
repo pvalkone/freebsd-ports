@@ -6,7 +6,7 @@
 PORTNAME=		ja2
 PORTVERSION=		0.14.01
 DISTVERSIONPREFIX=	v
-PORTREVISION=		1
+PORTREVISION=		2
 CATEGORIES=		games
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -34,7 +34,7 @@ MAKE_ENV=	Q=
 SUB_FILES=	pkg-message
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/some/place/where/the/data/is|${DATADIR}|' \
+	@${REINPLACE_CMD} -e 's|/some/place/where/the/data/is|/opt/${PORTNAME}|' \
 		${WRKSRC}/sgp/SGP.cc
 
 post-install:
