@@ -31,10 +31,12 @@ GH_PROJECT=	ja2-stracciatella
 
 MAKE_ENV=	Q=
 
+GAMEDATADIR=	/opt/ja2
 SUB_FILES=	pkg-message
+SUB_LIST=	GAMEDATADIR=${GAMEDATADIR}
 
 post-patch:
-	@${REINPLACE_CMD} -e 's|/some/place/where/the/data/is|/opt/${PORTNAME}|' \
+	@${REINPLACE_CMD} -e 's|/some/place/where/the/data/is|${GAMEDATADIR}|' \
 		${WRKSRC}/sgp/SGP.cc
 
 post-install:
