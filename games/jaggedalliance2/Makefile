@@ -18,7 +18,7 @@ ONLY_FOR_ARCHS_REASON=	Needs a little endian environment
 
 USES=		gmake tar:bzip2
 
-NO_CDROM=	License only permits non-commerical use
+NO_CDROM=	License only permits non-commercial use
 
 HAS_CONFIGURE=	yes
 CONFIGURE_ARGS=	--prefix=${PREFIX}
