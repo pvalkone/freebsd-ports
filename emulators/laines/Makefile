@@ -12,18 +12,19 @@ COMMENT=	Cycle-accurate NES emulator in ~1000 lines of code
 
 LICENSE=	BSD2CLAUSE
 
+USES=		scons
+
+USE_SDL+=	sdl2 ttf2 image2
+
 PLIST_FILES=	bin/laines \
-		%%DATADIR%%/font.ttf \
-		%%DATADIR%%/init.png
+		${DATADIR}/font.ttf \
+		${DATADIR}/init.png
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	AndreaOrru
 GH_PROJECT=	LaiNES
 GH_TAGNAME=	5151a69
 GH_TUPLE=	brofield:simpleini:03e27b2:simpleini
-
-USES=		scons
-USE_SDL+=	sdl2 ttf2 image2
 
 post-patch:
 .for i in SConstruct src/gui.cpp
