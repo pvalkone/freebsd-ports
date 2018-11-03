@@ -30,11 +30,12 @@ LIB_DEPENDS=		libstartup-notification-1.so:x11/startup-notification \
 			libintl.so:devel/gettext-runtime
 RUN_DEPENDS=		glib>=2.52.0:devel/glib20
 
+USES=			gmake pkgconfig autoreconf perl5
+
 CONFLICTS_INSTALL=	i3-*
 
 CFLAGS+=		-I${LOCALBASE}/include
 LDFLAGS+=		-L${LOCALBASE}/lib -liconv
-USES=			gmake pkgconfig autoreconf perl5
 GNU_CONFIGURE=		yes
 USE_XORG=		xcb
 USE_PERL5=		build
