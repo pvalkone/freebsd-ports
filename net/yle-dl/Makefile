@@ -4,7 +4,7 @@
 
 PORTNAME=	yle-dl
 PORTVERSION=	20181103
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -18,7 +18,9 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycryptodomex>=0:security/py-pycryptodomex \
 		${PYTHON_PKGNAMEPREFIX}mini_amf>=0:www/py-mini_amf \
 		${PYTHON_PKGNAMEPREFIX}defusedxml>=0:devel/py-defusedxml \
 		${PYTHON_PKGNAMEPREFIX}future>=0:devel/py-future \
-		${PYTHON_PKGNAMEPREFIX}attrs>=:devel/py-attrs
+		${PYTHON_PKGNAMEPREFIX}attrs>=:devel/py-attrs \
+		ffmpeg:multimedia/ffmpeg \
+		wget:ftp/wget
 
 USES=		python php
 USE_PYTHON=	distutils autoplist noflavors
