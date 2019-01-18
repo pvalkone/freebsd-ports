@@ -3,11 +3,10 @@
 # vim: ts=8 noet
 
 PORTNAME=	blastem
-PORTVERSION=	0.5.1
-PORTREVISION=	1
+PORTVERSION=	0.6.1
 CATEGORIES=	emulators
 MASTER_SITES=	https://www.retrodev.com/repos/blastem/archive/
-DISTNAME=	3d48cb0c28be
+DISTNAME=	357b4951d9b2
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Fast and accurate Genesis/Megadrive emulator
