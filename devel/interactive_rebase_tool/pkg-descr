@@ -1,0 +1,4 @@
+Native cross-platform full feature terminal based sequence editor for
+interactive rebase in Git 1.7.8+. Written in Rust using ncurses.
+
+WWW: https://gitrebasetool.mitmaro.ca/
