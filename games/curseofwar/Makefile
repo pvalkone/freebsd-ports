@@ -16,10 +16,10 @@ LICENSE=		GPLv3
 USES=			gmake
 USE_GITHUB=		yes
 GH_ACCOUNT=		a-nikolaev
+USE_GCC=		yes
 USE_CXXSTD=		gnu++98
 
 OPTIONS_DEFINE=		SDL
-OPTIONS_DEFAULT=
 SDL_USE=		SDL=yes
 SDL_MAKE_ENV=		SDL=yes
 SDL_PLIST_FILES=	bin/curseofwar-sdl \
