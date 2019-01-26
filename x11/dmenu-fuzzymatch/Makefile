@@ -8,7 +8,7 @@ CATEGORIES=		x11
 MASTER_SITES=		http://dl.suckless.org/tools/
 DISTNAME=		dmenu-${PORTVERSION}
 
-PATCH_SITES=		http://tools.suckless.org/dmenu/patches/
+PATCH_SITES=		https://tools.suckless.org/dmenu/patches/fuzzymatch/
 PATCHFILES=		${PORTNAME}-${PORTVERSION}.diff
 PATCH_DIST_STRIP=	-p1
 
