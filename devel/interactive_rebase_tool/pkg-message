@@ -1,0 +1,3 @@
+To configure Git to use interactive-rebase-tool, run:
+
+git config --global sequence.editor interactive-rebase-tool
