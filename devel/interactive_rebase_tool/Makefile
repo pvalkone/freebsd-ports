@@ -1,7 +1,4 @@
-# Created by: Petteri Valkonen <petteri.valkonen@iki.fi>
-# $FreeBSD$
-
-# vim: ts=8 noet
+# $FreeBSD: head/devel/interactive_rebase_tool/Makefile 491639 2019-01-30 18:52:12Z swills $
 
 PORTNAME=	interactive_rebase_tool
 DISTVERSION=	0.7.0
