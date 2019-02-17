@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/interactive_rebase_tool/Makefile 491639 2019-01-30 18:52:12Z swills $
+# $FreeBSD: head/devel/interactive_rebase_tool/Makefile 492432 2019-02-08 12:23:26Z tobik $
 
 PORTNAME=	interactive_rebase_tool
 DISTVERSION=	0.7.0
@@ -9,7 +9,7 @@ COMMENT=	Improved sequence editor for Git
 
 LICENSE=	ISCL
 
-USES=		cargo ssl ncurses
+USES=		cargo ncurses
 USE_GITHUB=	yes
 GH_ACCOUNT=	MitMaro
 GH_PROJECT=	git-interactive-rebase-tool
