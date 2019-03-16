@@ -1,0 +1,4 @@
+Cross-platform ncurses Spotify client written in Rust, inspired by
+ncmpc and the likes. Requires a Spotify Premium account.
+
+WWW: https://github.com/hrkfdn/ncspot

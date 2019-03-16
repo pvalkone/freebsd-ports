@@ -1,0 +1,5 @@
+Before starting ncspot, create a configuration file at ~/.config/ncspot
+with the following content:
+
+username = "spotify_user"
+password = "spotify_password"
