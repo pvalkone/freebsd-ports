@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ncspot
-DISTVERSION=	0.1.0-20190314
+DISTVERSION=	0.1.0-20190317
 CATEGORIES=	multimedia
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -14,7 +14,7 @@ LIB_DEPENDS=	libportaudio.so:audio/portaudio
 USES=		cargo ncurses
 USE_GITHUB=	yes
 GH_ACCOUNT=	hrkfdn
-GH_TAGNAME=	3d385af
+GH_TAGNAME=	2d5fa1e
 GH_TUPLE=	librespot-org:librespot:daeeeaa122fc2d71edf11e562e23038db4210b39:librespot \
 		plietar:rust-tremor:5958cc302e78f535dad90e9665da981ddff4000a:tremor
 
@@ -57,7 +57,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		crossbeam-epoch-0.7.1 \
 		crossbeam-queue-0.1.2 \
 		crossbeam-utils-0.6.5 \
-		cursive-0.11.0 \
+		cursive-0.11.1 \
 		dbus-0.6.4 \
 		derive-error-chain-0.10.1 \
 		derive_builder-0.5.1 \
@@ -100,6 +100,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		get_if_addrs-sys-0.1.1 \
 		getopts-0.2.18 \
 		h2-0.1.17 \
+		hashbrown-0.1.8 \
 		http-0.1.16 \
 		httparse-1.3.3 \
 		humantime-1.2.0 \
