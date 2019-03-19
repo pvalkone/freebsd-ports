@@ -2,7 +2,7 @@
 
 PORTNAME=	ncspot
 DISTVERSION=	0.1.0-20190317
-CATEGORIES=	multimedia
+CATEGORIES=	audio
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Cross-platform ncurses Spotify client
