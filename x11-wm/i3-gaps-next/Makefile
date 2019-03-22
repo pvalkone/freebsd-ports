@@ -4,6 +4,7 @@
 
 PORTNAME=		i3-gaps-next
 PORTVERSION=		4.16.1.20190321
+PORTEPOCH=		1
 CATEGORIES=		x11-wm
 
 MAINTAINER=		petteri.valkonen@iki.fi
