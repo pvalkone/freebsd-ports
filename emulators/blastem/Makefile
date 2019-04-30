@@ -3,10 +3,10 @@
 # vim: ts=8 noet
 
 PORTNAME=	blastem
-PORTVERSION=	0.6.1
+PORTVERSION=	0.6.2
 CATEGORIES=	emulators
 MASTER_SITES=	https://www.retrodev.com/repos/blastem/archive/
-DISTNAME=	357b4951d9b2
+DISTNAME=	8aeac7bd9fa7
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Fast and accurate Genesis/Megadrive emulator
@@ -17,7 +17,7 @@ BUILD_DEPENDS=	xcf2png:graphics/xcftools \
 		vasmm68k_mot:devel/vasm \
 		${PYTHON_PKGNAMEPREFIX}pillow>0:graphics/py-pillow
 
-USES=		gl gmake pkgconfig python:2.7,build shebangfix
+USES=		gl gmake pkgconfig python:2.7,build sdl shebangfix
 
 PLIST_FILES=	bin/blastem \
 		${DATADIR}/rom.db \
@@ -28,7 +28,7 @@ PLIST_FILES=	bin/blastem \
 		"@sample ${ETCDIR}/blastem.cfg.sample"
 
 USE_GCC=	5+
-USE_SDL=	sdl sdl2
+USE_SDL=	sdl2
 USE_GL=		glew glu gl
 SHEBANG_FILES=	img2tiles.py
 
@@ -36,6 +36,7 @@ OPTIONS_DEFINE=	DOCS
 PORTDOCS=	README COPYING CHANGELOG
 WRKSRC=		${WRKDIR}/${PORTNAME}-${DISTNAME}
 ALL_TARGET=	blastem menu.bin
+MAKE_ENV+=	DATA_PATH=${DATADIR}
 
 post-patch:
 .for i in render_sdl.c util.c

@@ -1,4 +1,4 @@
---- net.c.orig	2019-01-19 08:39:36 UTC
+--- net.c.orig	2019-03-28 06:34:53 UTC
 +++ net.c
 @@ -2,6 +2,7 @@
  #include <ifaddrs.h>
