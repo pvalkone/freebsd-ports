@@ -13,6 +13,8 @@ COMMENT=		Real-time strategy game
 
 LICENSE=		GPLv3
 
+BUILD_DEPENDS=		gcc:lang/gcc
+
 USES=			gmake
 USE_GITHUB=		yes
 GH_ACCOUNT=		a-nikolaev
