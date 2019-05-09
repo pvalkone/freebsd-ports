@@ -4,6 +4,7 @@
 
 PORTNAME=	yle-dl
 PORTVERSION=	20190502
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -36,7 +37,6 @@ PLIST_FILES=	"@sample etc/yledl.conf.sample"
 OPTIONS_DEFINE=		MUXMP4 RTMPDUMP
 MUXMP4_DESC=		Install post-processing script for muxing a video into a mp4
 RTMPDUMP_DESC=		Download Areena audio streams using RTMPDump
-OPTIONS_DEFAULT=	MUXMP4
 MUXMP4_PLIST_FILES=	${DATADIR}/muxmp4
 RTMPDUMP_RUN_DEPENDS=	rtmpdump>=2.4:multimedia/rtmpdump
 
