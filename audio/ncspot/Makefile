@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ncspot
-DISTVERSION=	0.1.0-20190319
+DISTVERSION=	0.1.0-20190428
 CATEGORIES=	audio
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -9,147 +9,179 @@ COMMENT=	Cross-platform ncurses Spotify client
 
 LICENSE=	BSD2CLAUSE
 
-LIB_DEPENDS=	libportaudio.so:audio/portaudio
+LIB_DEPENDS=	libdbus-1.so:devel/dbus \
+		libasound.so:audio/alsa-lib
 
-USES=		cargo ncurses
+USES=		cargo ncurses ssl
 USE_GITHUB=	yes
+
 GH_ACCOUNT=	hrkfdn
-GH_TAGNAME=	cf48251
-GH_TUPLE=	librespot-org:librespot:daeeeaa122fc2d71edf11e562e23038db4210b39:librespot \
-		plietar:rust-tremor:5958cc302e78f535dad90e9665da981ddff4000a:tremor
+GH_TAGNAME=	f5e3016
+GH_TUPLE=	librespot-org:librespot:14721f4:librespot \
+		samrayleung:rspotify:8f8dc17:rspotify
 
 PLIST_FILES=	bin/ncspot
 
 CARGO_CRATES=	adler32-1.0.3 \
+		aes-0.3.2 \
+		aes-ctr-0.3.0 \
+		aes-soft-0.3.3 \
+		aesni-0.6.0 \
 		aho-corasick-0.6.10 \
+		aho-corasick-0.7.3 \
 		alsa-0.2.1 \
-		arc-swap-0.3.7 \
+		alsa-sys-0.1.2 \
+		ansi_term-0.11.0 \
+		approx-0.1.1 \
+		arc-swap-0.3.11 \
 		array-macro-1.0.3 \
 		arrayvec-0.4.10 \
 		atty-0.2.11 \
 		autocfg-0.1.2 \
-		backtrace-0.3.14 \
-		backtrace-0.3.3 \
+		backtrace-0.3.15 \
 		backtrace-sys-0.1.28 \
 		base64-0.10.1 \
-		base64-0.5.0 \
 		base64-0.5.2 \
-		base64-0.6.0 \
 		base64-0.9.3 \
+		bindgen-0.32.3 \
 		bit-set-0.4.0 \
 		bit-vec-0.4.4 \
 		bitflags-0.3.3 \
 		bitflags-0.7.0 \
+		bitflags-0.9.1 \
 		bitflags-1.0.4 \
+		block-buffer-0.7.3 \
+		block-cipher-trait-0.6.2 \
+		block-modes-0.2.0 \
+		block-padding-0.1.4 \
+		build_const-0.2.1 \
+		byte-tools-0.3.1 \
 		byteorder-0.5.3 \
 		byteorder-1.3.1 \
 		bytes-0.4.12 \
 		c_linked_list-1.1.1 \
-		cc-1.0.31 \
+		cc-1.0.36 \
+		cexpr-0.2.3 \
 		cfg-if-0.1.7 \
+		cgmath-0.14.1 \
 		chrono-0.4.6 \
+		clang-sys-0.21.2 \
+		clap-2.33.0 \
 		cloudabi-0.0.3 \
-		core-foundation-0.5.1 \
+		cookie-0.11.1 \
+		cookie_store-0.5.1 \
+		core-foundation-0.6.4 \
 		core-foundation-sys-0.5.1 \
+		core-foundation-sys-0.6.2 \
+		coreaudio-rs-0.9.1 \
+		coreaudio-sys-0.2.2 \
+		cpal-0.8.2 \
+		crc-1.8.1 \
 		crc32fast-1.2.0 \
 		crossbeam-channel-0.3.8 \
 		crossbeam-deque-0.7.1 \
 		crossbeam-epoch-0.7.1 \
 		crossbeam-queue-0.1.2 \
 		crossbeam-utils-0.6.5 \
-		cursive-0.11.1 \
+		crypto-mac-0.7.0 \
+		ctr-0.3.2 \
+		cursive-0.11.2 \
+		darling-0.8.6 \
+		darling_core-0.8.6 \
+		darling_macro-0.8.6 \
 		dbus-0.6.4 \
-		derive-error-chain-0.10.1 \
-		derive_builder-0.5.1 \
-		derive_builder_core-0.2.0 \
+		derive_builder-0.7.1 \
+		derive_builder_core-0.4.1 \
+		digest-0.8.0 \
+		directories-1.0.2 \
 		dns-parser-0.3.2 \
-		dns-sd-0.1.3 \
-		dotenv-0.10.1 \
-		dtoa-0.4.3 \
-		either-1.5.1 \
+		dotenv-0.13.0 \
+		dtoa-0.4.4 \
+		either-1.5.2 \
 		encoding_rs-0.8.17 \
 		enum-map-0.5.0 \
-		enum-map-derive-0.4.0 \
 		enum-map-derive-0.4.1 \
-		enum-map-internals-0.1.0 \
 		enum-map-internals-0.1.2 \
-		enumset-0.3.17 \
-		enumset_derive-0.3.0 \
-		env_logger-0.4.0 \
+		enumset-0.3.19 \
+		enumset_derive-0.3.2 \
 		env_logger-0.4.3 \
-		env_logger-0.5.13 \
-		env_logger-0.5.3 \
 		env_logger-0.6.1 \
-		error-chain-0.10.0 \
 		error-chain-0.11.0 \
-		extprim-1.6.0 \
-		failure-0.1.3 \
+		error-chain-0.12.0 \
+		extprim-1.7.0 \
 		failure-0.1.5 \
 		failure_derive-0.1.5 \
+		fake-simd-0.1.2 \
+		fern-0.5.8 \
+		flate2-1.0.7 \
 		fnv-1.0.6 \
 		foreign-types-0.3.2 \
 		foreign-types-shared-0.1.1 \
 		fuchsia-cprng-0.1.1 \
 		fuchsia-zircon-0.3.3 \
 		fuchsia-zircon-sys-0.3.3 \
-		futures-0.1.25 \
+		futures-0.1.26 \
 		futures-cpupool-0.1.8 \
 		gcc-0.3.55 \
+		generic-array-0.12.0 \
 		get_if_addrs-0.5.3 \
 		get_if_addrs-sys-0.1.1 \
-		getopts-0.2.18 \
-		h2-0.1.17 \
-		hashbrown-0.1.8 \
-		http-0.1.16 \
+		getopts-0.2.19 \
+		glob-0.2.11 \
+		h2-0.1.18 \
+		hashbrown-0.2.2 \
+		hex-0.3.2 \
+		hmac-0.7.0 \
+		http-0.1.17 \
 		httparse-1.3.3 \
 		humantime-1.2.0 \
 		hyper-0.11.27 \
-		hyper-0.12.25 \
+		hyper-0.12.28 \
 		hyper-proxy-0.4.1 \
-		hyper-tls-0.3.1 \
+		hyper-tls-0.3.2 \
+		ident_case-1.0.1 \
 		idna-0.1.5 \
 		indexmap-1.0.2 \
 		iovec-0.1.2 \
-		itertools-0.7.11 \
-		itertools-0.7.6 \
-		itoa-0.3.4 \
-		itoa-0.4.3 \
-		jack-0.5.7 \
-		jack-sys-0.2.0 \
+		itertools-0.8.0 \
+		itoa-0.4.4 \
 		kernel32-sys-0.2.2 \
 		language-tags-0.2.2 \
 		lazy_static-0.2.11 \
 		lazy_static-1.3.0 \
 		lazycell-1.2.1 \
 		lewton-0.9.4 \
-		libc-0.2.50 \
+		libc-0.2.54 \
 		libdbus-sys-0.1.5 \
-		libflate-0.1.21 \
 		libloading-0.4.3 \
 		libpulse-sys-0.0.0 \
 		linear-map-1.2.0 \
 		lock_api-0.1.5 \
-		log-0.3.5 \
 		log-0.3.9 \
 		log-0.4.6 \
 		maplit-1.0.1 \
 		matches-0.1.8 \
 		mdns-0.2.0 \
+		memchr-1.0.2 \
 		memchr-2.2.0 \
 		memoffset-0.2.1 \
 		mime-0.3.13 \
 		mime_guess-2.0.0-alpha.6 \
+		miniz_oxide-0.2.1 \
+		miniz_oxide_c_api-0.2.1 \
 		mio-0.6.16 \
 		mio-named-pipes-0.1.6 \
 		mio-uds-0.6.7 \
 		miow-0.2.1 \
 		miow-0.3.3 \
 		multimap-0.4.0 \
-		native-tls-0.2.2 \
+		native-tls-0.2.3 \
 		ncurses-5.99.0 \
 		net2-0.2.33 \
 		nix-0.11.0 \
+		nix-0.9.0 \
 		nodrop-0.1.13 \
+		nom-3.2.1 \
 		num-0.2.0 \
 		num-bigint-0.1.44 \
 		num-complex-0.2.1 \
@@ -159,16 +191,19 @@ CARGO_CRATES=	adler32-1.0.3 \
 		num-traits-0.1.43 \
 		num-traits-0.2.6 \
 		num_cpus-1.10.0 \
+		numtoa-0.1.0 \
 		ogg-0.7.0 \
-		ogg-sys-0.0.9 \
-		openssl-0.10.19 \
+		opaque-debug-0.2.2 \
+		openssl-0.10.21 \
 		openssl-probe-0.1.2 \
-		openssl-sys-0.9.42 \
+		openssl-sys-0.9.45 \
 		owning_ref-0.4.0 \
 		pancurses-0.16.1 \
 		parking_lot-0.7.1 \
 		parking_lot_core-0.4.0 \
+		pbkdf2-0.3.0 \
 		pdcurses-sys-0.7.1 \
+		peeking_take_while-0.1.2 \
 		percent-encoding-1.0.1 \
 		phf-0.7.24 \
 		phf_codegen-0.7.24 \
@@ -177,16 +212,16 @@ CARGO_CRATES=	adler32-1.0.3 \
 		pkg-config-0.3.14 \
 		portaudio-rs-0.3.0 \
 		portaudio-sys-0.1.1 \
-		proc-macro2-0.4.27 \
+		proc-macro2-0.2.3 \
+		proc-macro2-0.4.29 \
 		protobuf-1.7.4 \
-		protobuf-2.4.0 \
-		protobuf-codegen-2.4.0 \
-		protobuf-codegen-pure-2.4.0 \
-		protoc-2.4.0 \
-		protoc-rust-2.4.0 \
+		protobuf-2.5.0 \
+		protobuf-codegen-2.5.0 \
+		protobuf-codegen-pure-2.5.0 \
+		publicsuffix-1.5.2 \
 		quick-error-1.2.2 \
-		quote-0.3.15 \
-		quote-0.6.11 \
+		quote-0.4.2 \
+		quote-0.6.12 \
 		rand-0.3.23 \
 		rand-0.4.6 \
 		rand-0.5.6 \
@@ -196,81 +231,75 @@ CARGO_CRATES=	adler32-1.0.3 \
 		rand_core-0.4.0 \
 		rand_hc-0.1.0 \
 		rand_isaac-0.1.1 \
-		rand_jitter-0.1.3 \
+		rand_jitter-0.1.4 \
 		rand_os-0.1.3 \
 		rand_pcg-0.1.2 \
 		rand_xorshift-0.1.1 \
 		random-0.12.2 \
 		rdrand-0.4.0 \
-		redox_syscall-0.1.51 \
+		redox_syscall-0.1.54 \
 		redox_termios-0.1.1 \
 		regex-0.2.11 \
-		regex-1.1.2 \
+		regex-1.1.6 \
 		regex-syntax-0.5.6 \
-		regex-syntax-0.6.2 \
-		regex-syntax-0.6.5 \
+		regex-syntax-0.6.6 \
 		relay-0.1.1 \
 		remove_dir_all-0.5.1 \
-		reqwest-0.9.11 \
+		reqwest-0.9.16 \
+		rodio-0.8.1 \
 		rpassword-0.3.1 \
-		rspotify-0.2.5 \
-		rust-crypto-0.2.36 \
-		rustc-demangle-0.1.13 \
+		rustc-demangle-0.1.14 \
 		rustc-serialize-0.3.24 \
 		rustc_version-0.2.3 \
-		ryu-0.2.7 \
-		safemem-0.2.0 \
+		ryu-0.2.8 \
 		safemem-0.3.0 \
 		schannel-0.1.15 \
 		scoped-tls-0.1.2 \
 		scopeguard-0.3.3 \
-		security-framework-0.2.1 \
-		security-framework-sys-0.2.1 \
+		security-framework-0.3.1 \
+		security-framework-sys-0.3.1 \
 		semver-0.9.0 \
 		semver-parser-0.7.0 \
-		serde-0.9.15 \
-		serde-1.0.89 \
-		serde_codegen_internals-0.14.2 \
-		serde_derive-0.9.15 \
-		serde_derive-1.0.89 \
-		serde_json-0.9.10 \
+		serde-1.0.91 \
+		serde_derive-1.0.91 \
 		serde_json-1.0.39 \
-		serde_urlencoded-0.5.4 \
+		serde_urlencoded-0.5.5 \
+		sha-1-0.8.1 \
+		sha2-0.8.0 \
 		shannon-0.2.0 \
-		signal-hook-0.1.7 \
-		signal-hook-0.1.8 \
+		signal-hook-0.1.9 \
+		signal-hook-registry-1.0.1 \
 		siphasher-0.2.3 \
 		slab-0.3.0 \
 		slab-0.4.2 \
 		smallvec-0.2.1 \
 		smallvec-0.6.9 \
 		socket2-0.2.4 \
-		socket2-0.3.8 \
+		socket2-0.3.9 \
 		stable_deref_trait-1.1.1 \
+		stdweb-0.1.3 \
+		stream-cipher-0.3.0 \
 		string-0.1.3 \
-		syn-0.11.11 \
+		strsim-0.8.0 \
+		subtle-1.0.0 \
 		syn-0.14.9 \
-		syn-0.15.29 \
-		synom-0.11.3 \
+		syn-0.15.34 \
 		synstructure-0.10.1 \
 		take-0.1.0 \
 		tempfile-2.2.0 \
 		tempfile-3.0.7 \
 		term_size-0.3.1 \
-		termcolor-1.0.2 \
 		termcolor-1.0.4 \
-		termion-1.5.1 \
+		termion-1.5.2 \
 		termios-0.2.2 \
+		textwrap-0.11.0 \
 		thread_local-0.3.6 \
 		time-0.1.42 \
-		tokio-0.1.16 \
-		tokio-0.1.17 \
-		tokio-0.1.7 \
+		tokio-0.1.19 \
 		tokio-codec-0.1.1 \
 		tokio-core-0.1.17 \
-		tokio-core-0.1.7 \
-		tokio-current-thread-0.1.5 \
-		tokio-executor-0.1.6 \
+		tokio-current-thread-0.1.6 \
+		tokio-executor-0.1.7 \
 		tokio-fs-0.1.6 \
 		tokio-io-0.1.12 \
 		tokio-process-0.2.3 \
@@ -279,44 +308,44 @@ CARGO_CRATES=	adler32-1.0.3 \
 		tokio-service-0.1.0 \
 		tokio-signal-0.1.5 \
 		tokio-signal-0.2.7 \
-		tokio-sync-0.1.3 \
-		tokio-sync-0.1.4 \
+		tokio-sync-0.1.5 \
 		tokio-tcp-0.1.3 \
-		tokio-threadpool-0.1.12 \
+		tokio-threadpool-0.1.14 \
 		tokio-timer-0.2.10 \
 		tokio-trace-core-0.1.0 \
 		tokio-udp-0.1.3 \
 		tokio-uds-0.2.5 \
 		toml-0.4.10 \
-		tremor-0.1.0 \
+		toml-0.5.0 \
 		try-lock-0.1.0 \
 		try-lock-0.2.2 \
+		try_from-0.3.2 \
+		typenum-1.10.0 \
 		ucd-util-0.1.3 \
 		unicase-1.4.2 \
-		unicase-2.3.0 \
+		unicase-2.4.0 \
 		unicode-bidi-0.3.4 \
 		unicode-normalization-0.1.8 \
 		unicode-segmentation-1.2.1 \
 		unicode-width-0.1.5 \
-		unicode-xid-0.0.4 \
 		unicode-xid-0.1.0 \
 		url-1.7.2 \
 		utf8-ranges-1.0.2 \
 		uuid-0.4.0 \
-		uuid-0.7.2 \
+		uuid-0.7.4 \
 		vcpkg-0.2.6 \
+		vec_map-0.8.1 \
 		vergen-0.1.1 \
 		version_check-0.1.5 \
 		void-1.0.2 \
-		vorbis-0.1.0 \
-		vorbis-encoder-0.1.4 \
-		vorbis-sys-0.0.8 \
-		vorbisfile-sys-0.0.8 \
 		want-0.0.4 \
 		want-0.0.6 \
-		webbrowser-0.2.2 \
+		webbrowser-0.5.1 \
+		which-1.0.5 \
+		widestring-0.4.0 \
+		winapi-0.2.3 \
 		winapi-0.2.8 \
-		winapi-0.3.6 \
+		winapi-0.3.7 \
 		winapi-build-0.1.1 \
 		winapi-i686-pc-windows-gnu-0.4.0 \
 		winapi-util-0.1.2 \
@@ -324,14 +353,8 @@ CARGO_CRATES=	adler32-1.0.3 \
 		wincolor-1.0.1 \
 		winreg-0.5.1 \
 		ws2_32-sys-0.2.1 \
-		xdg-2.2.0 \
 		xi-unicode-0.1.0
-
-CARGO_FEATURES=		portaudio_backend
 CARGO_USE_GITHUB=	yes
-CARGO_BUILD_ARGS=	--no-default-features
-CARGO_INSTALL_ARGS=	--no-default-features
-CARGO_TEST_ARGS=	--no-default-features
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/ncspot
