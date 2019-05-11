@@ -9,10 +9,11 @@ COMMENT=	Cross-platform ncurses Spotify client
 
 LICENSE=	BSD2CLAUSE
 
+BUILD_DEPENDS=	python3:lang/python3
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libasound.so:audio/alsa-lib
 
-USES=		cargo ncurses ssl
+USES=		cargo ncurses python:3.6+,build ssl
 USE_XORG=	xcb
 USE_GITHUB=	yes
 
