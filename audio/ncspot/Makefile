@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ncspot
-DISTVERSION=	0.1.0-20190428
+DISTVERSION=	0.1.0-20190510
 CATEGORIES=	audio
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -13,10 +13,11 @@ LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libasound.so:audio/alsa-lib
 
 USES=		cargo ncurses ssl
+USE_XORG=	xcb
 USE_GITHUB=	yes
 
 GH_ACCOUNT=	hrkfdn
-GH_TAGNAME=	f5e3016
+GH_TAGNAME=	5eff818
 GH_TUPLE=	librespot-org:librespot:14721f4:librespot \
 		samrayleung:rspotify:8f8dc17:rspotify
 
@@ -50,6 +51,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		bitflags-0.7.0 \
 		bitflags-0.9.1 \
 		bitflags-1.0.4 \
+		block-0.1.6 \
 		block-buffer-0.7.3 \
 		block-cipher-trait-0.6.2 \
 		block-modes-0.2.0 \
@@ -67,6 +69,8 @@ CARGO_CRATES=	adler32-1.0.3 \
 		chrono-0.4.6 \
 		clang-sys-0.21.2 \
 		clap-2.33.0 \
+		clipboard-0.5.0 \
+		clipboard-win-2.1.2 \
 		cloudabi-0.0.3 \
 		cookie-0.11.1 \
 		cookie_store-0.5.1 \
@@ -107,7 +111,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		env_logger-0.4.3 \
 		env_logger-0.6.1 \
 		error-chain-0.11.0 \
-		error-chain-0.12.0 \
+		error-chain-0.12.1 \
 		extprim-1.7.0 \
 		failure-0.1.5 \
 		failure_derive-0.1.5 \
@@ -120,7 +124,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		fuchsia-cprng-0.1.1 \
 		fuchsia-zircon-0.3.3 \
 		fuchsia-zircon-sys-0.3.3 \
-		futures-0.1.26 \
+		futures-0.1.27 \
 		futures-cpupool-0.1.8 \
 		gcc-0.3.55 \
 		generic-array-0.12.0 \
@@ -159,6 +163,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		lock_api-0.1.5 \
 		log-0.3.9 \
 		log-0.4.6 \
+		malloc_buf-0.0.6 \
 		maplit-1.0.1 \
 		matches-0.1.8 \
 		mdns-0.2.0 \
@@ -192,11 +197,14 @@ CARGO_CRATES=	adler32-1.0.3 \
 		num-traits-0.2.6 \
 		num_cpus-1.10.0 \
 		numtoa-0.1.0 \
+		objc-0.2.6 \
+		objc-foundation-0.1.1 \
+		objc_id-0.1.1 \
 		ogg-0.7.0 \
 		opaque-debug-0.2.2 \
-		openssl-0.10.21 \
+		openssl-0.10.22 \
 		openssl-probe-0.1.2 \
-		openssl-sys-0.9.45 \
+		openssl-sys-0.9.46 \
 		owning_ref-0.4.0 \
 		pancurses-0.16.1 \
 		parking_lot-0.7.1 \
@@ -213,7 +221,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		portaudio-rs-0.3.0 \
 		portaudio-sys-0.1.1 \
 		proc-macro2-0.2.3 \
-		proc-macro2-0.4.29 \
+		proc-macro2-0.4.30 \
 		protobuf-1.7.4 \
 		protobuf-2.5.0 \
 		protobuf-codegen-2.5.0 \
@@ -353,6 +361,8 @@ CARGO_CRATES=	adler32-1.0.3 \
 		wincolor-1.0.1 \
 		winreg-0.5.1 \
 		ws2_32-sys-0.2.1 \
+		x11-clipboard-0.3.2 \
+		xcb-0.8.2 \
 		xi-unicode-0.1.0
 CARGO_USE_GITHUB=	yes
 
