@@ -12,9 +12,9 @@ COMMENT=	Cycle-accurate NES emulator in ~1000 lines of code
 
 LICENSE=	BSD2CLAUSE
 
-USES=		scons
+USES=		scons sdl
 
-USE_SDL+=	sdl2 ttf2 image2
+USE_SDL=	sdl2 ttf2 image2
 
 PLIST_FILES=	bin/laines \
 		${DATADIR}/font.ttf \
