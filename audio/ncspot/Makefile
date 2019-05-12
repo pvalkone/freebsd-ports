@@ -2,6 +2,7 @@
 
 PORTNAME=	ncspot
 DISTVERSION=	0.1.0-20190510
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -11,7 +12,7 @@ LICENSE=	BSD2CLAUSE
 
 BUILD_DEPENDS=	python3:lang/python3
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
-		libasound.so:audio/alsa-lib
+		libportaudio.so:audio/portaudio
 
 USES=		cargo ncurses python:3.6+,build ssl
 USE_XORG=	xcb
@@ -365,7 +366,11 @@ CARGO_CRATES=	adler32-1.0.3 \
 		x11-clipboard-0.3.2 \
 		xcb-0.8.2 \
 		xi-unicode-0.1.0
+CARGO_FEATURES=		portaudio_backend,cursive/pancurses-backend
 CARGO_USE_GITHUB=	yes
+CARGO_BUILD_ARGS=	--no-default-features
+CARGO_INSTALL_ARGS=	--no-default-features
+CARGO_TEST_ARGS=	--no-default-features
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/ncspot
