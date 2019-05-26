@@ -1,8 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ncspot
-DISTVERSION=	0.1.0-20190510
-PORTREVISION=	1
+DISTVERSION=	0.1.0-20190522
 CATEGORIES=	audio
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -10,7 +9,6 @@ COMMENT=	Cross-platform ncurses Spotify client
 
 LICENSE=	BSD2CLAUSE
 
-BUILD_DEPENDS=	python3:lang/python3
 LIB_DEPENDS=	libdbus-1.so:devel/dbus \
 		libportaudio.so:audio/portaudio
 
@@ -19,7 +17,7 @@ USE_XORG=	xcb
 USE_GITHUB=	yes
 
 GH_ACCOUNT=	hrkfdn
-GH_TAGNAME=	5eff818
+GH_TAGNAME=	e03536b
 GH_TUPLE=	librespot-org:librespot:14721f4:librespot \
 		samrayleung:rspotify:8f8dc17:rspotify
 
@@ -353,7 +351,6 @@ CARGO_CRATES=	adler32-1.0.3 \
 		webbrowser-0.5.1 \
 		which-1.0.5 \
 		widestring-0.4.0 \
-		winapi-0.2.3 \
 		winapi-0.2.8 \
 		winapi-0.3.7 \
 		winapi-build-0.1.1 \
