@@ -369,6 +369,8 @@ CARGO_BUILD_ARGS=	--no-default-features
 CARGO_INSTALL_ARGS=	--no-default-features
 CARGO_TEST_ARGS=	--no-default-features
 
+BINARY_ALIAS=	python3=${PYTHON_CMD}
+
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/ncspot
 
