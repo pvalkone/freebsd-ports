@@ -27,7 +27,7 @@ PLIST_FILES=	bin/blastem \
 		${DATADIR}/menu.bin \
 		"@sample ${ETCDIR}/blastem.cfg.sample"
 
-USE_GCC=	5+
+USE_GCC=	yes
 USE_SDL=	sdl2
 USE_GL=		glew glu gl
 SHEBANG_FILES=	img2tiles.py
