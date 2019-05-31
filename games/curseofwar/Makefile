@@ -13,8 +13,6 @@ COMMENT=		Real-time strategy game
 
 LICENSE=		GPLv3
 
-BUILD_DEPENDS=		gcc:lang/gcc
-
 USES=			gmake
 USE_GITHUB=		yes
 GH_ACCOUNT=		a-nikolaev
@@ -33,6 +31,8 @@ SDL_PLIST_FILES_OFF=	bin/curseofwar \
 			man/man6/curseofwar.6.gz
 
 PLIST_FILES=		${DOCSDIR}/changelog.gz
+
+BINARY_ALIAS=		gcc=${CC}
 
 post-patch:
 	@${REINPLACE_CMD} -e "s/%VERSION%/${PORTVERSION}/g" \
