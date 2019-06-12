@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ncspot
-DISTVERSION=	0.1.0-20190522
+DISTVERSION=	0.1.0-20190610
 CATEGORIES=	audio
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -17,9 +17,8 @@ USE_XORG=	xcb
 USE_GITHUB=	yes
 
 GH_ACCOUNT=	hrkfdn
-GH_TAGNAME=	e03536b
-GH_TUPLE=	librespot-org:librespot:14721f4:librespot \
-		samrayleung:rspotify:8f8dc17:rspotify
+GH_TAGNAME=	d213e8a
+GH_TUPLE=	librespot-org:librespot:4e3576b:librespot
 
 PLIST_FILES=	bin/ncspot
 
@@ -30,16 +29,17 @@ CARGO_CRATES=	adler32-1.0.3 \
 		aesni-0.6.0 \
 		aho-corasick-0.6.10 \
 		aho-corasick-0.7.3 \
-		alsa-0.2.1 \
+		alga-0.9.1 \
+		alsa-0.2.2 \
 		alsa-sys-0.1.2 \
 		ansi_term-0.11.0 \
-		approx-0.1.1 \
+		approx-0.3.2 \
 		arc-swap-0.3.11 \
 		array-macro-1.0.3 \
 		arrayvec-0.4.10 \
 		atty-0.2.11 \
-		autocfg-0.1.2 \
-		backtrace-0.3.15 \
+		autocfg-0.1.4 \
+		backtrace-0.3.30 \
 		backtrace-sys-0.1.28 \
 		base64-0.10.1 \
 		base64-0.5.2 \
@@ -50,7 +50,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		bitflags-0.3.3 \
 		bitflags-0.7.0 \
 		bitflags-0.9.1 \
-		bitflags-1.0.4 \
+		bitflags-1.1.0 \
 		block-0.1.6 \
 		block-buffer-0.7.3 \
 		block-cipher-trait-0.6.2 \
@@ -62,18 +62,17 @@ CARGO_CRATES=	adler32-1.0.3 \
 		byteorder-1.3.1 \
 		bytes-0.4.12 \
 		c_linked_list-1.1.1 \
-		cc-1.0.36 \
+		cc-1.0.37 \
 		cexpr-0.2.3 \
-		cfg-if-0.1.7 \
-		cgmath-0.14.1 \
+		cfg-if-0.1.9 \
 		chrono-0.4.6 \
 		clang-sys-0.21.2 \
 		clap-2.33.0 \
 		clipboard-0.5.0 \
-		clipboard-win-2.1.2 \
+		clipboard-win-2.2.0 \
 		cloudabi-0.0.3 \
-		cookie-0.11.1 \
-		cookie_store-0.5.1 \
+		cookie-0.12.0 \
+		cookie_store-0.7.0 \
 		core-foundation-0.6.4 \
 		core-foundation-sys-0.5.1 \
 		core-foundation-sys-0.6.2 \
@@ -89,13 +88,13 @@ CARGO_CRATES=	adler32-1.0.3 \
 		crossbeam-utils-0.6.5 \
 		crypto-mac-0.7.0 \
 		ctr-0.3.2 \
-		cursive-0.11.2 \
-		darling-0.8.6 \
-		darling_core-0.8.6 \
-		darling_macro-0.8.6 \
+		cursive-0.12.0 \
+		darling-0.9.0 \
+		darling_core-0.9.0 \
+		darling_macro-0.9.0 \
 		dbus-0.6.4 \
-		derive_builder-0.7.1 \
-		derive_builder_core-0.4.1 \
+		derive_builder-0.7.2 \
+		derive_builder_core-0.5.0 \
 		digest-0.8.0 \
 		directories-1.0.2 \
 		dns-parser-0.3.2 \
@@ -106,8 +105,8 @@ CARGO_CRATES=	adler32-1.0.3 \
 		enum-map-0.5.0 \
 		enum-map-derive-0.4.1 \
 		enum-map-internals-0.1.2 \
-		enumset-0.3.19 \
-		enumset_derive-0.3.2 \
+		enumset-0.4.0 \
+		enumset_derive-0.4.0 \
 		env_logger-0.4.3 \
 		env_logger-0.6.1 \
 		error-chain-0.11.0 \
@@ -132,15 +131,16 @@ CARGO_CRATES=	adler32-1.0.3 \
 		get_if_addrs-sys-0.1.1 \
 		getopts-0.2.19 \
 		glob-0.2.11 \
-		h2-0.1.18 \
-		hashbrown-0.2.2 \
+		h2-0.1.23 \
+		hashbrown-0.3.1 \
 		hex-0.3.2 \
 		hmac-0.7.0 \
 		http-0.1.17 \
+		http-body-0.1.0 \
 		httparse-1.3.3 \
 		humantime-1.2.0 \
 		hyper-0.11.27 \
-		hyper-0.12.28 \
+		hyper-0.12.29 \
 		hyper-proxy-0.4.1 \
 		hyper-tls-0.3.2 \
 		ident_case-1.0.1 \
@@ -153,11 +153,11 @@ CARGO_CRATES=	adler32-1.0.3 \
 		language-tags-0.2.2 \
 		lazy_static-0.2.11 \
 		lazy_static-1.3.0 \
-		lazycell-1.2.1 \
 		lewton-0.9.4 \
-		libc-0.2.54 \
+		libc-0.2.58 \
 		libdbus-sys-0.1.5 \
 		libloading-0.4.3 \
+		libm-0.1.3 \
 		libpulse-sys-0.0.0 \
 		linear-map-1.2.0 \
 		lock_api-0.1.5 \
@@ -166,6 +166,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		malloc_buf-0.0.6 \
 		maplit-1.0.1 \
 		matches-0.1.8 \
+		matrixmultiply-0.2.2 \
 		mdns-0.2.0 \
 		memchr-1.0.2 \
 		memchr-2.2.0 \
@@ -174,27 +175,28 @@ CARGO_CRATES=	adler32-1.0.3 \
 		mime_guess-2.0.0-alpha.6 \
 		miniz_oxide-0.2.1 \
 		miniz_oxide_c_api-0.2.1 \
-		mio-0.6.16 \
+		mio-0.6.19 \
 		mio-named-pipes-0.1.6 \
 		mio-uds-0.6.7 \
 		miow-0.2.1 \
 		miow-0.3.3 \
 		multimap-0.4.0 \
+		nalgebra-0.18.0 \
 		native-tls-0.2.3 \
 		ncurses-5.99.0 \
 		net2-0.2.33 \
-		nix-0.11.0 \
+		nix-0.11.1 \
 		nix-0.9.0 \
 		nodrop-0.1.13 \
 		nom-3.2.1 \
 		num-0.2.0 \
 		num-bigint-0.1.44 \
 		num-complex-0.2.1 \
-		num-integer-0.1.39 \
-		num-iter-0.1.37 \
+		num-integer-0.1.41 \
+		num-iter-0.1.39 \
 		num-rational-0.2.1 \
 		num-traits-0.1.43 \
-		num-traits-0.2.6 \
+		num-traits-0.2.8 \
 		num_cpus-1.10.0 \
 		numtoa-0.1.0 \
 		objc-0.2.6 \
@@ -202,9 +204,9 @@ CARGO_CRATES=	adler32-1.0.3 \
 		objc_id-0.1.1 \
 		ogg-0.7.0 \
 		opaque-debug-0.2.2 \
-		openssl-0.10.22 \
+		openssl-0.10.23 \
 		openssl-probe-0.1.2 \
-		openssl-sys-0.9.46 \
+		openssl-sys-0.9.47 \
 		owning_ref-0.4.0 \
 		pancurses-0.16.1 \
 		parking_lot-0.7.1 \
@@ -222,10 +224,10 @@ CARGO_CRATES=	adler32-1.0.3 \
 		portaudio-sys-0.1.1 \
 		proc-macro2-0.2.3 \
 		proc-macro2-0.4.30 \
-		protobuf-1.7.4 \
-		protobuf-2.5.0 \
-		protobuf-codegen-2.5.0 \
-		protobuf-codegen-pure-2.5.0 \
+		protobuf-1.7.5 \
+		protobuf-2.6.2 \
+		protobuf-codegen-2.6.2 \
+		protobuf-codegen-pure-2.6.2 \
 		publicsuffix-1.5.2 \
 		quick-error-1.2.2 \
 		quote-0.4.2 \
@@ -244,6 +246,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		rand_pcg-0.1.2 \
 		rand_xorshift-0.1.1 \
 		random-0.12.2 \
+		rawpointer-0.1.0 \
 		rdrand-0.4.0 \
 		redox_syscall-0.1.54 \
 		redox_termios-0.1.1 \
@@ -253,10 +256,11 @@ CARGO_CRATES=	adler32-1.0.3 \
 		regex-syntax-0.6.6 \
 		relay-0.1.1 \
 		remove_dir_all-0.5.1 \
-		reqwest-0.9.16 \
-		rodio-0.8.1 \
+		reqwest-0.9.18 \
+		rodio-0.9.0 \
 		rpassword-0.3.1 \
-		rustc-demangle-0.1.14 \
+		rspotify-0.5.0 \
+		rustc-demangle-0.1.15 \
 		rustc-serialize-0.3.24 \
 		rustc_version-0.2.3 \
 		ryu-0.2.8 \
@@ -268,8 +272,8 @@ CARGO_CRATES=	adler32-1.0.3 \
 		security-framework-sys-0.3.1 \
 		semver-0.9.0 \
 		semver-parser-0.7.0 \
-		serde-1.0.91 \
-		serde_derive-1.0.91 \
+		serde-1.0.92 \
+		serde_derive-1.0.92 \
 		serde_json-1.0.39 \
 		serde_urlencoded-0.5.5 \
 		sha-1-0.8.1 \
@@ -287,23 +291,25 @@ CARGO_CRATES=	adler32-1.0.3 \
 		stable_deref_trait-1.1.1 \
 		stdweb-0.1.3 \
 		stream-cipher-0.3.0 \
-		string-0.1.3 \
+		string-0.2.0 \
+		strsim-0.7.0 \
 		strsim-0.8.0 \
 		subtle-1.0.0 \
 		syn-0.14.9 \
-		syn-0.15.34 \
-		synstructure-0.10.1 \
+		syn-0.15.35 \
+		synstructure-0.10.2 \
 		take-0.1.0 \
 		tempfile-2.2.0 \
-		tempfile-3.0.7 \
+		tempfile-3.0.8 \
 		term_size-0.3.1 \
-		termcolor-1.0.4 \
+		termcolor-1.0.5 \
 		termion-1.5.2 \
 		termios-0.2.2 \
 		textwrap-0.11.0 \
 		thread_local-0.3.6 \
 		time-0.1.42 \
-		tokio-0.1.19 \
+		tokio-0.1.21 \
+		tokio-buf-0.1.1 \
 		tokio-codec-0.1.1 \
 		tokio-core-0.1.17 \
 		tokio-current-thread-0.1.6 \
@@ -316,15 +322,15 @@ CARGO_CRATES=	adler32-1.0.3 \
 		tokio-service-0.1.0 \
 		tokio-signal-0.1.5 \
 		tokio-signal-0.2.7 \
-		tokio-sync-0.1.5 \
+		tokio-sync-0.1.6 \
 		tokio-tcp-0.1.3 \
 		tokio-threadpool-0.1.14 \
-		tokio-timer-0.2.10 \
-		tokio-trace-core-0.1.0 \
+		tokio-timer-0.2.11 \
+		tokio-trace-core-0.2.0 \
 		tokio-udp-0.1.3 \
 		tokio-uds-0.2.5 \
 		toml-0.4.10 \
-		toml-0.5.0 \
+		toml-0.5.1 \
 		try-lock-0.1.0 \
 		try-lock-0.2.2 \
 		try_from-0.3.2 \
@@ -334,7 +340,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		unicase-2.4.0 \
 		unicode-bidi-0.3.4 \
 		unicode-normalization-0.1.8 \
-		unicode-segmentation-1.2.1 \
+		unicode-segmentation-1.3.0 \
 		unicode-width-0.1.5 \
 		unicode-xid-0.1.0 \
 		url-1.7.2 \
