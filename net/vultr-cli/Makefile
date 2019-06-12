@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=		vultr-cli
-PORTVERSION=		2.0.0
+PORTVERSION=		2.0.1
 DISTVERSIONPREFIX=	v
 CATEGORIES=		net
 
