@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	ncspot
-DISTVERSION=	0.1.0-20190610
+DISTVERSION=	0.1.0-20190624
 CATEGORIES=	audio
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -17,7 +17,7 @@ USE_XORG=	xcb
 USE_GITHUB=	yes
 
 GH_ACCOUNT=	hrkfdn
-GH_TAGNAME=	d213e8a
+GH_TAGNAME=	f4c640c
 GH_TUPLE=	librespot-org:librespot:4e3576b:librespot
 
 PLIST_FILES=	bin/ncspot
