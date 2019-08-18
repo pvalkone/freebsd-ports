@@ -78,7 +78,7 @@ CARGO_CRATES=	adler32-1.0.3 \
 		core-foundation-sys-0.6.2 \
 		coreaudio-rs-0.9.1 \
 		coreaudio-sys-0.2.2 \
-		cpal-0.8.2 \
+		cpal-0.10.0 \
 		crc-1.8.1 \
 		crc32fast-1.2.0 \
 		crossbeam-channel-0.3.8 \

@@ -1,4 +1,4 @@
-TIMESTAMP = 1566110542
+TIMESTAMP = 1566112169
 SHA256 (rust/crates/adler32-1.0.3.tar.gz) = 7e522997b529f05601e05166c07ed17789691f562762c7f3b987263d2dedee5c
 SIZE (rust/crates/adler32-1.0.3.tar.gz) = 5734
 SHA256 (rust/crates/aes-0.3.2.tar.gz) = 54eb1d8fe354e5fc611daf4f2ea97dd45a765f4f1e4512306ec183ae2e8f20c9
@@ -111,8 +111,8 @@ SHA256 (rust/crates/coreaudio-rs-0.9.1.tar.gz) = f229761965dad3e9b11081668a6ea00
 SIZE (rust/crates/coreaudio-rs-0.9.1.tar.gz) = 30511
 SHA256 (rust/crates/coreaudio-sys-0.2.2.tar.gz) = 78fdbabf58d5b1f461e31b94a571c109284f384cec619a3d96e66ec55b4de82b
 SIZE (rust/crates/coreaudio-sys-0.2.2.tar.gz) = 3830
-SHA256 (rust/crates/cpal-0.8.2.tar.gz) = d58ae1ed6536b1b233f5e3aeb6997a046ddb4d05e3f61701b58a92eb254a829e
-SIZE (rust/crates/cpal-0.8.2.tar.gz) = 39673
+SHA256 (rust/crates/cpal-0.10.0.tar.gz) = 3ded070249be850b5b59e1e3a44a70b8ae395e0e5c65b487131d8909a8208120
+SIZE (rust/crates/cpal-0.10.0.tar.gz) = 60583
 SHA256 (rust/crates/crc-1.8.1.tar.gz) = d663548de7f5cca343f1e0a48d14dcfb0e9eb4e079ec58883b7251539fa10aeb
 SIZE (rust/crates/crc-1.8.1.tar.gz) = 9114
 SHA256 (rust/crates/crc32fast-1.2.0.tar.gz) = ba125de2af0df55319f41944744ad91c71113bf74a4646efff39afe1f6842db1
