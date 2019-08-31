@@ -1,4 +1,4 @@
-# $FreeBSD: head/devel/interactive_rebase_tool/Makefile 505837 2019-07-04 14:41:57Z tobik $
+# $FreeBSD: head/devel/interactive_rebase_tool/Makefile 510267 2019-08-30 12:18:41Z tobik $
 
 PORTNAME=	interactive_rebase_tool
 DISTVERSION=	1.1.0
@@ -7,7 +7,7 @@ CATEGORIES=	devel
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Improved sequence editor for Git
 
-LICENSE=	GPLv3
+LICENSE=	GPLv3+
 
 LIB_DEPENDS=	libgit2.so:devel/libgit2
 
