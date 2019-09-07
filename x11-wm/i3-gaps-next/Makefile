@@ -4,6 +4,7 @@
 
 PORTNAME=		i3-gaps-next
 PORTVERSION=		4.17.20190903
+PORTREVISION=		1
 PORTEPOCH=		1
 CATEGORIES=		x11-wm
 
@@ -55,7 +56,11 @@ CONFIGURE_ARGS+=	--disable-dependency-tracking
 
 post-patch:
 	@${ECHO_CMD} "${RELEASE_VERSION}" > ${WRKSRC}/VERSION
-	@${ECHO_CMD} "${RELEASE_VERSION} (${RELEASE_DATE}, branch \"${RELEASE_BRANCH}\")" > ${WRKSRC}/I3_VERSION
+.if defined(GH_TAGNAME)
+	@${ECHO_CMD} "${RELEASE_VERSION} (${RELEASE_DATE}, branch \"${RELEASE_BRANCH}\", revision ${GH_TAGNAME})" > ${WRKSRC}/I3_VERSION
+.else
+	@${ECHO_CMD} "${RELEASE_VERSION} (branch \"${RELEASE_BRANCH}\")" > ${WRKSRC}/I3_VERSION
+.endif
 
 do-configure:
 	cd ${WRKSRC} && \
