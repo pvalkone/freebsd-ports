@@ -1,4 +1,4 @@
-TIMESTAMP = 1567352717
+TIMESTAMP = 1568048753
 SHA256 (rust/crates/adler32-1.0.3.tar.gz) = 7e522997b529f05601e05166c07ed17789691f562762c7f3b987263d2dedee5c
 SIZE (rust/crates/adler32-1.0.3.tar.gz) = 5734
 SHA256 (rust/crates/aes-0.3.2.tar.gz) = 54eb1d8fe354e5fc611daf4f2ea97dd45a765f4f1e4512306ec183ae2e8f20c9
@@ -685,7 +685,7 @@ SHA256 (rust/crates/xcb-0.8.2.tar.gz) = 5e917a3f24142e9ff8be2414e36c649d47d6cc2b
 SIZE (rust/crates/xcb-0.8.2.tar.gz) = 129071
 SHA256 (rust/crates/xi-unicode-0.1.0.tar.gz) = 12ea8eda4b1eb72f02d148402e23832d56a33f55d8c1b2d5bcdde91d79d47cb1
 SIZE (rust/crates/xi-unicode-0.1.0.tar.gz) = 18370
-SHA256 (hrkfdn-ncspot-0.1.0-20190901-7aa70fc_GH0.tar.gz) = 3fa3730d34ab6309f016336287f35a42270433c29f67f4d4d81a56758dbd9a11
-SIZE (hrkfdn-ncspot-0.1.0-20190901-7aa70fc_GH0.tar.gz) = 161543
+SHA256 (hrkfdn-ncspot-0.1.0-20190908-498724e_GH0.tar.gz) = 7a1c84ad076be4b3ef57c824e40d987a6a1d39b22a7d0fdb041be21989081ffb
+SIZE (hrkfdn-ncspot-0.1.0-20190908-498724e_GH0.tar.gz) = 161583
 SHA256 (librespot-org-librespot-1ce0706_GH0.tar.gz) = 9d8e1f8bea88142ae1fe34e1a81adcb195e96980091cd607544c3cad9e0d1d03
 SIZE (librespot-org-librespot-1ce0706_GH0.tar.gz) = 163760
