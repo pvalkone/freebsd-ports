@@ -3,8 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	yle-dl
-PORTVERSION=	20190614
-PORTREVISION=	1
+PORTVERSION=	20191022
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -18,7 +17,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycryptodomex>=0:security/py-pycryptodomex \
 		${PYTHON_PKGNAMEPREFIX}mini_amf>=0:www/py-mini_amf \
 		${PYTHON_PKGNAMEPREFIX}defusedxml>=0:devel/py-defusedxml \
 		${PYTHON_PKGNAMEPREFIX}future>=0:devel/py-future \
-		${PYTHON_PKGNAMEPREFIX}attrs>=18.1.0,<19.2.0:devel/py-attrs \
+		${PYTHON_PKGNAMEPREFIX}attrs>=18.1.0,<19.3.0:devel/py-attrs \
 		${PYTHON_PKGNAMEPREFIX}configargparse>=0.13.0:devel/py-configargparse \
 		ffmpeg>=4.1:multimedia/ffmpeg \
 		wget:ftp/wget
