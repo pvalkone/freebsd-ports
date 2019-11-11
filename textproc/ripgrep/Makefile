@@ -1,11 +1,11 @@
 # Created by: Petteri Valkonen <petteri.valkonen@iki.fi>
-# $FreeBSD: head/textproc/ripgrep/Makefile 513013 2019-09-27 09:35:20Z tobik $
+# $FreeBSD: head/textproc/ripgrep/Makefile 516995 2019-11-07 18:07:20Z tobik $
 
 # vim: ts=8 noet
 
 PORTNAME=	ripgrep
 DISTVERSION=	11.0.2
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	textproc
 
 MAINTAINER=	petteri.valkonen@iki.fi
