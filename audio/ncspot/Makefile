@@ -2,6 +2,7 @@
 
 PORTNAME=	ncspot
 DISTVERSION=	0.1.0-20191103
+PORTREVISION=	1
 CATEGORIES=	audio
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -9,8 +10,7 @@ COMMENT=	Cross-platform ncurses Spotify client
 
 LICENSE=	BSD2CLAUSE
 
-LIB_DEPENDS=	libdbus-1.so:devel/dbus \
-		libportaudio.so:audio/portaudio
+LIB_DEPENDS=	libdbus-1.so:devel/dbus
 
 USES=		cargo ncurses python:3.6+,build ssl
 USE_XORG=	xcb
@@ -359,11 +359,23 @@ CARGO_CRATES=	adler32-1.0.4 \
 		x11-clipboard-0.3.3 \
 		xcb-0.8.2 \
 		xi-unicode-0.2.0
-CARGO_FEATURES=		portaudio_backend,cursive/pancurses-backend
+
+CARGO_FEATURES=		cursive/pancurses-backend
 CARGO_USE_GITHUB=	yes
 CARGO_BUILD_ARGS=	--no-default-features
 CARGO_INSTALL_ARGS=	--no-default-features
 CARGO_TEST_ARGS=	--no-default-features
+
+OPTIONS_SINGLE=		BACKEND
+OPTIONS_SINGLE_BACKEND=	PORTAUDIO PULSEAUDIO
+OPTIONS_DEFAULT=	PORTAUDIO
+BACKEND_DESC=		Audio backend
+
+PORTAUDIO_LIB_DEPENDS=	libportaudio.so:audio/portaudio
+PORTAUDIO_VARS=		CARGO_FEATURES+=portaudio_backend
+
+PULSEAUDIO_LIB_DEPENDS=	libpulse.so:audio/pulseaudio
+PULSEAUDIO_VARS=	CARGO_FEATURES+=pulseaudio_backend
 
 BINARY_ALIAS=	python3=${PYTHON_CMD}
 
