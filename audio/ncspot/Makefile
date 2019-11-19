@@ -22,6 +22,8 @@ GH_TUPLE=	librespot-org:librespot:551daad:librespot
 
 PLIST_FILES=	bin/ncspot
 
+LDFLAGS+=       -L${LOCALBASE}/lib
+
 CARGO_CRATES=	adler32-1.0.4 \
 		aes-0.3.2 \
 		aes-ctr-0.3.0 \
