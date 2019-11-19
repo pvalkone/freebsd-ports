@@ -15,7 +15,7 @@ LICENSE=	GPLv3
 
 BUILD_DEPENDS=	xcf2png:graphics/xcftools \
 		vasmm68k_mot:devel/vasm \
-		${PYTHON_PKGNAMEPREFIX}pillow>0:graphics/py-pillow
+		${PYTHON_PKGNAMEPREFIX}pillow>0:graphics/py-pillow@${PY_FLAVOR}
 
 USES=		gl gmake pkgconfig python:2.7,build sdl shebangfix
 
