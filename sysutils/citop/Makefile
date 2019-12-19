@@ -14,6 +14,7 @@ LICENSE=	BSD3CLAUSE
 BUILD_DEPENDS=	git:devel/git-lite \
 		go:lang/go \
 		pandoc:textproc/hs-pandoc
+RUN_DEPENDS=	git:devel/git
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	nbedos
