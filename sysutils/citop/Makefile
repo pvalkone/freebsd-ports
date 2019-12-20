@@ -11,7 +11,7 @@ COMMENT=	Monitor Continuous Integration pipelines from the command line
 
 LICENSE=	BSD3CLAUSE
 
-BUILD_DEPENDS=	git:devel/git-lite \
+BUILD_DEPENDS=	git:devel/git \
 		go:lang/go \
 		pandoc:textproc/hs-pandoc
 RUN_DEPENDS=	git:devel/git
