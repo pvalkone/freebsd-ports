@@ -4,6 +4,7 @@
 
 PORTNAME=	yle-dl
 PORTVERSION=	20191022
+PORTREVISION=	1
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -11,18 +12,19 @@ COMMENT=	Download videos from Yle servers
 
 LICENSE=	GPLv3
 
-RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycryptodomex>=0:security/py-pycryptodomex \
-		${PYTHON_PKGNAMEPREFIX}progress>=0:devel/py-progress \
-		${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml \
-		${PYTHON_PKGNAMEPREFIX}mini_amf>=0:www/py-mini_amf \
-		${PYTHON_PKGNAMEPREFIX}defusedxml>=0:devel/py-defusedxml \
-		${PYTHON_PKGNAMEPREFIX}future>=0:devel/py-future \
-		${PYTHON_PKGNAMEPREFIX}attrs>=18.1.0,<19.3.0:devel/py-attrs \
-		${PYTHON_PKGNAMEPREFIX}configargparse>=0.13.0:devel/py-configargparse \
+RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycryptodomex>=0:security/py-pycryptodomex@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}progress>=0:devel/py-progress@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}lxml>=0:devel/py-lxml@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}mini_amf>=0:www/py-mini_amf@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}defusedxml>=0:devel/py-defusedxml@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}future>=0:devel/py-future@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}attrs>=18.1.0,<19.3.0:devel/py-attrs@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}configargparse>=0.13.0:devel/py-configargparse@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 		ffmpeg>=4.1:multimedia/ffmpeg \
 		wget:ftp/wget
 
-USES=		python php
+USES=		python:3.7+ php
 USE_PYTHON=	distutils autoplist noflavors
 USE_PHP=	bcmath curl hash mcrypt simplexml
 
