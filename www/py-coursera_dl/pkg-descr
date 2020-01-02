@@ -1,0 +1,7 @@
+This script makes it easier to batch download lecture resources
+(e.g., videos, ppt, etc) for Coursera classes. Given one or more class
+names and account credentials, it obtains week and class names from
+the lectures page, and then downloads the related materials into
+appropriately named files and directories.
+
+WWW: https://github.com/coursera-dl/coursera-dl
