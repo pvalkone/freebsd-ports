@@ -2,6 +2,7 @@
 
 PORTNAME=	nand2tetris
 PORTVERSION=	2.6
+PORTREVISION=	1
 CATEGORIES=	devel java
 MASTER_SITES=	https://drive.google.com/uc?export=download&id=1KcFPj8KQ_QAHheFmLCqs5iqC_0NCndvs&dummy=/
 
@@ -17,6 +18,7 @@ NO_ARCH=	yes
 USE_JAVA=	yes
 JAVA_OS=	native
 JAVA_RUN=	yes
+JAVA_VERSION=	8+
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 TOOLS_DIR=	${WRKSRC}/tools
