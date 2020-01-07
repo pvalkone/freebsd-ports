@@ -3,9 +3,9 @@
 # vim: ts=8 noet
 
 PORTNAME=		dnscontrol
-PORTVERSION=		0.2.7
-PORTEPOCH=		1
+PORTVERSION=		2.9
 DISTVERSIONPREFIX=	v
+PORTEPOCH=		1
 CATEGORIES=		dns
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -18,7 +18,6 @@ GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	StackExchange
-GH_TAGNAME=	e563c536
 
 PLIST_FILES=	bin/dnscontrol \
 		"@sample etc/dnsconfig.js.sample" \
