@@ -1,4 +1,4 @@
-TIMESTAMP = 1566111607
+TIMESTAMP = 1578813393
 SHA256 (rust/crates/ansi_term-0.11.0.tar.gz) = ee49baf6cb617b853aa8d93bf420db2383fab46d314482ca2803b40d5fde979b
 SIZE (rust/crates/ansi_term-0.11.0.tar.gz) = 17087
 SHA256 (rust/crates/atty-0.2.11.tar.gz) = 9a7d5b8723950951411ee34d271d99dddcc2035a16ab25310ea2c8cfd4369652
@@ -81,5 +81,5 @@ SHA256 (rust/crates/winapi-x86_64-pc-windows-gnu-0.4.0.tar.gz) = 712e227841d057c
 SIZE (rust/crates/winapi-x86_64-pc-windows-gnu-0.4.0.tar.gz) = 2947998
 SHA256 (rust/crates/winreg-0.5.1.tar.gz) = a27a759395c1195c4cc5cda607ef6f8f6498f64e78f7900f5de0a127a424704a
 SIZE (rust/crates/winreg-0.5.1.tar.gz) = 17693
-SHA256 (MitMaro-git-interactive-rebase-tool-1.1.0_GH0.tar.gz) = c4fa28f864f84e24e7d6253074e5409f49362a99e40f481f2187b5e6a79285f7
-SIZE (MitMaro-git-interactive-rebase-tool-1.1.0_GH0.tar.gz) = 3616869
+SHA256 (MitMaro-git-interactive-rebase-tool-1.2.0_GH0.tar.gz) = 0dc328575d03fb160f0222d594ab26b540aa257c8be41f5d6ba854bd5876a171
+SIZE (MitMaro-git-interactive-rebase-tool-1.2.0_GH0.tar.gz) = 3623219
