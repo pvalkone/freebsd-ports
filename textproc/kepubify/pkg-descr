@@ -1,4 +1,4 @@
-Kepubify converts ePubs to kepubs (Kobo's ebook format).
+Kepubify converts EPUBs to KEPUBs (Kobo's ebook format).
 
 Features:
 
@@ -6,8 +6,9 @@ Features:
 - Batch conversion
 - Fast (about 12x faster than Calibre)
 - Works from the command line
-- Update Kobo series metadata
+- Optionally pre-generate covers (can also stretch it to a specific aspect ratio)
+- Optionally update Kobo series metadata (even before the book is imported)
 - Does not add any extra metadata (unlike Calibre)
 - Supports many different CSS tweaks
 
-WWW: https://geek1011.github.io/kepubify/
+WWW: https://pgaskin.net/kepubify

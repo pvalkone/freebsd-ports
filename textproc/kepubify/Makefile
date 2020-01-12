@@ -1,14 +1,12 @@
 # $FreeBSD$
 
-# vim: ts=8 noet
-
 PORTNAME=		kepubify
-PORTVERSION=		2.3.2
+PORTVERSION=		2.5.0
 DISTVERSIONPREFIX=	v
 CATEGORIES=		textproc
 
 MAINTAINER=	petteri.valkonen@iki.fi
-COMMENT=	ePub to kepub converter
+COMMENT=	EPUB to KEPUB converter
 
 LICENSE=	MIT
 
@@ -19,9 +17,11 @@ GH_ACCOUNT=	geek1011
 
 GO_PKGNAME=	github.com/${GH_ACCOUNT}/${PORTNAME}
 GO_TARGET=	${GO_PKGNAME} \
+		${GO_PKGNAME}/covergen \
 		${GO_PKGNAME}/seriesmeta
 
-PLIST_FILES=	bin/kepubify \
+PLIST_FILES=	bin/covergen \
+		bin/kepubify \
 		bin/seriesmeta
 
 do-install:
