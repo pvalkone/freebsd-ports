@@ -10,6 +10,8 @@ COMMENT=	EPUB to KEPUB converter
 
 LICENSE=	MIT
 
+BUILD_DEPENDS=	ca_root_nss>0:security/ca_root_nss
+
 USES=		go
 
 USE_GITHUB=	yes
