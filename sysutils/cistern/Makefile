@@ -1,9 +1,7 @@
 # $FreeBSD$
 
-# vim: ts=8 noet
-
 PORTNAME=	cistern
-PORTVERSION=	0.2.0dev6
+PORTVERSION=	0.2.0
 CATEGORIES=	sysutils
 
 MAINTAINER=	petteri.valkonen@iki.fi
