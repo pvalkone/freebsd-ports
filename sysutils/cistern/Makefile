@@ -2,6 +2,7 @@
 
 PORTNAME=	cistern
 PORTVERSION=	0.2.0
+PORTEPOCH=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	petteri.valkonen@iki.fi
