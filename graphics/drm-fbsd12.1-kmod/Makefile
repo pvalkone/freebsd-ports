@@ -2,7 +2,7 @@
 # $FreeBSD$
 
 PORTNAME=	drm-fbsd12.1-kmod
-PORTVERSION=	5.0.g20190915
+PORTVERSION=	5.0.g20200113
 CATEGORIES=	graphics
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -29,7 +29,7 @@ USES=		kmod uidfix compiler:c++11-lang
 USE_GITHUB=	yes
 GH_ACCOUNT=	FreeBSDDesktop
 GH_PROJECT=	kms-drm
-GH_TAGNAME=	7d4835b
+GH_TAGNAME=	eebd254
 
 .include <bsd.port.options.mk>
 
