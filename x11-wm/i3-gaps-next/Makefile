@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=		i3-gaps-next
-PORTVERSION=		4.17.20200207
+PORTVERSION=		4.17.1.20200216
 PORTEPOCH=		1
 CATEGORIES=		x11-wm
 
@@ -43,7 +43,7 @@ USE_PERL5=		build
 USE_GITHUB=		yes
 GH_ACCOUNT=		Airblader
 GH_PROJECT=		i3
-GH_TAGNAME=		c5295ca
+GH_TAGNAME=		6b1bc09
 
 RELEASE_VERSION=	${PORTVERSION}
 RELEASE_DATE=		`${ECHO_CMD} "${PORTVERSION}" | ${SED} -n 's/.*\.\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)$$/\1-\2-\3/p'`
