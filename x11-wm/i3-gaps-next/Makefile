@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=		i3-gaps-next
-PORTVERSION=		4.17.1.20200216
+PORTVERSION=		4.18
 PORTEPOCH=		1
 CATEGORIES=		x11-wm
 
@@ -31,7 +31,7 @@ LIB_DEPENDS=		libstartup-notification-1.so:x11/startup-notification \
 			libintl.so:devel/gettext-runtime
 RUN_DEPENDS=		glib>=2.52.0:devel/glib20
 
-USES=			gmake pkgconfig autoreconf perl5
+USES=			gmake pkgconfig autoreconf perl5 xorg
 
 CONFLICTS_INSTALL=	i3-*
 
@@ -43,7 +43,6 @@ USE_PERL5=		build
 USE_GITHUB=		yes
 GH_ACCOUNT=		Airblader
 GH_PROJECT=		i3
-GH_TAGNAME=		6b1bc09
 
 RELEASE_VERSION=	${PORTVERSION}
 RELEASE_DATE=		`${ECHO_CMD} "${PORTVERSION}" | ${SED} -n 's/.*\.\([0-9]\{4\}\)\([0-9]\{2\}\)\([0-9]\{2\}\)$$/\1-\2-\3/p'`
