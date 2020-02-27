@@ -3,7 +3,6 @@
 %%ALAN2%%bin/garglk/alan2
 %%ALAN3%%bin/garglk/alan3
 %%BOCFEL%%bin/garglk/bocfel
-%%FROTZ%%bin/garglk/frotz
 bin/garglk/gargoyle
 %%GEAS%%bin/garglk/geas
 %%GIT%%bin/garglk/git
@@ -12,7 +11,6 @@ bin/garglk/gargoyle
 %%JACL%%bin/garglk/jacl
 %%LEVEL9%%bin/garglk/level9
 %%MAGNETIC%%bin/garglk/magnetic
-%%NITFOL%%bin/garglk/nitfol
 %%SCARE%%bin/garglk/scare
 %%SCOTT%%bin/garglk/scott
 bin/garglk/tadsr
