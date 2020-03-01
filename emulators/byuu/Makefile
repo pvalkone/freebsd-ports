@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	byuu
-PORTVERSION=	1.3
+PORTVERSION=	1.4
 CATEGORIES=	emulators
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -30,7 +30,7 @@ PLIST_FILES=	bin/byuu \
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	byuu
-GH_TAGNAME=	822122d
+GH_TAGNAME=	33cf9dd
 
 do-build:
 	@cd ${WRKSRC} && ${SETENV} ${MAKE_ENV} ${GMAKE} -C higan target=byuu local=false
