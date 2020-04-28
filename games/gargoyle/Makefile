@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=		gargoyle
-PORTVERSION=		2019.1.1.20200220
+PORTVERSION=		2019.1.1.20200426
 CATEGORIES=		games
 
 MAINTAINER=		petteri.valkonen@iki.fi
@@ -22,7 +22,7 @@ USES=			gettext-runtime jpeg gnome sdl
 USE_GITHUB=		yes
 GH_ACCOUNT=		garglk
 GH_PROJECT=		garglk
-GH_TAGNAME=		0e4199b
+GH_TAGNAME=		5f7cb6a
 USE_GNOME=		gtk20 atk glib20 pango cairo gdkpixbuf2
 
 OPTIONS_DEFINE=		SDL ADVSYS AGILITY ALAN2 ALAN3 BOCFEL GEAS \
