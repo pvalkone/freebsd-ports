@@ -1,10 +1,11 @@
 # Created by: Petteri Valkonen <petteri.valkonen@iki.fi>
-# $FreeBSD: head/textproc/ripgrep/Makefile 528685 2020-03-19 05:56:12Z tobik $
+# $FreeBSD: head/textproc/ripgrep/Makefile 532685 2020-04-23 15:32:29Z tobik $
 
 # vim: ts=8 noet
 
 PORTNAME=	ripgrep
-DISTVERSION=	12.0.0
+DISTVERSION=	12.0.1
+PORTREVISION=	1
 CATEGORIES=	textproc
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -39,12 +40,12 @@ CARGO_CRATES=	aho-corasick-0.7.10 \
 		fnv-1.0.6 \
 		fs_extra-1.1.0 \
 		glob-0.3.0 \
-		hermit-abi-0.1.8 \
+		hermit-abi-0.1.9 \
 		itoa-0.4.5 \
 		jemalloc-sys-0.3.2 \
 		jemallocator-0.3.2 \
 		lazy_static-1.4.0 \
-		libc-0.2.67 \
+		libc-0.2.68 \
 		log-0.4.8 \
 		maybe-uninit-2.0.0 \
 		memchr-2.3.3 \
@@ -56,16 +57,16 @@ CARGO_CRATES=	aho-corasick-0.7.10 \
 		pkg-config-0.3.17 \
 		proc-macro2-1.0.9 \
 		quote-1.0.3 \
-		regex-1.3.5 \
+		regex-1.3.6 \
 		regex-automata-0.1.9 \
 		regex-syntax-0.6.17 \
 		ryu-1.0.3 \
 		same-file-1.0.6 \
-		serde-1.0.104 \
-		serde_derive-1.0.104 \
-		serde_json-1.0.48 \
+		serde-1.0.105 \
+		serde_derive-1.0.105 \
+		serde_json-1.0.50 \
 		strsim-0.8.0 \
-		syn-1.0.16 \
+		syn-1.0.17 \
 		termcolor-1.1.0 \
 		textwrap-0.11.0 \
 		thread_local-1.0.1 \
