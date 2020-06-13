@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# PROVIDE: sasidled
+# REQUIRE: FILESYSTEMS DAEMON
+# BEFORE: LOGIN
+# KEYWORD: shutdown
+
+#sasidled_enable=YES
+sasidled_prefix="/usr/local"
+
+. /etc/rc.subr
+
+name="sasidled"
+command_interpreter="/bin/sh"
+rcvar="$name_enable"
+
+load_rc_config $name
+
+command="${sasidled_cmdpath-/usr/local/bin}/sasidle"
+command_args="${sasidled_args}"
+
+required_dirs="/var/run"
+pidfile="/var/run/$name.pid"
+
+start_precmd="sasidled_prestart"
+stop_postcmd="sasidled_poststop"
+
+sasidled_prestart()
+{
+    if [ ! -d /var/run ]; then
+        mkdir -p /var/run
+    fi
+}
+
+sasidled_poststop()
+{
+    rm -f $pidfile
+}
+
+run_rc_command "$1"

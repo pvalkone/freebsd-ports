@@ -1,0 +1,5 @@
+This script will attempt to stop disks in a ZFS pool connected
+by a SAS HBA controller, using the camcontrol command. In effect,
+this is a poor man's ATAIDLE.
+
+WWW: https://www.ixsystems.com/community/threads/unsure-of-sata-drive-spindown.1053/page-4#post-29123

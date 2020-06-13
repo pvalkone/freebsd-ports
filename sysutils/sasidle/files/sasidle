@@ -1,0 +1,253 @@
+#!/bin/sh
+#set -xv
+
+#VERSION:  0.3.3
+#MODIFIED: 22 Oct 2013
+#AUTHOR:  Milhouse
+#
+#DESCRIPTION: Created on FreeNAS 8.0.1-BETA4 with LSI 9211-8i HBA
+#            Tested on FreeNAS 8.0.2-RELEASE with LSI 9211-8i HBA
+#            Tested on FreeNAS 9.1.1-RELEASE with onboard SATA
+#
+#  This script will attempt to stop disks in a ZFS pool connected
+#  by a SAS HBA controller, using the camcontrol command. In effect,
+#  this is a poor mans ATAIDLE.
+#
+#  The script is designed to run as a "daemon" process, running
+#  constantly from bootup. The idea is that it will consume standard
+#  input, which will itself be the output of "zpool iostat n" where n
+#  is a time interval, usually 60 (seconds).
+#
+#  A count (--timeout) is specified as an argument for the script, and this
+#  quantity is decremented each time there is no iostat activity, and reset
+#  whenever there is iostat activity. When the count reaches zero, the disks
+#  will be stopped using "camcontrol stop" (unless the --test option is
+#  specified).
+#
+#  The amount of time elapsed before disks are stopped is calculated as
+#  the product of the timeout and the value n specified for zpool iostat.
+#  For example, a timeout of 15 and an interval of 60 gives 15 * 60, or
+#  900 seconds (ie. 15 minutes). The default timeout is 30.
+#
+#  By default, disks will be stopped asynchronously (ie. simultaneously)
+#  however if this is a problem, specify the --sync option to stop disks
+#  in sequence, one after the other.
+#
+#  If a system has multiple pools, run individual commands for each pool.
+#
+#  If the script is unable to automatically detect disks/devices, specific
+#  devices can be specified using the --devices argument.
+#
+#CHANGELOG:
+#
+#  0.1.0: 2011-08-01  - Initial version
+#  0.2.0: 2011-09-05  - Tweak CAMCONTROL detection
+#  0.2.1: 2011-10-08  - Rewrite device detection to read devices from SQLITE db
+#  0.2.2: 2011-11-11  - Log when new disc activity detected after a stop (disable with --nologstart)
+#                      Simplify logging.
+#  0.2.3: 2011-11-12  - Minor fix for logging.
+#  0.3.0: 2012-06-04  - Add support for multiple pools and pool specific devices
+#  0.3.1: 2012-06-05  - Minor coding style corrections, remove trailing comma from default pools
+#  0.3.2: 2012-06-17  - Fix regression decoding devices and expansion of args
+#  0.3.3: 2013-10-22  - Fix unterminated string which FreeNAS 9.1.1 detects (but wasn't a problem in FreeNAS 8.x!)
+#
+#
+#USAGE:
+#  Execute the script with the -h or --help arguments.
+#
+#EXAMPLES:
+#  zpool iostat tank 60 | sh sasidle --timeout 15
+#  zpool iostat tank 60 | sh sasidle --timeout 15 --devices "/dev/da[2-3]"
+#  zpool iostat tank 60 | sh sasidle --timeout 15 --devices "tank:/dev/da[1-2] music:/dev/da[3-4]" --pool tank,music
+#  zpool iostat tank 60 | sh sasidle --timeout 15 --sync
+#  zpool iostat tank 60 | sh sasidle --timeout 15 --test --verbose
+#
+
+POOL=`zpool list -H -o name | tr -s '\n' ',' | sed 's/,$//g'`
+INTERVAL=60
+TIMEOUT=30
+DEVICES=
+ASYNC=Y
+LOGSTART=Y
+DOSTOP=Y
+DEBUG=
+INFO=Y
+
+_log() {
+    [ ! -z $RC_PID ] && echo "$1" || echo "`date +'%Y/%m/%d %H:%M:%S'` $1"
+}
+
+_help() {
+    echo "usage: ${0} [-p --pool <pool1,pool2>] [-i --interval #] [-t --timeout #] [-s -sync]
+[-d --devices "pool1:/dev/da[0-2] pool2:/dev/da[3-6]"] [--nologstart] [-x --test]
+[-q --quiet|-v --verbose] [-h --help]
+-p --pool      name of pool(s) to monitor, comma separated list
+-i --inteval    time interval between checks, in seconds
+-t --timeout    number of intervals to elaps before stopping disks (default 30)
+-s --sync      stop disks synchronously (default, async)
+-d --devices    override device detection by specifying devices eg. "/dev/da[0-4]",
+                or pool specific (pool1:dev1,dev2 pool2:dev3,dev4)
+  --nologstart log message when disk activity detected after a prior stop
+-x --test      do not stop disks (simulation)
+-q --quiet      suppress all informational and debug messages
+-v --verbose    output debug messages
+-h --help      display this help"
+}
+
+# Total hack to avoid consuming arguments (needed for later expansion)
+# getopts doesn't support long options in BSD, so this hack will have
+# to do.
+# In order to kick off the background task, we only need to know --pool
+# and --interval so make sure they're first in any arguments, and we'll
+# pass them in again to the background job where they can be consumed...
+P=1
+while [ $P -le $# ]; do
+    [ $P -gt 9 ] && break;
+
+    ARG1=`eval echo \$"$P"`
+    let P=P+1 >/dev/null
+    ARG2=`eval echo \$"$P"`
+    let PN=P+1 >/dev/null
+
+    case ${ARG1} in
+        "-p" | "--pool")    POOL=${ARG2}; P=$PN;;
+        "-i" | "--interval")    INTERVAL=${ARG2}; P=$PN;;
+    esac
+done
+
+# Being called by rc - fork off a backgroun task
+if [ ! -z $RC_PID ]; then
+    if [ -z ${PROCMAIN} ]; then
+        export PROCMAIN=YES;
+        for p in `echo ${POOL} | sed "s/,/ /g"`; do
+            zpool list $p >/dev/null
+# Pool must exist - if not, ignore it (error message will appear in logs)
+            if [ $? -eq 0 ]; then
+                zpool iostat ${p} ${INTERVAL} | \
+                    /bin/sh $0 "$@" --pool ${p} --interval ${INTERVAL} | \
+                    logger -i -t sasidle &
+            fi
+        done
+        exit 0
+    fi
+    echo $$ >>/var/run/sasidled.pid
+fi
+
+# To have got here, we're either being run manually from the command line, or
+# called from rc, so lets validate all arguments - they're safe to consume now.
+while [ $# -gt 0 ]; do
+    case ${1} in
+        "-p" | "--pool")    shift 1; POOL=${1};;
+        "-i" | "--interval")    shift 1; INTERVAL=${1};;
+        "-t" | "--timeout")    shift 1; TIMEOUT=${1};;
+        "-s" | "--sync")    ASYNC=;;
+        "-d" | "--devices")    shift 1; DEVICES=${1};;
+              "--nologstart")  LOGSTART=;;
+        "-x" | "--test")    DOSTOP=;;
+        "-q" | "--quiet")    DEBUG=; INFO=;;
+        "-v" | "--verbose")    DEBUG=Y; INFO=Y;;
+
+        "-h" | "--help")    _help; exit;;
+        *)            echo "Unrecognised argument: $1"; _help; exit;;
+    esac
+    shift 1
+done
+
+[ "${INFO}" ] && _log "$0 starting"
+
+if [ "${DEVICES}" ]; then
+    TEMP_DEV=${DEVICES}
+    DEVICES=
+
+    for x in ${TEMP_DEV}; do
+        if [ -n "$(echo $x | grep "^${POOL}:")" ]; then
+            [ "${INFO}" ] && _log "Parsing devices for pool \"${POOL}\"..."
+            DEVICES="`echo "$x" | cut -d: -f2- | sed 's/,/ /g'`"
+            break
+        fi
+# Use these unamed devices if no pool is matched
+        [ `echo $x | grep -v ":"` ] && DEVICES="${DEVICES} $x"
+    done
+
+# Clean up devices if necessary...
+    [ "$DEVICES" ] && DEVICES=`eval echo '$DEVICES' | sed 's/,/ /g' | sed 's/"//g'`
+fi
+
+# Determine managed devices if not already known...
+if [ ! "${DEVICES}" ]; then
+    [ "${INFO}" ] && _log "Identifying devices for pool \"${POOL}\"..."
+
+    GLABEL_OUTPUT=`glabel status | sed 1d | awk '{print $1,$3}'`
+    for LABEL in $(zpool status ${POOL} | grep 'label' | awk '{print $1}')
+    do
+        DEVICES="${DEVICES} `echo "${GLABEL_OUTPUT}" | grep "${LABEL} " | awk '{print $2}'`"
+    done
+    DEVICES=`echo "${DEVICES}" | awk '{sub(/^[ \t]+/, "")};1' | tr ' ' '\n' | sort -u | tr '\n' ' '`
+fi
+
+# Strip /dev/ prefix, eliminate any duplicates and stop disks in ascending sequence...
+DEVICES=`echo ${DEVICES} | sed "s#/dev/##g" | tr -s " " "\n" | sort -u | tr -s "\n" " "`
+
+# Show config info...
+if [ "${INFO}" ]; then
+    _log "---------------------------------------------------------"
+    _log "Monitored Pool:    ${POOL}"
+    _log "Monitored Devices: ${DEVICES}"
+    _log "Polling Interval:  ${INTERVAL} seconds"
+    _log "Idle Timeout:      ${TIMEOUT} * ${INTERVAL} seconds"
+    _log "ASync Enabled:     $([ ${ASYNC} ] && echo "Yes" || echo "No")"
+    _log "Simulated Stop:    $([ ${DOSTOP} ] && echo "No" || echo "Yes")"
+    _log "Log Disk Start:    $([ ${LOGSTART} ] && echo "Yes" || echo "No")"
+    _log "---------------------------------------------------------"
+fi
+
+# Skip 3 lines of "zpool iostat" headers...
+for H in 1 2 3; do
+    read HEADER
+    [ "$DEBUG" ] && _log "$(printf "%.3d: %s\n" ${TIMEOUT} "${HEADER}")"
+done
+
+COUNT=${TIMEOUT}
+STOPPED=
+
+# Main infinite loop...
+while [ true ]; do
+    read POOL_NAME POOL_USED POOL_AVAIL POOL_OP_READ POOL_OP_WRITE POOL_BW_READ POOL_BW_WRITE
+
+# If no activity, decrement count, else reset it
+    if [ ${POOL_OP_READ-1} = 0 -a ${POOL_OP_WRITE-1} = 0 -a \
+        ${POOL_BW_READ-1} = 0 -a ${POOL_BW_WRITE-1} = 0 ]; then
+        [ ! ${STOPPED} ] && let COUNT=COUNT-1 >/dev/null
+    else
+        if [ "${STOPPED}" -a "${LOGSTART}" ]; then
+            [ "${INFO}" ] && _log "Restarting devices in pool \"${POOL_NAME}\" due to activity"
+        fi
+
+        COUNT=${TIMEOUT}
+        STOPPED=
+    fi
+
+# Optional diagnostic output...
+    [ "${DEBUG}" ] && _log "$(printf "%.3d: %-10s  %5s  %5s  %5s  %5s  %5s  %5s\n" \
+        ${COUNT} ${POOL_NAME} ${POOL_USED} ${POOL_AVAIL} \
+        ${POOL_OP_READ} ${POOL_OP_WRITE} ${POOL_BW_READ} ${POOL_BW_WRITE})"
+
+# If count reaches zero, stop devices
+    if [ ${COUNT} -le 0 -a ! "${STOPPED}" ]; then
+        [ "${INFO}" ] && _log "Stopping devices in pool \"${POOL_NAME}\""
+
+        for DISK in ${DEVICES}; do
+            if [ "${DOSTOP}" ]; then
+                [ "${DEBUG}" ] && _log "camcontrol standby ${DISK}"
+                [  "${ASYNC}" ] && camcontrol standby ${DISK} &
+                [ ! "${ASYNC}" ] && camcontrol standby ${DISK}
+            else
+                [ "${DEBUG}" ] && _log "#camcontrol standby ${DISK}"
+            fi
+        done
+
+        STOPPED=Y
+    fi
+done
+
+exit 0
