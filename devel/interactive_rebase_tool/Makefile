@@ -1,8 +1,8 @@
-# $FreeBSD: head/devel/interactive_rebase_tool/Makefile 544073 2020-08-03 15:18:49Z tobik $
+# $FreeBSD: head/devel/interactive_rebase_tool/Makefile 547071 2020-08-30 18:36:07Z tobik $
 
 PORTNAME=	interactive_rebase_tool
 DISTVERSION=	1.2.1
-PORTREVISION=	9
+PORTREVISION=	10
 CATEGORIES=	devel
 
 MAINTAINER=	petteri.valkonen@iki.fi
