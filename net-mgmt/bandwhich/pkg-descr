@@ -1,0 +1,4 @@
+Bandwhich is a CLI utility for displaying current network utilisation
+by process, connection and remote IP/hostname.
+
+WWW: https://github.com/imsnif/bandwhich
