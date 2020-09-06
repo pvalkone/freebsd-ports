@@ -5,7 +5,7 @@ DISTVERSION=	0.17.0
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	petteri.valkonen@iki.fi
-COMMENT=	Terminal bandwidth utilisation tool
+COMMENT=	Terminal bandwidth utilization tool
 
 LICENSE=	MIT
 
