@@ -226,4 +226,5 @@ PLIST_FILES=	bin/bandwhich \
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/bandwhich
 	${INSTALL_MAN} ${WRKSRC}/docs/bandwhich.1 ${STAGEDIR}${MAN1PREFIX}/man/man1
+
 .include <bsd.port.mk>
