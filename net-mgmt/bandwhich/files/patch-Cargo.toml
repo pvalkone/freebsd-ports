@@ -1,0 +1,11 @@
+--- Cargo.toml.orig	2020-09-24 09:19:52 UTC
++++ Cargo.toml
+@@ -21,7 +21,7 @@ exclude = ["src/tests/*", "demo.gif"]
+ [dependencies]
+ pnet = "0.26.0"
+ ipnetwork = "0.16.0"
+-tui = { version = "0.5", default-features = false, features = ["crossterm"]}
++tui = { version = "0.6", default-features = false, features = ["crossterm"]}
+ crossterm = "0.17.7"
+ structopt = "0.3"
+ signal-hook = "0.1.10"
