@@ -1,7 +1,7 @@
 # $FreeBSD: head/net-mgmt/bandwhich/Makefile 547966 2020-09-08 07:16:45Z lwhsu $
 
 PORTNAME=	bandwhich
-DISTVERSION=	0.18.1
+DISTVERSION=	0.19.0
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -55,14 +55,6 @@ CARGO_CRATES=	adler-0.2.3 \
 		crossbeam-epoch-0.8.2 \
 		crossbeam-utils-0.7.2 \
 		crossterm-0.17.7 \
-		crossterm-0.9.6 \
-		crossterm_cursor-0.2.6 \
-		crossterm_input-0.3.9 \
-		crossterm_screen-0.2.5 \
-		crossterm_style-0.3.3 \
-		crossterm_terminal-0.2.6 \
-		crossterm_utils-0.2.4 \
-		crossterm_winapi-0.1.5 \
 		crossterm_winapi-0.6.1 \
 		derive-new-0.5.8 \
 		difference-2.0.0 \
@@ -97,7 +89,7 @@ CARGO_CRATES=	adler-0.2.3 \
 		heck-0.3.1 \
 		hermit-abi-0.1.15 \
 		hex-0.4.2 \
-		hostname-0.1.5 \
+		hostname-0.3.1 \
 		http_req-0.7.0 \
 		idna-0.2.0 \
 		insta-0.11.0 \
@@ -106,7 +98,6 @@ CARGO_CRATES=	adler-0.2.3 \
 		ipconfig-0.2.1 \
 		ipnetwork-0.12.8 \
 		ipnetwork-0.16.0 \
-		itertools-0.8.2 \
 		itoa-0.4.4 \
 		kernel32-sys-0.2.2 \
 		lazy_static-1.4.0 \
@@ -119,6 +110,7 @@ CARGO_CRATES=	adler-0.2.3 \
 		log-0.4.8 \
 		lru-cache-0.1.2 \
 		maplit-1.0.2 \
+		match_cfg-0.1.0 \
 		matches-0.1.8 \
 		maybe-uninit-2.0.0 \
 		memchr-2.2.1 \
@@ -192,7 +184,7 @@ CARGO_CRATES=	adler-0.2.3 \
 		regex-1.3.1 \
 		regex-syntax-0.6.12 \
 		remove_dir_all-0.5.3 \
-		resolv-conf-0.6.2 \
+		resolv-conf-0.6.3 \
 		rle-decode-fast-1.0.1 \
 		rustc-demangle-0.1.16 \
 		rustc-serialize-0.3.24 \
@@ -237,7 +229,7 @@ CARGO_CRATES=	adler-0.2.3 \
 		tokio-0.2.2 \
 		trust-dns-proto-0.18.1 \
 		trust-dns-resolver-0.18.1 \
-		tui-0.6.2 \
+		tui-0.12.0 \
 		typenum-1.11.2 \
 		ucd-trie-0.1.2 \
 		unicase-2.6.0 \
@@ -264,7 +256,6 @@ CARGO_CRATES=	adler-0.2.3 \
 		winapi-util-0.1.2 \
 		winapi-x86_64-pc-windows-gnu-0.4.0 \
 		winreg-0.6.2 \
-		winutil-0.1.1 \
 		ws2_32-sys-0.2.1 \
 		yaml-rust-0.4.3 \
 		zip-0.5.6
