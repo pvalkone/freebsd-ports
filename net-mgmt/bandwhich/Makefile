@@ -1,7 +1,8 @@
-# $FreeBSD: head/net-mgmt/bandwhich/Makefile 551477 2020-10-05 06:57:09Z mikael $
+# $FreeBSD: head/net-mgmt/bandwhich/Makefile 552221 2020-10-13 08:36:35Z mikael $
 
 PORTNAME=	bandwhich
 DISTVERSION=	0.19.0
+PORTREVISION=	1
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -263,6 +264,12 @@ CARGO_USE_GITHUB=	yes
 
 PLIST_FILES=	bin/bandwhich \
 		man/man1/bandwhich.1.gz
+
+.include <bsd.port.options.mk>
+
+.if ${ARCH} == aarch64 || ${ARCH:Marmv*} || ${ARCH:Mpowerpc*}
+EXTRA_PATCHES=	${FILESDIR}/extra-patch-cargo-crates_pnet__datalink-0.26.0_src_bpf.rs
+.endif
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/bandwhich
