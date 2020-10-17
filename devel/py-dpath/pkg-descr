@@ -1,0 +1,4 @@
+A Python library for accessing and searching dictionaries via
+XPath-style /slashed/paths.
+
+WWW: https://github.com/akesterson/dpath-python

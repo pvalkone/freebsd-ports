@@ -1,0 +1,6 @@
+Checkov is a static code analysis tool for infrastructure-as-code.
+It scans cloud infrastructure managed in Terraform, Cloudformation,
+Kubernetes, Arm templates or Serverless Framework and detects
+misconfigurations.
+
+WWW: https://www.checkov.io/
