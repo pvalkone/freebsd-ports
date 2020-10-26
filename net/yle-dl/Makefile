@@ -1,9 +1,7 @@
 # $FreeBSD$
 
-# vim: ts=8 noet
-
 PORTNAME=	yle-dl
-PORTVERSION=	20200807
+PORTVERSION=	20201022
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
