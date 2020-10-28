@@ -1,7 +1,7 @@
 # Created by: Johannes Dieterich <jmd@FreeBSD.org>
 # $FreeBSD$
 
-PORTNAME=	drm-fbsd12.1-kmod
+PORTNAME=	drm-fbsd12.2-kmod
 PORTVERSION=	5.0.g20200206
 CATEGORIES=	graphics
 
@@ -19,7 +19,7 @@ RUN_DEPENDS=	gpu-firmware-kmod>=g20180319:graphics/gpu-firmware-kmod
 CONFLICTS_INSTALL=	drm-devel-kmod \
 			drm-fbsd11.2-kmod \
 			drm-fbsd12.0-kmod \
-			drm-fbsd12.2-kmod \
+			drm-fbsd12.1-kmod \
 			drm-current-kmod \
 			drm-legacy-kmod
 
