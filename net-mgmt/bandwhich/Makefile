@@ -1,4 +1,4 @@
-# $FreeBSD: head/net-mgmt/bandwhich/Makefile 552221 2020-10-13 08:36:35Z mikael $
+# $FreeBSD: head/net-mgmt/bandwhich/Makefile 553778 2020-10-31 16:13:23Z mikael $
 
 PORTNAME=	bandwhich
 DISTVERSION=	0.20.0
