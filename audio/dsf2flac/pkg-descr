@@ -1,0 +1,7 @@
+dsf2flac is a file conversion tool for translating DSD audio files
+(in DSF or DFF format) into PCM audio files (in FLAC format).
+
+This version has been patched to support outputting to stdout
+(https://www.rollofone.com/?p=309).
+
+WWW: https://github.com/hank/dsf2flac

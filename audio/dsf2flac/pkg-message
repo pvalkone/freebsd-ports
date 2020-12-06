@@ -1,0 +1,14 @@
+[
+{ type: install
+  message: <<EOM
+To play a DSD64 file using DSD-over-PCM (DoP), issue the command:
+
+dsf2flac --dop \
+	--samplerate=176400 \
+	--infile=input.dsf \
+	--outfile=- \
+	2>/dev/null | \
+	mpv -
+EOM
+}
+]
