@@ -15,7 +15,7 @@ LIB_DEPENDS=	libid3.so:audio/id3lib \
 		libFLAC.so:audio/flac \
 		libFLAC++.so:audio/flac
 
-USES=		autoreconf:build
+USES=           autoreconf:build libtool pkgconfig
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	hank
