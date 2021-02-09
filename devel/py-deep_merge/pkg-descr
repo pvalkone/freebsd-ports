@@ -1,0 +1,4 @@
+This library contains a simple utility for deep-merging dictionaries
+and the data structures they contain.
+
+WWW: https://github.com/halfak/deep_merge
