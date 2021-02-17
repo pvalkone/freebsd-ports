@@ -1,0 +1,5 @@
+The Drone command line tools are used to interact with the Drone from the
+command line, and provide important utilities for managing users and
+repository settings.
+
+WWW: https://github.com/drone/drone-cli
