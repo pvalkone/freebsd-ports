@@ -1,8 +1,8 @@
-# $FreeBSD: head/net-mgmt/bandwhich/Makefile 560492 2021-01-06 10:13:58Z mikael $
+# $FreeBSD: head/net-mgmt/bandwhich/Makefile 565245 2021-02-14 15:45:10Z mikael $
 
 PORTNAME=	bandwhich
 DISTVERSION=	0.20.0
-PORTREVISION=	2
+PORTREVISION=	3
 CATEGORIES=	net-mgmt
 
 MAINTAINER=	petteri.valkonen@iki.fi
