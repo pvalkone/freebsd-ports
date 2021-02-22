@@ -1,7 +1,7 @@
 # $FreeBSD$
 
 PORTNAME=	yle-dl
-PORTVERSION=	20201022
+PORTVERSION=	20210212
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -20,7 +20,7 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}pycryptodomex>=0:security/py-pycryptodomex@$
 		ffmpeg>=4.1:multimedia/ffmpeg \
 		wget:ftp/wget
 
-USES=		python:3.7+
+USES=		python:3.5+
 USE_PYTHON=	distutils autoplist noflavors
 
 USE_GITHUB=	yes
