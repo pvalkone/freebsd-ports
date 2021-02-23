@@ -2,7 +2,7 @@
 
 PORTNAME=		kustomize
 DISTVERSIONPREFIX=	kustomize/v
-DISTVERSION=		3.8.6
+DISTVERSION=		4.0.1
 CATEGORIES=		devel
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -17,6 +17,9 @@ GH_ACCOUNT=	kubernetes-sigs
 PLIST_FILES=	bin/kustomize
 
 do-build:
-	@cd ${WRKSRC}/kustomize && ${SETENV} ${GO_ENV} ${GO_CMD} install .
+	@cd ${WRKSRC}/${PORTNAME} && ${SETENV} GOPATH=${WRKSRC} ${GO_CMD} build .
+
+do-install:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
 
 .include <bsd.port.mk>

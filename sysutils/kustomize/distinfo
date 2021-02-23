@@ -1,3 +1,3 @@
-TIMESTAMP = 1604219767
-SHA256 (kubernetes-sigs-kustomize-kustomize-v3.8.6_GH0.tar.gz) = 5646377f762f56e9a8b9580b3b0a2ad2652f33155d4ca39b3a396a43fdd6358a
-SIZE (kubernetes-sigs-kustomize-kustomize-v3.8.6_GH0.tar.gz) = 26027769
+TIMESTAMP = 1614087790
+SHA256 (kubernetes-sigs-kustomize-kustomize-v4.0.1_GH0.tar.gz) = dab80277b2f53d84b24e8810de8657f93351a0ef345922cf04ba61422c14dcdc
+SIZE (kubernetes-sigs-kustomize-kustomize-v4.0.1_GH0.tar.gz) = 27971924
