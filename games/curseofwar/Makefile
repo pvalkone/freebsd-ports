@@ -1,11 +1,8 @@
 # $FreeBSD$
 
-# vim: ts=8 noet
-
 PORTNAME=		curseofwar
-PORTVERSION=		1.2.0
+PORTVERSION=		1.3.0
 DISTVERSIONPREFIX=	v
-PORTREVISION=		1
 CATEGORIES=		games
 
 MAINTAINER=		petteri.valkonen@iki.fi
@@ -20,7 +17,8 @@ USE_GCC=		yes
 USE_CXXSTD=		gnu++98
 
 OPTIONS_DEFINE=		SDL
-SDL_USE=		SDL=yes
+SDL_USES=		sdl
+SDL_USE=		SDL=sdl
 SDL_MAKE_ENV=		SDL=yes
 SDL_PLIST_FILES=	bin/curseofwar-sdl \
 			man/man6/curseofwar-sdl.6.gz \
