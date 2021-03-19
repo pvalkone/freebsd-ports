@@ -2,7 +2,7 @@
 
 PORTNAME=		kustomize
 DISTVERSIONPREFIX=	kustomize/v
-DISTVERSION=		4.0.1
+DISTVERSION=		4.0.5
 CATEGORIES=		devel
 
 MAINTAINER=	petteri.valkonen@iki.fi
