@@ -1,0 +1,4 @@
+pathvalidate is a Python library to sanitize/validate a string such
+as filenames/file-paths/etc.
+
+WWW: https://pathvalidate.rtfd.io/
