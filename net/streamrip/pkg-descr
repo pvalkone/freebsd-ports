@@ -1,0 +1,12 @@
+A scriptable stream downloader for Qobuz, Tidal, and Deezer.
+
+Features:
+
+- Downloads tracks, albums, playlists, discographies, and labels
+  from Qobuz, Tidal, and Deezer
+- Automatically converts files to a preferred format
+- Has a database that stores the downloaded tracks' IDs so that
+  repeats are avoided
+- Easy to customize with the config file
+
+WWW: https://github.com/nathom/streamrip
