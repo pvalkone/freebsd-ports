@@ -3,6 +3,7 @@
 PORTNAME=		streamrip
 PORTVERSION=		0.2.13
 DISTVERSIONPREFIX=	v
+PORTREVISION=		1
 CATEGORIES=		net
 
 MAINTAINER=	petteri.valkonen@iki.fi

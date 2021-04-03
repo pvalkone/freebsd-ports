@@ -1,4 +1,4 @@
---- streamrip/downloader.py.orig	2021-04-02 00:44:00 UTC
+--- streamrip/downloader.py.orig	2021-04-03 09:17:14 UTC
 +++ streamrip/downloader.py
 @@ -107,7 +107,8 @@ class Track:
              # `load_meta` must be called at some point
@@ -19,32 +19,17 @@
  
          os.makedirs(self.folder, exist_ok=True)
  
-@@ -534,15 +535,15 @@ class Tracklist(list):
+@@ -534,7 +535,8 @@ class Tracklist(list):
          self.__setitem__(key, val)
  
      def convert(self, codec="ALAC", **kwargs):
 -        if (sr := kwargs.get("sampling_rate")) :
--            if sr < 44100:
--                logger.warning(
--                    "Sampling rate %d is lower than 44.1kHz."
--                    "This may cause distortion and ruin the track.",
--                    kwargs["sampling_rate"],
--                )
--            else:
--                logger.debug(f"Downsampling to {sr/1000}kHz")
 +        sr = kwargs.get("sampling_rate")
-+        if sr < 44100:
-+            logger.warning(
-+                "Sampling rate %d is lower than 44.1kHz."
-+                "This may cause distortion and ruin the track.",
-+                kwargs["sampling_rate"],
-+            )
-+        else:
-+            logger.debug(f"Downsampling to {sr/1000}kHz")
- 
-         for track in self:
-             track.convert(codec, **kwargs)
-@@ -1253,7 +1254,8 @@ class Artist(Tracklist):
++        if sr:
+             if sr < 44100:
+                 logger.warning(
+                     "Sampling rate %d is lower than 44.1kHz."
+@@ -1253,7 +1255,8 @@ class Artist(Tracklist):
          """
          groups = dict()
          for album in self:
