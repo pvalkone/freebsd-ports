@@ -1,6 +1,6 @@
---- streamrip/downloader.py.orig	2021-04-10 03:19:29 UTC
+--- streamrip/downloader.py.orig	2021-04-13 14:17:05 UTC
 +++ streamrip/downloader.py
-@@ -109,7 +109,8 @@ class Track:
+@@ -117,7 +117,8 @@ class Track:
              # `load_meta` must be called at some point
              logger.debug("Track: meta not provided")
  
@@ -10,16 +10,16 @@
              logger.debug(f"Cover url: {u}")
              self.cover_url = u
  
-@@ -172,7 +173,7 @@ class Track:
+@@ -180,7 +181,7 @@ class Track:
          self.folder = parent_folder or self.folder
  
          self.file_format = kwargs.get("track_format", TRACK_FORMAT)
 -        self.folder = sanitize_filepath(self.folder, platform="auto")
 +        self.folder = sanitize_filepath(self.folder, platform="Posix")
+         self.format_final_path()
  
          os.makedirs(self.folder, exist_ok=True)
- 
-@@ -587,7 +588,8 @@ class Tracklist(list):
+@@ -672,7 +673,8 @@ class Tracklist(list):
          self.__setitem__(key, val)
  
      def convert(self, codec="ALAC", **kwargs):
@@ -29,7 +29,7 @@
              if sr < 44100:
                  logger.warning(
                      "Sampling rate %d is lower than 44.1kHz."
-@@ -1441,7 +1443,8 @@ class Artist(Tracklist):
+@@ -1494,7 +1496,8 @@ class Artist(Tracklist):
          """
          groups = dict()
          for album in self:

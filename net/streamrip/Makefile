@@ -1,12 +1,12 @@
 # $FreeBSD$
 
 PORTNAME=		streamrip
-PORTVERSION=		0.4
+PORTVERSION=		0.4.2
 DISTVERSIONPREFIX=	v
 CATEGORIES=		net
 
 MAINTAINER=	petteri.valkonen@iki.fi
-COMMENT=	Scriptable music downloader for Qobuz, Tidal, and Deezer
+COMMENT=	Scriptable music downloader for Qobuz, Tidal, Deezer and SoundCloud
 
 LICENSE=	GPLv3
 
