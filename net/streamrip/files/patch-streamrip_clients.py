@@ -1,6 +1,6 @@
---- streamrip/clients.py.orig	2021-04-13 14:39:02 UTC
-+++ streamrip/clients.py
-@@ -637,7 +637,8 @@ class TidalClient(ClientInterface):
+--- streamrip/clients.py.orig	2021-04-30 16:33:05.672672000 +0300
++++ streamrip/clients.py	2021-04-30 16:29:26.648956000 +0300
+@@ -764,7 +764,8 @@
          if media_type in ("playlist", "album"):
  
              resp = self._api_request(f"{url}/items")

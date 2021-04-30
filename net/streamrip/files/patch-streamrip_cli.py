@@ -1,7 +1,7 @@
---- streamrip/cli.py.orig	2021-04-10 03:19:29 UTC
-+++ streamrip/cli.py
-@@ -56,7 +56,7 @@ def cli(ctx, **kwargs):
-     config = Config()
+--- streamrip/cli.py.orig	2021-04-30 16:52:02.434474000 +0300
++++ streamrip/cli.py	2021-04-30 16:52:35.318662000 +0300
+@@ -59,7 +59,7 @@
+         return
  
      if config.session["check_for_updates"]:
 -        from importlib import metadata
