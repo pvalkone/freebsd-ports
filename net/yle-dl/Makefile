@@ -1,7 +1,7 @@
-# $FreeBSD$
+#
 
 PORTNAME=	yle-dl
-PORTVERSION=	20210212
+PORTVERSION=	20210502
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
