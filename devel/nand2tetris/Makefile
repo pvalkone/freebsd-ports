@@ -1,10 +1,10 @@
-# $FreeBSD$
+#
 
 PORTNAME=	nand2tetris
 PORTVERSION=	2.6
 PORTREVISION=	1
 CATEGORIES=	devel java
-MASTER_SITES=	https://drive.google.com/uc?export=download&id=1KcFPj8KQ_QAHheFmLCqs5iqC_0NCndvs&dummy=/
+MASTER_SITES=	https://drive.google.com/uc?export=download&id=1xZzcMIUETv3u3sdpM_oTJSTetpVee3KZ&dummy=/
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Software suite accompanying the Nand2Tetris course
