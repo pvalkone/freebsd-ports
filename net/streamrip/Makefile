@@ -1,7 +1,7 @@
 #
 
 PORTNAME=		streamrip
-PORTVERSION=		0.5
+PORTVERSION=		0.5.4
 DISTVERSIONPREFIX=	v
 CATEGORIES=		net
 
@@ -17,14 +17,11 @@ RUN_DEPENDS=	${PYTHON_PKGNAMEPREFIX}click>=0:devel/py-click@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}requests>=0:www/py-requests@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}mutagen>=0:audio/py-mutagen@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}tqdm>=0:misc/py-tqdm@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pycryptodome>=0:security/py-pycryptodome@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}pick>=0:devel/py-pick@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}colorama>=0:devel/py-colorama@${PY_FLAVOR} \
+		${PYTHON_PKGNAMEPREFIX}simple-term-menu>=0:devel/py-simple-term-menu@${PY_FLAVOR} \
 		${PYTHON_PKGNAMEPREFIX}sqlite3>=0:databases/py-sqlite3@${PY_FLAVOR} \
-		${PYTHON_PKGNAMEPREFIX}importlib-metadata>=0:devel/py-importlib-metadata@${PY_FLAVOR} \
 		ffmpeg:multimedia/ffmpeg
 
-USES=		python:3.7+
+USES=		python:3.8+
 USE_PYTHON=	distutils autoplist noflavors
 USE_GITHUB=	yes
 GH_ACCOUNT=	nathom
