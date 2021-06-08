@@ -1,16 +1,16 @@
-PORTNAME=			atuin
-DISTVERSIONPREFIX=	v
-DISTVERSION=		0.7.1
-CATEGORIES=			shells
+PORTNAME=   atuin
+DISTVERSIONPREFIX=v
+DISTVERSION=0.7.1
+CATEGORIES= shells
 
-MAINTAINER=	petteri.valkonen@iki.fi
-COMMENT=	Magical shell history
+MAINTAINER= petteri.valkonen@iki.fi
+COMMENT=    Magical shell history
 
-LICENSE=	MIT
+LICENSE=MIT
 
-USES=		cargo
-USE_GITHUB=	yes
-GH_ACCOUNT=	ellie
+USES=       cargo
+USE_GITHUB= yes
+GH_ACCOUNT= ellie
 
 CARGO_CRATES=	\
   ahash-0.4.7 \
@@ -288,7 +288,7 @@ CARGO_CRATES=	\
 
 OPTIONS_DEFINE=DOCS
 
-PLIST_FILES=	bin/atuin
+PLIST_FILES=bin/atuin
 
 PORTDOCS=	\
 	config.md \

@@ -1,16 +1,16 @@
-PORTNAME=						himalaya
-DISTVERSIONPREFIX=	v
-DISTVERSION=				0.4.0
-CATEGORIES=					mail
+PORTNAME=   himalaya
+DISTVERSIONPREFIX=v
+DISTVERSION=0.4.0
+CATEGORIES= mail
 
-MAINTAINER=	petteri.valkonen@iki.fi
-COMMENT=		CLI email client
+MAINTAINER= petteri.valkonen@iki.fi
+COMMENT=    CLI email client
 
 LICENSE=BSD3CLAUSE
 
-USES=				cargo ssl
-USE_GITHUB=	yes
-GH_ACCOUNT=	soywod
+USES=       cargo ssl
+USE_GITHUB= yes
+GH_ACCOUNT= soywod
 
 CARGO_CRATES=	\
   addr2line-0.14.1 \
