@@ -1,0 +1,9 @@
+Bringing emails to the terminal is a pain. First, because they are
+sensitive data. Secondly, the existing TUIs (Mutt, NeoMutt, Alpine,
+aerc...) are really hard to configure. They require time and patience.
+
+The aim of Himalaya is to extract the email logic into a simple (yet
+solid) CLI API that can be used directly from the terminal, from
+scripts, from UIs... Possibilities are endless!
+
+WWW: https://github.com/soywod/himalaya
