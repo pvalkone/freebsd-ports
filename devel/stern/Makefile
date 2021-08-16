@@ -63,8 +63,8 @@ GH_TUPLE=	\
 		inconshreveable:mousetrap:v1.0.0:inconshreveable_mousetrap/vendor/github.com/inconshreveable/mousetrap \
 		json-iterator:go:v1.1.10:json_iterator_go/vendor/github.com/json-iterator/go \
 		kballard:go-shellquote:95032a82bc51:kballard_go_shellquote/vendor/github.com/kballard/go-shellquote \
-    kubernetes-sigs:kustomize:kyaml/v0.10.15:kubernetes_sigs_kustomize_kyaml/vendor/sigs.k8s.io/kustomize \
-    kubernetes-sigs:kustomize:api/v0.8.5:kubernetes_sigs_kustomize_api/vendor/sigs.k8s.io/kustomize \
+		kubernetes-sigs:kustomize:kyaml/v0.10.15:kubernetes_sigs_kustomize_kyaml/vendor/sigs.k8s.io/kustomize \
+		kubernetes-sigs:kustomize:api/v0.8.5:kubernetes_sigs_kustomize_api/vendor/sigs.k8s.io/kustomize \
 		kubernetes-sigs:structured-merge-diff:v4.1.0:kubernetes_sigs_structured_merge_diff/vendor/sigs.k8s.io/structured-merge-diff/v4 \
 		kubernetes-sigs:yaml:v1.2.0:kubernetes_sigs_yaml/vendor/sigs.k8s.io/yaml \
 		kubernetes:api:v0.21.0:kubernetes_api/vendor/k8s.io/api \
