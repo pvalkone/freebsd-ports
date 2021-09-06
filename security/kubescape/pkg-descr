@@ -1,0 +1,4 @@
+Kubescape is a tool for testing if Kubernetes is deployed securely as
+defined in Kubernetes Hardening Guidance by NSA and CISA.
+
+WWW: https://www.armosec.io/armo-kubescape
