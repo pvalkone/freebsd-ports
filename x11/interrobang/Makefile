@@ -1,7 +1,3 @@
-# $FreeBSD$
-
-# vim: ts=8 noet
-
 PORTNAME=	interrobang
 PORTVERSION=	0.2.20180816
 CATEGORIES=	x11
@@ -11,10 +7,6 @@ COMMENT=	Tiny launcher menu packing a big bang (syntax)
 
 LICENSE=	GPLv3
 
-PLIST_FILES=	bin/interrobang \
-		bin/percontation \
-		man/man1/interrobang.1.gz \
-		"@sample %%ETCDIR%%/config.sample"
 PORTDOCS=	COPYING README.md
 
 OPTIONS_DEFINE=	DOCS
@@ -22,7 +14,9 @@ OPTIONS_DEFINE=	DOCS
 USE_GITHUB=	yes
 GH_ACCOUNT=	TrilbyWhite
 GH_TAGNAME=	39d2716
-USE_GCC=	yes
+
+USES=			xorg
+USE_GCC=  yes
 USE_XORG=	x11
 
 post-patch:
