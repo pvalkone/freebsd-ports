@@ -1,5 +1,3 @@
-#
-
 PORTNAME=		streamrip
 PORTVERSION=		0.5.4
 DISTVERSIONPREFIX=	v
