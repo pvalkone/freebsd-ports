@@ -1,0 +1,6 @@
+httm prints the size, date and corresponding locations of available
+unique versions (deduplicated by modify time and size) of files residing
+on ZFS snapshots, but can also be used interactively to select and
+restore such files.
+
+WWW: https://github.com/kimono-koans/httm
