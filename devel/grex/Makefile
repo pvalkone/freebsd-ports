@@ -162,9 +162,9 @@ CARGO_CRATES=	aho-corasick-0.7.18 \
 		winapi-x86_64-pc-windows-gnu-0.4.0
 
 PLIST_FILES=	bin/grex
+PORTDOCS=	README.md RELEASE_NOTES.md
 
 OPTIONS_DEFINE=	DOCS
-PORTDOCS=	README.md RELEASE_NOTES.md
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/grex
