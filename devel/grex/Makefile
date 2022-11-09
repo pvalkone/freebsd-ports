@@ -13,7 +13,7 @@ USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	pemistahl
 
-CARGO_CRATES= aho-corasick-0.7.18 \
+CARGO_CRATES=	aho-corasick-0.7.18 \
 		anes-0.1.6 \
 		assert_cmd-2.0.5 \
 		atty-0.2.14 \
