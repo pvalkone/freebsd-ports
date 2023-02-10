@@ -3,7 +3,7 @@
 # vim: ts=8 noet
 
 PORTNAME=	laines
-PORTVERSION=	20170106
+PORTVERSION=	20200610
 PORTEPOCH=	0
 CATEGORIES=	emulators
 
@@ -23,7 +23,7 @@ PLIST_FILES=	bin/laines \
 USE_GITHUB=	yes
 GH_ACCOUNT=	AndreaOrru
 GH_PROJECT=	LaiNES
-GH_TAGNAME=	5151a69
+GH_TAGNAME=	b56dac7
 GH_TUPLE=	brofield:simpleini:03e27b2:simpleini
 
 post-patch:
