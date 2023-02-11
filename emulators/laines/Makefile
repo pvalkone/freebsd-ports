@@ -9,6 +9,7 @@ CATEGORIES=	emulators
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Cycle-accurate NES emulator in ~1000 lines of code
+WWW=		https://github.com/AndreaOrru/LaiNES
 
 LICENSE=	BSD2CLAUSE
 
