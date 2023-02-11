@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 # vim: ts=8 noet
 
 PORTNAME=	laines
