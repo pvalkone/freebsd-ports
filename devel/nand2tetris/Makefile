@@ -1,8 +1,7 @@
 #
 
 PORTNAME=	nand2tetris
-PORTVERSION=	2.6
-PORTREVISION=	1
+PORTVERSION=	2.7
 CATEGORIES=	devel java
 MASTER_SITES=	https://drive.google.com/uc?export=download&id=1xZzcMIUETv3u3sdpM_oTJSTetpVee3KZ&dummy=/
 
