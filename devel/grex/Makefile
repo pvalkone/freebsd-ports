@@ -1,7 +1,6 @@
 PORTNAME=	grex
 DISTVERSIONPREFIX=	v
-DISTVERSION=	1.4.2
-PORTREVISION=	4
+DISTVERSION=	1.4.4
 CATEGORIES=	devel
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -25,55 +24,13 @@ CARGO_CRATES=	aho-corasick-1.0.2 \
 		autocfg-1.1.0 \
 		bit-set-0.5.3 \
 		bit-vec-0.6.3 \
-		bitflags-1.3.2 \
-		bitflags-2.3.3 \
-		bstr-1.6.0 \
-		bumpalo-3.13.0 \
-		byteorder-1.4.3 \
-		cast-0.3.0 \
-		cc-1.0.79 \
-		cfg-if-1.0.0 \
-		ciborium-0.2.1 \
-		ciborium-io-0.2.1 \
-		ciborium-ll-0.2.1 \
-		clap-4.3.19 \
-		clap_builder-4.3.19 \
-		clap_derive-4.3.12 \
-		clap_lex-0.5.0 \
-		colorchoice-1.0.0 \
-		console_error_panic_hook-0.1.7 \
-		criterion-0.5.1 \
-		criterion-plot-0.5.0 \
-		crossbeam-channel-0.5.8 \
-		crossbeam-deque-0.8.3 \
-		crossbeam-epoch-0.9.15 \
-		crossbeam-utils-0.8.16 \
-		difflib-0.4.0 \
-		doc-comment-0.3.3 \
-		either-1.9.0 \
-		errno-0.3.1 \
-		errno-dragonfly-0.1.2 \
-		fastrand-2.0.0 \
-		fixedbitset-0.4.2 \
-		float-cmp-0.9.0 \
-		fnv-1.0.7 \
-		futures-0.3.28 \
-		futures-channel-0.3.28 \
-		futures-core-0.3.28 \
-		futures-executor-0.3.28 \
-		futures-io-0.3.28 \
-		futures-macro-0.3.28 \
-		futures-sink-0.3.28 \
-		futures-task-0.3.28 \
-		futures-timer-3.0.2 \
-		futures-util-0.3.28 \
-		getrandom-0.2.10 \
 		glob-0.3.1 \
 		half-1.8.2 \
-		hashbrown-0.12.3 \
+		hashbrown-0.14.0 \
 		heck-0.4.1 \
 		hermit-abi-0.3.2 \
-		indexmap-1.9.3 \
+		indexmap-2.0.0 \
+		indoc-1.0.9 \
 		indoc-2.0.3 \
 		io-lifetimes-1.0.11 \
 		is-terminal-0.4.9 \
@@ -86,6 +43,7 @@ CARGO_CRATES=	aho-corasick-1.0.2 \
 		libm-0.2.7 \
 		linux-raw-sys-0.3.8 \
 		linux-raw-sys-0.4.3 \
+		lock_api-0.4.10 \
 		log-0.4.19 \
 		matches-0.1.10 \
 		matrixmultiply-0.3.7 \
@@ -99,18 +57,8 @@ CARGO_CRATES=	aho-corasick-1.0.2 \
 		num_cpus-1.16.0 \
 		once_cell-1.18.0 \
 		oorandom-11.1.3 \
-		petgraph-0.6.3 \
-		pin-project-lite-0.2.10 \
-		pin-utils-0.1.0 \
-		plotters-0.3.5 \
-		plotters-backend-0.3.5 \
-		plotters-svg-0.3.5 \
-		ppv-lite86-0.2.17 \
-		predicates-3.0.3 \
-		predicates-core-1.0.6 \
-		predicates-tree-1.0.9 \
-		proc-macro2-1.0.66 \
-		proptest-1.2.0 \
+		parking_lot-0.12.1 \
+		parking_lot_core-0.9.8 \
 		quick-error-1.2.3 \
 		quote-1.0.32 \
 		rand-0.8.5 \
@@ -121,13 +69,13 @@ CARGO_CRATES=	aho-corasick-1.0.2 \
 		rayon-1.7.0 \
 		rayon-core-1.11.0 \
 		redox_syscall-0.3.5 \
-		regex-1.9.1 \
-		regex-automata-0.3.3 \
+		regex-1.9.3 \
+		regex-automata-0.3.6 \
 		regex-syntax-0.6.29 \
 		regex-syntax-0.7.4 \
 		relative-path-1.8.0 \
-		rstest-0.18.1 \
-		rstest_macros-0.18.1 \
+		rstest-0.18.2 \
+		rstest_macros-0.18.2 \
 		rustc_version-0.4.0 \
 		rustix-0.37.23 \
 		rustix-0.38.4 \
@@ -141,9 +89,12 @@ CARGO_CRATES=	aho-corasick-1.0.2 \
 		serde_derive-1.0.174 \
 		serde_json-1.0.103 \
 		slab-0.4.8 \
+		smallvec-1.11.0 \
 		strsim-0.10.0 \
+		syn-1.0.109 \
 		syn-2.0.27 \
-		tempfile-3.7.0 \
+		target-lexicon-0.12.11 \
+		tempfile-3.8.0 \
 		terminal_size-0.2.6 \
 		termtree-0.4.1 \
 		tinytemplate-1.2.1 \
@@ -155,6 +106,7 @@ CARGO_CRATES=	aho-corasick-1.0.2 \
 		unic-ucd-version-0.9.0 \
 		unicode-ident-1.0.11 \
 		unicode-segmentation-1.10.1 \
+		unindent-0.1.11 \
 		utf8parse-0.2.1 \
 		wait-timeout-0.2.0 \
 		walkdir-2.3.3 \
