@@ -24,6 +24,50 @@ CARGO_CRATES=	aho-corasick-1.0.2 \
 		autocfg-1.1.0 \
 		bit-set-0.5.3 \
 		bit-vec-0.6.3 \
+		bitflags-1.3.2 \
+		bitflags-2.3.3 \
+		bstr-1.6.0 \
+		bumpalo-3.13.0 \
+		byteorder-1.4.3 \
+		cast-0.3.0 \
+		cc-1.0.79 \
+		cfg-if-1.0.0 \
+		ciborium-0.2.1 \
+		ciborium-io-0.2.1 \
+		ciborium-ll-0.2.1 \
+		clap-4.3.24 \
+		clap_builder-4.3.24 \
+		clap_derive-4.3.12 \
+		clap_lex-0.5.0 \
+		colorchoice-1.0.0 \
+		console_error_panic_hook-0.1.7 \
+		criterion-0.5.1 \
+		criterion-plot-0.5.0 \
+		crossbeam-channel-0.5.8 \
+		crossbeam-deque-0.8.3 \
+		crossbeam-epoch-0.9.15 \
+		crossbeam-utils-0.8.16 \
+		difflib-0.4.0 \
+		doc-comment-0.3.3 \
+		either-1.9.0 \
+		equivalent-1.0.1 \
+		errno-0.3.1 \
+		errno-dragonfly-0.1.2 \
+		fastrand-2.0.0 \
+		fixedbitset-0.4.2 \
+		float-cmp-0.9.0 \
+		fnv-1.0.7 \
+		futures-0.3.28 \
+		futures-channel-0.3.28 \
+		futures-core-0.3.28 \
+		futures-executor-0.3.28 \
+		futures-io-0.3.28 \
+		futures-macro-0.3.28 \
+		futures-sink-0.3.28 \
+		futures-task-0.3.28 \
+		futures-timer-3.0.2 \
+		futures-util-0.3.28 \
+		getrandom-0.2.10 \
 		glob-0.3.1 \
 		half-1.8.2 \
 		hashbrown-0.14.0 \
@@ -59,6 +103,23 @@ CARGO_CRATES=	aho-corasick-1.0.2 \
 		oorandom-11.1.3 \
 		parking_lot-0.12.1 \
 		parking_lot_core-0.9.8 \
+		petgraph-0.6.4 \
+		pin-project-lite-0.2.10 \
+		pin-utils-0.1.0 \
+		plotters-0.3.5 \
+		plotters-backend-0.3.5 \
+		plotters-svg-0.3.5 \
+		ppv-lite86-0.2.17 \
+		predicates-3.0.3 \
+		predicates-core-1.0.6 \
+		predicates-tree-1.0.9 \
+		proc-macro2-1.0.66 \
+		proptest-1.2.0 \
+		pyo3-0.19.2 \
+		pyo3-build-config-0.19.2 \
+		pyo3-ffi-0.19.2 \
+		pyo3-macros-0.19.2 \
+		pyo3-macros-backend-0.19.2 \
 		quick-error-1.2.3 \
 		quote-1.0.32 \
 		rand-0.8.5 \
