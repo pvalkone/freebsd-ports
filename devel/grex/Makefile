@@ -8,6 +8,7 @@ COMMENT=	Command-line tool for generating regular expressions from test cases
 WWW=		https://github.com/pemistahl/grex/
 
 LICENSE=	APACHE20
+LICENSE_FILE=	${WRKSRC}/LICENSE
 
 USES=		cargo
 USE_GITHUB=	yes
