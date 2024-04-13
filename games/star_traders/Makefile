@@ -1,6 +1,6 @@
 PORTNAME=	star_traders
 PORTVERSION=	7.20
-PORTREVISION=	1
+PORTREVISION=	2
 CATEGORIES=	games
 MASTER_SITES=	https://ftp.zap.org.au/pub/trader/unix/
 DISTNAME=	trader-${PORTVERSION}

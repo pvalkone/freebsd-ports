@@ -1,5 +1,5 @@
 bin/trader
-man/man6/trader.6.gz
+share/man/man6/trader.6.gz
 share/applications/au.org.zap.trader.desktop
 share/icons/hicolor/128x128/apps/trader.png
 share/icons/hicolor/16x16/apps/trader.png
