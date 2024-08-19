@@ -11,10 +11,14 @@ WWW=			https://a-nikolaev.github.io/curseofwar/
 LICENSE=		GPLv3
 
 USES=			gmake
+USE_CXXSTD=		gnu++98
+USE_GCC=		yes
 USE_GITHUB=		yes
 GH_ACCOUNT=		a-nikolaev
-USE_GCC=		yes
-USE_CXXSTD=		gnu++98
+
+BINARY_ALIAS=		gcc=${CC}
+
+PLIST_FILES=		${DOCSDIR}/changelog.gz
 
 OPTIONS_DEFINE=		SDL
 SDL_USES=		sdl
@@ -28,23 +32,19 @@ SDL_PLIST_FILES=	bin/curseofwar-sdl \
 SDL_PLIST_FILES_OFF=	bin/curseofwar \
 			share/man/man6/curseofwar.6.gz
 
-PLIST_FILES=		${DOCSDIR}/changelog.gz
-
-BINARY_ALIAS=		gcc=${CC}
-
 post-patch:
 	@${REINPLACE_CMD} -e "s/%VERSION%/${PORTVERSION}/g" \
 	${WRKSRC}/${PORTNAME}.6 ${WRKSRC}/${PORTNAME}-sdl.6
 
 do-install:
 
-do-install-SDL-off:
-	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.6 ${STAGEDIR}${PREFIX}/share/man/man6
-
 do-install-SDL-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME}-sdl ${STAGEDIR}${PREFIX}/bin
 	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}-sdl.6 ${STAGEDIR}${PREFIX}/share/man/man6
+
+do-install-SDL-off:
+	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.6 ${STAGEDIR}${PREFIX}/share/man/man6
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
