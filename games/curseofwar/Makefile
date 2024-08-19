@@ -1,5 +1,3 @@
-# $FreeBSD$
-
 PORTNAME=		curseofwar
 PORTVERSION=		1.3.0
 DISTVERSIONPREFIX=	v
@@ -8,6 +6,7 @@ CATEGORIES=		games
 
 MAINTAINER=		petteri.valkonen@iki.fi
 COMMENT=		Real-time strategy game
+WWW=			https://a-nikolaev.github.io/curseofwar/
 
 LICENSE=		GPLv3
 
