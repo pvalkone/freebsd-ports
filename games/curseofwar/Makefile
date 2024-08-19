@@ -3,6 +3,7 @@
 PORTNAME=		curseofwar
 PORTVERSION=		1.3.0
 DISTVERSIONPREFIX=	v
+PORTREVISION=		1
 CATEGORIES=		games
 
 MAINTAINER=		petteri.valkonen@iki.fi
@@ -21,12 +22,12 @@ SDL_USES=		sdl
 SDL_USE=		SDL=sdl
 SDL_MAKE_ENV=		SDL=yes
 SDL_PLIST_FILES=	bin/curseofwar-sdl \
-			man/man6/curseofwar-sdl.6.gz \
+			share/man/man6/curseofwar-sdl.6.gz \
 			${DATADIR}/images/tileset.bmp \
 			${DATADIR}/images/type.bmp \
 			${DATADIR}/images/ui.bmp
 SDL_PLIST_FILES_OFF=	bin/curseofwar \
-			man/man6/curseofwar.6.gz
+			share/man/man6/curseofwar.6.gz
 
 PLIST_FILES=		${DOCSDIR}/changelog.gz
 
@@ -40,11 +41,11 @@ do-install:
 
 do-install-SDL-off:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME} ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.6 ${STAGEDIR}${PREFIX}/man/man6
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.6 ${STAGEDIR}${PREFIX}/share/man/man6
 
 do-install-SDL-on:
 	${INSTALL_PROGRAM} ${WRKSRC}/${PORTNAME}-sdl ${STAGEDIR}${PREFIX}/bin
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}-sdl.6 ${STAGEDIR}${PREFIX}/man/man6
+	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}-sdl.6 ${STAGEDIR}${PREFIX}/share/man/man6
 
 post-install:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
