@@ -1,0 +1,9 @@
+This tool reads the internal memory of LTO/Ultrium cartridges from a
+tape drive.
+
+More precisely, this tool can:
+
+- Read, decode and display factory and usage information stored in the
+  Cartridge Memory (CM) AKA Medium Auxiliary Memory (MAM).
+- View and modify the custom User Medium Text Label of a cartridge.
+- Display basic information about the tape drive device.

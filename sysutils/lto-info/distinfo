@@ -1,0 +1,13 @@
+TIMESTAMP = 1724168942
+SHA256 (speed47-lto-info-v0.2.1_GH0.tar.gz) = 67701f484cdd530749c166a080dd679bf003c14073a51d00d0d31515f7ec891b
+SIZE (speed47-lto-info-v0.2.1_GH0.tar.gz) = 11071
+SHA256 (HewlettPackard-structex-v1.0.2_GH0.tar.gz) = 940a4aa0b81092296d2d28354a871d01031a7c4953170faf96d5b5b372ceca2f
+SIZE (HewlettPackard-structex-v1.0.2_GH0.tar.gz) = 78626
+SHA256 (benmcclelland-mtio-f929531fb4fe_GH0.tar.gz) = 7d2c917b9e85c8d2985dbddcbc5167d256eaa9ada19c96b6e684421b50d8a370
+SIZE (benmcclelland-mtio-f929531fb4fe_GH0.tar.gz) = 6558
+SHA256 (benmcclelland-sgio-f710aebf64c1_GH0.tar.gz) = 5b0bd519d9f00c275b6374e13e3ad1173fda0028e420fcc956b9bec98a42a77a
+SIZE (benmcclelland-sgio-f710aebf64c1_GH0.tar.gz) = 6146
+SHA256 (golang-sys-1e4c9ba3b0c4_GH0.tar.gz) = f12d6935b9f5ae575b41fcaf7a64ea9063fa2ba2b173cf8b83a7793e98e3d0e2
+SIZE (golang-sys-1e4c9ba3b0c4_GH0.tar.gz) = 1218175
+SHA256 (jessevdk-go-flags-v1.5.0_GH0.tar.gz) = d4bf30f729cbc16d2aa0095ac10ca4fadc8f092b9a28990c0cfca2345c3e7ffd
+SIZE (jessevdk-go-flags-v1.5.0_GH0.tar.gz) = 59316
