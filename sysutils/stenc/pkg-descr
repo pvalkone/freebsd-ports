@@ -1,0 +1,4 @@
+SCSI Tape Encryption Manager - Manages hardware encryption on LTO tape
+drives (starting with generation 4). Program should work on any other
+SCSI security protocol (SSP) capable tape drives. Supports key change
+auditing and key descriptors (uKAD).
