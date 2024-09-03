@@ -12,7 +12,7 @@ BUILD_DEPENDS=	bash-completion>0:shells/bash-completion \
 		pandoc:textproc/hs-pandoc
 RUN_DEPENDS=	bash-completion>0:shells/bash-completion
 
-USES=		autoreconf compiler:c++17-lang
+USES=		autoreconf compiler:c++17-lang pkgconfig
 USE_GITHUB=	yes
 GH_ACCOUNT=	scsitape
 
