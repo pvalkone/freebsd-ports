@@ -8,8 +8,7 @@ WWW=		https://github.com/scsitape/stenc
 
 LICENSE=	GPLv2
 
-BUILD_DEPENDS=	bash-completion>0:shells/bash-completion \
-		pandoc:textproc/hs-pandoc
+BUILD_DEPENDS=	pandoc:textproc/hs-pandoc
 RUN_DEPENDS=	bash-completion>0:shells/bash-completion
 
 USES=		autoreconf compiler:c++17-lang pkgconfig
