@@ -8,6 +8,7 @@ COMMENT=	Terminal bandwidth utilization tool
 WWW=		https://github.com/imsnif/bandwhich
 
 LICENSE=	MIT
+LICENSE_FILE=	${WRKSRC}/LICENSE.md
 
 RUN_DEPENDS=	lsof:sysutils/lsof
 
