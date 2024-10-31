@@ -5,6 +5,7 @@ MASTER_SITES=	https://drive.google.com/uc?export=download&id=1xZzcMIUETv3u3sdpM_
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Software suite accompanying the Nand2Tetris course
+WWW=		http://www.nand2tetris.org/
 
 LICENSE=	GPLv3
 
