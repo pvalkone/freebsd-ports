@@ -1,5 +1,3 @@
-#
-
 PORTNAME=	nand2tetris
 PORTVERSION=	2.7
 CATEGORIES=	devel java
