@@ -10,17 +10,19 @@ WWW=		http://www.nand2tetris.org/
 LICENSE=	GPLv3
 
 USES=		zip
-NO_BUILD=	yes
-NO_ARCH=	yes
 
 USE_JAVA=	yes
+JAVA_VERSION=	8+
 JAVA_OS=	native
 JAVA_RUN=	yes
-JAVA_VERSION=	8+
+
+NO_ARCH=	yes
+NO_BUILD=	yes
 
 WRKSRC=		${WRKDIR}/${PORTNAME}
 TOOLS_DIR=	${WRKSRC}/tools
-SCRIPT_FILES=	Assembler.sh CPUEmulator.sh HardwareSimulator.sh JackCompiler.sh VMEmulator.sh
+SCRIPT_FILES=	Assembler.sh CPUEmulator.sh HardwareSimulator.sh \
+		JackCompiler.sh VMEmulator.sh
 
 post-patch:
 .for f in ${SCRIPT_FILES}
