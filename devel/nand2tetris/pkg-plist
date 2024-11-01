@@ -3,15 +3,6 @@
 %%DATADIR%%/bin/classes/HardwareSimulatorMain.class
 %%DATADIR%%/bin/classes/TextComparer.class
 %%DATADIR%%/bin/classes/VMEmulatorMain.class
-%%DATADIR%%/bin/help/._asmAbout.html
-%%DATADIR%%/bin/help/._asmUsage.html
-%%DATADIR%%/bin/help/._compiler.txt
-%%DATADIR%%/bin/help/._cpuAbout.html
-%%DATADIR%%/bin/help/._cpuUsage.html
-%%DATADIR%%/bin/help/._hwAbout.html
-%%DATADIR%%/bin/help/._hwUsage.html
-%%DATADIR%%/bin/help/._vmAbout.html
-%%DATADIR%%/bin/help/._vmUsage.html
 %%DATADIR%%/bin/help/asmAbout.html
 %%DATADIR%%/bin/help/asmUsage.html
 %%DATADIR%%/bin/help/compiler.txt
