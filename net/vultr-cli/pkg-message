@@ -1,4 +1,0 @@
-Export your Vultr API key into a VULTR_API_KEY environment variable, or
-provide it using the --api-key (-k) command-line option.
-
-You can get the API key from the admin panel at: https://my.vultr.com/settings
