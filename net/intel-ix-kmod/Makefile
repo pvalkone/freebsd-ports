@@ -17,10 +17,9 @@ DISTINFO_FILE=	${.CURDIR}/distinfo
 OPTIONS_DEFINE=	SRIOV
 SRIOV_DESC=	Enable SR-IOV support (experimental)
 
+MANPAGELINKS=
+
 post-patch-SRIOV-on:
 	@${SED} -i '' 's|SRIOV_ENABLE = 0|SRIOV_ENABLE = 1|g' ${WRKSRC}/Makefile
-
-post-install:
-	${INSTALL_MAN} ${WRKSRC}/${PORTNAME}.4 ${STAGEDIR}${PREFIX}/share/man/man4
 
 .include "${MASTERDIR}/Makefile"
