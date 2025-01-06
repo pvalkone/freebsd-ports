@@ -24,6 +24,9 @@ PLIST_FILES=	bin/dsf2flac
 
 post-patch:
 	@${REINPLACE_CMD} -e 's|/usr|${LOCALBASE}|g' ${WRKSRC}/m4/ax_lib_id3.m4
+	@${REINPLACE_CMD} \
+		-e 's|streampos|std::streampos|' \
+		-e 's|streamoff|std::streamoff|' ${WRKSRC}/src/fstream_plus.*
 
 pre-configure:
 	cd ${WRKSRC} && ./autogen.sh
