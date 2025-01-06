@@ -1,11 +1,10 @@
-# $FreeBSD$
-
 PORTNAME=	dsf2flac
 PORTVERSION=	0.1Rev54
 CATEGORIES=	audio
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Tool for translating DSD audio files into PCM
+WWW=		https://github.com/hank/dsf2flac
 
 LICENSE=	GPLv2
 
@@ -15,7 +14,7 @@ LIB_DEPENDS=	libid3.so:audio/id3lib \
 		libFLAC.so:audio/flac \
 		libFLAC++.so:audio/flac
 
-USES=           autoreconf:build libtool pkgconfig
+USES=		autoreconf:build libtool pkgconfig
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	hank

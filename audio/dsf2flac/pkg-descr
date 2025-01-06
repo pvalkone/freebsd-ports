@@ -3,5 +3,3 @@ dsf2flac is a file conversion tool for translating DSD audio files
 
 This version has been patched to support outputting to stdout
 (https://www.rollofone.com/?p=309).
-
-WWW: https://github.com/hank/dsf2flac
