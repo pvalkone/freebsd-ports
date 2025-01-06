@@ -8,11 +8,11 @@ WWW=		https://github.com/hank/dsf2flac
 
 LICENSE=	GPLv2
 
-LIB_DEPENDS=	libid3.so:audio/id3lib \
-		libtag.so:audio/taglib \
-		libboost_system.so:devel/boost-libs \
+LIB_DEPENDS=	libboost_system.so:devel/boost-libs \
+		libFLAC++.so:audio/flac \
 		libFLAC.so:audio/flac \
-		libFLAC++.so:audio/flac
+		libid3.so:audio/id3lib \
+		libtag.so:audio/taglib
 
 USES=		autoreconf:build libtool pkgconfig
 
