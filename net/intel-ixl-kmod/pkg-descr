@@ -1,0 +1,4 @@
+This release includes FreeBSD Base Drivers for Intel(R) Ethernet
+Network Connections.
+
+Supporting devices based on the 700 series controllers.
