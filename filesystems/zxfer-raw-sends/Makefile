@@ -1,8 +1,8 @@
-PORTNAME=		zxfer
-PORTVERSION=		1.1.7
+PORTNAME=	zxfer
+PORTVERSION=	1.1.7
 DISTVERSIONPREFIX=	v
-CATEGORIES=		filesystems sysutils
-PKGNAMESUFFIX=		-raw-sends
+CATEGORIES=	filesystems sysutils
+PKGNAMESUFFIX=	-raw-sends
 
 MAINTAINER=	petteri.valkonen@iki.fi
 COMMENT=	Easily and reliably transfer ZFS filesystems, supports raw sends
@@ -18,8 +18,8 @@ CONFLICTS_INSTALL=	filesystems/zxfer
 
 NO_BUILD=	yes
 
-PLIST_FILES=	share/man/man8/zxfer.8.gz \
-		sbin/zxfer
+PLIST_FILES=	sbin/zxfer \
+		share/man/man8/zxfer.8.gz
 
 OPTIONS_DEFINE=	RSYNC
 
