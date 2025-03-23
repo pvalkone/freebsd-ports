@@ -14,17 +14,17 @@ USE_GITHUB=	yes
 GH_ACCOUNT=	evilham
 GH_TAGNAME=	b800526
 
+CONFLICTS_INSTALL=	filesystems/zxfer
+
 NO_BUILD=	yes
+
+PLIST_FILES=	share/man/man8/zxfer.8.gz \
+		sbin/zxfer
 
 OPTIONS_DEFINE=	RSYNC
 
 RSYNC_DESC=		Enable RSYNC Support
 RSYNC_RUN_DEPENDS=	rsync:net/rsync
-
-PLIST_FILES=	share/man/man8/zxfer.8.gz \
-		sbin/zxfer
-
-CONFLICTS_INSTALL=	filesystems/zxfer
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/zxfer ${STAGEDIR}${PREFIX}/sbin
