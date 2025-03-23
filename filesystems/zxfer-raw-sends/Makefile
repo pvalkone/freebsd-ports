@@ -1,6 +1,7 @@
 PORTNAME=	zxfer
 PORTVERSION=	1.1.7
 DISTVERSIONPREFIX=	v
+PORTREVISION=	1
 CATEGORIES=	filesystems sysutils
 PKGNAMESUFFIX=	-raw-sends
 
@@ -11,8 +12,8 @@ WWW=		https://github.com/allanjude/zxfer/pull/55
 LICENSE=	BSD2CLAUSE
 
 USE_GITHUB=	yes
-GH_ACCOUNT=	evilham
-GH_TAGNAME=	b800526
+GH_ACCOUNT=	allanjude
+GH_TAGNAME=	86e33b4
 
 CONFLICTS_INSTALL=	filesystems/zxfer
 
