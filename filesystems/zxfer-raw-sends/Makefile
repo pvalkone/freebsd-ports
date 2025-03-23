@@ -1,7 +1,7 @@
 PORTNAME=		zxfer
 PORTVERSION=		1.1.7
 DISTVERSIONPREFIX=	v
-CATEGORIES=		sysutils
+CATEGORIES=		filesystems sysutils
 PKGNAMESUFFIX=		-raw-sends
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -24,7 +24,7 @@ RSYNC_RUN_DEPENDS=	rsync:net/rsync
 PLIST_FILES=	share/man/man8/zxfer.8.gz \
 		sbin/zxfer
 
-CONFLICTS_INSTALL=	sysutils/zxfer
+CONFLICTS_INSTALL=	filesystems/zxfer
 
 do-install:
 	${INSTALL_SCRIPT} ${WRKSRC}/zxfer ${STAGEDIR}${PREFIX}/sbin
