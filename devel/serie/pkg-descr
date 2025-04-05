@@ -1,0 +1,2 @@
+Serie is a TUI application that uses the terminal emulators' image
+display protocol to render commit graphs like 'git log --graph --all'.
