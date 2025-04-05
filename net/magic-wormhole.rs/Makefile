@@ -1,5 +1,5 @@
 PORTNAME=	magic-wormhole.rs
-DISTVERSION=	0.7.5
+DISTVERSION=	0.7.6
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
