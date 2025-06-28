@@ -1,0 +1,5 @@
+Improved fork of the EtherDFS Server for Linux by Mateusz Viste.
+
+ethersrv is an implementation of EtherSRV for FreeBSD/Linux. It allows
+a computer to share its drive over Ethernet with multiple DOS clients
+running EtherDFS.

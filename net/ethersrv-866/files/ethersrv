@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# PROVIDE: ethersrv
+# REQUIRE: DAEMON NETWORKING
+# KEYWORD: shutdown
+#
+# Add these lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# ethersrv_enable (bool):  Set to NO by default.
+#                          Set it to YES to enable ethersrv.
+# ethersrv_interface (str):     The name of the network interface to bind ethersrv to.
+# ethersrv_rootpaths (str):     Space separated list of root paths to share.                             
+#
+# shellcheck disable=SC2034
+#
+# shellcheck source=/dev/null
+. /etc/rc.subr
+
+name=ethersrv
+rcvar=ethersrv_enable
+
+load_rc_config ${name}
+
+: "${ethersrv_enable:="NO"}"
+: "${ethersrv_interface=""}"
+: "${ethersrv_rootpaths=""}"
+
+command="/usr/local/sbin/ethersrv"
+command_args="${ethersrv_interface} ${ethersrv_rootpaths} >/dev/null"
+
+run_rc_command "$1"
