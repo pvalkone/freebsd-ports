@@ -27,6 +27,6 @@ load_rc_config ${name}
 : "${ethersrv_rootpaths=""}"
 
 command="/usr/local/sbin/ethersrv"
-command_args="${ethersrv_interface} ${ethersrv_rootpaths} >/dev/null"
+command_args="${ethersrv_interface} ${ethersrv_rootpaths} >/dev/null 2>&1"
 
 run_rc_command "$1"
