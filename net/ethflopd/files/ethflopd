@@ -1,0 +1,32 @@
+#!/bin/sh
+
+# PROVIDE: ethflopd
+# REQUIRE: DAEMON NETWORKING
+# KEYWORD: shutdown
+#
+# Add these lines to /etc/rc.conf.local or /etc/rc.conf
+# to enable this service:
+#
+# ethflopd_enable (bool):  Set to NO by default.
+#                          Set it to YES to enable ethflopd.
+# ethflopd_interface  (str):     The name of the network interface to bind ethersrv to.
+# ethflopd_storagedir (str):     The directory the floppy images are stored in.
+#
+# shellcheck disable=SC2034
+#
+# shellcheck source=/dev/null
+. /etc/rc.subr
+
+name=ethflopd
+rcvar=ethflopd_enable
+
+load_rc_config ${name}
+
+: "${ethflopd_enable:="NO"}"
+: "${ethflopd_interface=""}"
+: "${ethflopd_storagedir=""}"
+
+command="/usr/local/sbin/ethflopd"
+command_args="${ethflopd_interface} ${ethflopd_storagedir} >/dev/null 2>&1"
+
+run_rc_command "$1"

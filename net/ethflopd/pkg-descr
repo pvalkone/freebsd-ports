@@ -1,0 +1,2 @@
+ethflopd is a network server that serves emulated (virtual) floppy disk
+images to a DOS TSR client (ethflop).
