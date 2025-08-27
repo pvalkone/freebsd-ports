@@ -13,7 +13,7 @@ LICENSE_FILE=	${WRKSRC}/debian/copyright
 
 RUN_DEPENDS=	wget:ftp/wget \
 		bash:shells/bash \
-		pcregrep:devel/pcre \
+		pcre2grep:devel/pcre2 \
 		gpgv2:security/gnupg \
 		gtar:archivers/gtar \
 		${LOCALBASE}/share/keyrings/ubuntu-archive-keyring.gpg:security/ubuntu-keyring
