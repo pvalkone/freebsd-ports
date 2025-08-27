@@ -11,12 +11,12 @@ WWW=		https://wiki.debian.org/Debootstrap
 LICENSE=	MIT
 LICENSE_FILE=	${WRKSRC}/debian/copyright
 
-RUN_DEPENDS=	wget:ftp/wget \
+RUN_DEPENDS=	${LOCALBASE}/share/keyrings/ubuntu-archive-keyring.gpg:security/ubuntu-keyring \
 		bash:shells/bash \
-		pcre2grep:devel/pcre2 \
 		gpgv2:security/gnupg \
 		gtar:archivers/gtar \
-		${LOCALBASE}/share/keyrings/ubuntu-archive-keyring.gpg:security/ubuntu-keyring
+		pcre2grep:devel/pcre2 \
+		wget:ftp/wget
 
 USES=		gmake perl5
 USE_PERL5=	run
