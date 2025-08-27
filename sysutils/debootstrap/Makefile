@@ -1,6 +1,5 @@
 PORTNAME=	debootstrap
 PORTVERSION=	${DEB_VERSION}n${DEB_NMU}
-PORTREVISION=	4
 CATEGORIES=	sysutils
 MASTER_SITES=	DEBIAN
 DISTNAME=	${PORTNAME}_${DEB_VERSION}+nmu${DEB_NMU}
@@ -30,7 +29,7 @@ WRKSRC=		${WRKDIR}/${PORTNAME}
 # The +nmu suffix used by debian for "non maintainer uploads" of a Debian
 # native package doesn't play well with our versioning
 DEB_VERSION=	1.0.128
-DEB_NMU=	2
+DEB_NMU=	2+deb12u2
 
 post-patch:
 	@${REINPLACE_CMD} \
