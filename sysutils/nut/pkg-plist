@@ -291,3 +291,32 @@ sbin/upssched
 @dir(%%NUT_USER%%,%%NUT_GROUP%%,750) %%STATEDIR%%
 @dir libexec/nut
 @dir(%%NUT_USER%%,%%NUT_GROUP%%,) /var/log/nut
+libexec/%%NUT_USER%%/bicker_ser
+libexec/%%NUT_USER%%/failover
+libexec/%%NUT_USER%%/liebert-gxe
+libexec/%%NUT_USER%%/%%NUT_USER%%drv_hashx
+libexec/%%NUT_USER%%/powervar_cx_ser
+libexec/%%NUT_USER%%/powervar_cx_usb
+libexec/%%NUT_USER%%/ve-direct
+share/man/man3/%%NUT_USER%%scan_add_ip_range.3.gz
+share/man/man3/%%NUT_USER%%scan_free_ip_ranges.3.gz
+share/man/man3/%%NUT_USER%%scan_init_ip_ranges.3.gz
+share/man/man3/%%NUT_USER%%scan_ip_ranges_iter_inc.3.gz
+share/man/man3/%%NUT_USER%%scan_ip_ranges_iter_init.3.gz
+share/man/man3/%%NUT_USER%%scan_stringify_ip_ranges.3.gz
+share/man/man3/upscli_get_default_connect_timeout.3.gz
+share/man/man3/upscli_init_default_connect_timeout.3.gz
+share/man/man3/upscli_set_default_connect_timeout.3.gz
+share/man/man3/upscli_str_add_unique_token.3.gz
+share/man/man3/upscli_str_contains_token.3.gz
+share/man/man3/upscli_tryconnect.3.gz
+share/man/man7/%%NUT_USER%%.7.gz
+share/man/man8/bicker_ser.8.gz
+share/man/man8/clone-outlet.8.gz
+share/man/man8/failover.8.gz
+share/man/man8/liebert-gxe.8.gz
+share/man/man8/%%NUT_USER%%drv_hashx.8.gz
+share/man/man8/powervar_cx_ser.8.gz
+share/man/man8/powervar_cx_usb.8.gz
+share/man/man8/ve-direct.8.gz
+%%PORTDOCS%%@dir %%DOCSDIR%%/html-man
