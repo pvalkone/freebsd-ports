@@ -53,4 +53,9 @@ post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
-.include <bsd.port.mk>
+.include <bsd.port.pre.mk>
+
+CARGO_BUILD_ARGS=	--profile release-lto
+CARGO_INSTALL_ARGS=	--profile release-lto
+
+.include <bsd.port.post.mk>
