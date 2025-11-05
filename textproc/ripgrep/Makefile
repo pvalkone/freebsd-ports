@@ -1,5 +1,5 @@
 PORTNAME=	ripgrep
-DISTVERSION=	15.0.0
+DISTVERSION=	15.1.0
 CATEGORIES=	textproc
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -53,9 +53,4 @@ post-install-DOCS-on:
 	@${MKDIR} ${STAGEDIR}${DOCSDIR}
 	cd ${WRKSRC} && ${INSTALL_DATA} ${PORTDOCS} ${STAGEDIR}${DOCSDIR}
 
-.include <bsd.port.pre.mk>
-
-CARGO_BUILD_ARGS=	--profile release-lto
-CARGO_INSTALL_ARGS=	--profile release-lto
-
-.include <bsd.port.post.mk>
+.include <bsd.port.mk>
