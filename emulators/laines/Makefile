@@ -11,17 +11,16 @@ LICENSE=	BSD2CLAUSE
 
 USES=		scons sdl
 
-USE_SDL=	sdl2 ttf2 image2
-
-PLIST_FILES=	bin/laines \
-		${DATADIR}/font.ttf \
-		${DATADIR}/init.png
-
 USE_GITHUB=	yes
 GH_ACCOUNT=	AndreaOrru
 GH_PROJECT=	LaiNES
 GH_TAGNAME=	1f3d126
 GH_TUPLE=	brofield:simpleini:03e27b2:simpleini
+USE_SDL=	image2 sdl2 ttf2
+
+PLIST_FILES=	${DATADIR}/font.ttf \
+		${DATADIR}/init.png \
+		bin/laines
 
 post-patch:
 .for i in SConstruct src/gui.cpp
