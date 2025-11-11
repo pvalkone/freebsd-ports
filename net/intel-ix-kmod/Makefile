@@ -7,6 +7,8 @@ DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 MAINTAINER=	freebsd@intel.com
 COMMENT=	10 gigabit FreeBSD Base Driver for Intel(R) Network Connections
 
+CFLAGS+=	-Wno-unknown-warning-option
+
 MANPAGENAME=	ix
 MANPAGELINKS=	if_ix if_ixgbe
 
