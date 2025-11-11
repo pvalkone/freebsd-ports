@@ -1,7 +1,5 @@
-# vim: ts=8 noet
-
 PORTNAME=	laines
-PORTVERSION=	20200610
+PORTVERSION=	20251106
 PORTEPOCH=	0
 CATEGORIES=	emulators
 
@@ -22,7 +20,7 @@ PLIST_FILES=	bin/laines \
 USE_GITHUB=	yes
 GH_ACCOUNT=	AndreaOrru
 GH_PROJECT=	LaiNES
-GH_TAGNAME=	b56dac7
+GH_TAGNAME=	1f3d126
 GH_TUPLE=	brofield:simpleini:03e27b2:simpleini
 
 post-patch:
