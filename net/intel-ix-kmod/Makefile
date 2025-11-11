@@ -1,8 +1,7 @@
 PORTNAME=	ix
-PORTVERSION=	3.4.29
-PORTREVISION=	1
+PORTVERSION=	3.4.31
 PORTEPOCH=	0
-MASTER_SITES?=	https://downloadmirror.intel.com/845482/
+MASTER_SITES?=	https://downloadmirror.intel.com/864024/
 DISTFILES=	${DISTNAME}${EXTRACT_SUFX}
 
 MAINTAINER=	freebsd@intel.com
