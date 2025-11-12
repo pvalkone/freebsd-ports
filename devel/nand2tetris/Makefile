@@ -9,12 +9,10 @@ WWW=		http://www.nand2tetris.org/
 
 LICENSE=	GPLv3
 
-USES=		zip
+USES=		java zip
 
-USE_JAVA=	yes
 JAVA_VERSION=	8+
 JAVA_OS=	native
-JAVA_RUN=	yes
 
 NO_ARCH=	yes
 NO_BUILD=	yes
