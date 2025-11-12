@@ -20,6 +20,7 @@ USE_SDL=	image2 sdl2 ttf2
 
 PLIST_FILES=	${DATADIR}/font.ttf \
 		${DATADIR}/init.png \
+		${DATADIR}/laines_icon.png \
 		bin/laines
 
 post-patch:
