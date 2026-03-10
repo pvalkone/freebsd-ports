@@ -1,6 +1,5 @@
 PORTNAME=	magic-wormhole.rs
-DISTVERSION=	0.7.6
-PORTREVISION=	1
+DISTVERSION=	0.7.7
 CATEGORIES=	net
 
 MAINTAINER=	petteri.valkonen@iki.fi
@@ -13,7 +12,8 @@ USES=		cargo
 USE_GITHUB=	yes
 GH_ACCOUNT=	magic-wormhole
 
-WRKSRC_SUBDIR=	cli
+CARGO_CARGOLOCK=	${WRKSRC}/../Cargo.lock
+WRKSRC_SUBDIR=		cli
 
 BINARY_NAME=	wormhole-rs
 
