@@ -1,9 +1,13 @@
-Bringing emails to the terminal is a pain. First, because they are
-sensitive data. Secondly, the existing TUIs (Mutt, NeoMutt, Alpine,
-aerc...) are really hard to configure. They require time and patience.
+Himalaya is a command-line interface for managing emails. It supports
+IMAP and Maildir backends for reading, and SMTP for sending, with
+OAuth 2.0 authentication and system keyring integration available
+for popular providers like Gmail and Outlook.
 
-The aim of Himalaya is to extract the email logic into a simple (yet
-solid) CLI API that can be used directly from the terminal, from
-scripts, from UIs... Possibilities are endless!
-
-WWW: https://github.com/soywod/himalaya
+Key features:
+- Multiple account configuration via TOML
+- IMAP and Maildir backends for reading messages
+- SMTP backend for sending, with OAuth 2.0 support
+- Email composition via $EDITOR with MML for multipart bodies
+- IDLE mode for real-time mailbox change notifications
+- JSON output for scripting and integration with other tools
+- Shell completions for bash, zsh, and fish
