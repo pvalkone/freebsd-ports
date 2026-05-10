@@ -19,7 +19,10 @@ PORTDOCS=	README.md
 OPTIONS_DEFINE=		COMPLETIONS DOCS
 OPTIONS_DEFAULT=	COMPLETIONS DOCS
 
-COMPLETIONS_DESC=	Install shell completions for bash, zsh, and fish
+COMPLETIONS_DESC=		Install shell completions for bash, zsh, and fish
+COMPLETIONS_PLIST_FILES=	share/bash-completion/completions/himalaya \
+				share/fish/vendor_completions.d/himalaya.fish \
+				share/zsh/site-functions/_himalaya
 
 post-install:
 	${STRIP_CMD} ${STAGEDIR}${PREFIX}/bin/himalaya
@@ -32,9 +35,6 @@ post-install-COMPLETIONS-on:
 	${STAGEDIR}${PREFIX}/bin/himalaya completion zsh > ${STAGEDIR}${PREFIX}/share/zsh/site-functions/_himalaya
 	${STAGEDIR}${PREFIX}/bin/himalaya completion fish > ${STAGEDIR}${PREFIX}/share/fish/vendor_completions.d/himalaya.fish
 
-PLIST_FILES_COMPLETIONS=	share/bash-completion/completions/himalaya \
-				share/zsh/site-functions/_himalaya \
-				share/fish/vendor_completions.d/himalaya.fish
 post-install-DOCS-on:
 	${MKDIR} ${STAGEDIR}${DOCSDIR}
 	${INSTALL_DATA} ${WRKSRC}/README.md ${STAGEDIR}${DOCSDIR}
