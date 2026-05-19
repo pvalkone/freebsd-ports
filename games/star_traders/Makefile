@@ -11,7 +11,7 @@ WWW=		https://www.zap.org.au/projects/trader
 LICENSE=	GPLv3
 LICENSE_FILE=	${WRKSRC}/COPYING
 
-USES=		iconv ncurses tar:xz
+USES=		iconv ncurses pkgconfig tar:xz
 GNU_CONFIGURE=	yes
 
 INSTALL_TARGET=	install-strip
