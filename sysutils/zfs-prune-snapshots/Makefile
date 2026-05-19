@@ -1,6 +1,7 @@
 PORTNAME=	zfs-prune-snapshots
 DISTVERSIONPREFIX=	v
 DISTVERSION=	1.5.0
+PORTREVISION=	1
 CATEGORIES=	sysutils
 
 MAINTAINER=	petteri.valkonen@iki.fi

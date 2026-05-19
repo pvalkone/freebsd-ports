@@ -1,0 +1,38 @@
+--- zfs-prune-snapshots.orig
++++ zfs-prune-snapshots
+@@ -226,6 +226,9 @@
+ code=0
+ totalused=0
+ numsnapshots=0
++destroyed=0
++destroyedused=0
++failed=0
+ 
+ if $recursive; then
+ 	destroyargs+=('-R')
+@@ -359,11 +362,21 @@
+ 
+ 	echo "[$i/$numsnapshots] removing $snapshot: $ht old ($hu)"
+ 
+-	if ! $dryrun; then
+-		zfs destroy "${destroyargs[@]}" "$snapshot" || code=1
++	if $dryrun; then
++		((destroyed++)); ((destroyedused += used))
++	elif zfs destroy "${destroyargs[@]}" "$snapshot"; then
++		((destroyed++)); ((destroyedused += used))
++	else
++		((failed++))
+ 	fi
+ done
+ 
+-echo "removed $numsnapshots snapshots ($humantotal)"
++echo "removed $destroyed snapshots ($(human-size "$destroyedused"))"
+ 
+-exit "$code"
++if ((failed == 0)); then
++	exit 0
++elif ((destroyed > 0)); then
++	exit 2
++else
++	exit 1
++fi
