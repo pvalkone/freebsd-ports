@@ -1,5 +1,5 @@
 PORTNAME=	star_traders
-DISTVERSION=	7.20
+DISTVERSION=	7.21
 CATEGORIES=	games
 MASTER_SITES=	https://ftp.zap.org.au/pub/trader/unix/
 DISTNAME=	trader-${DISTVERSION}
