@@ -1,0 +1,3 @@
+zfs-prune-snapshots removes ZFS snapshots older than a given age,
+optionally restricted to snapshots whose name matches a given prefix
+or suffix.
