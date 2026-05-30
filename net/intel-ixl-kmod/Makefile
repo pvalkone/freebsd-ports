@@ -3,7 +3,7 @@ PORTVERSION?=	1.14.2
 CATEGORIES=	net
 MASTER_SITES?=	https://downloadmirror.intel.com/${MASTER_SITE_SUBDIR}/ \
 		http://downloadmirror.intel.com/${MASTER_SITE_SUBDIR}/
-MASTER_SITE_SUBDIR?=	822707
+MASTER_SITE_SUBDIR?=	920798
 PKGNAMEPREFIX=	intel-
 PKGNAMESUFFIX=	-kmod
 
