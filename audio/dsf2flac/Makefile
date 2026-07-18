@@ -18,7 +18,7 @@ USES=		autoreconf:build libtool pkgconfig
 
 USE_GITHUB=	yes
 GH_ACCOUNT=	hank
-GH_TAGNAME=	24514e5
+GH_TAGNAME=	320c57c
 
 PLIST_FILES=	bin/dsf2flac
 
