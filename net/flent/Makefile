@@ -12,12 +12,15 @@ LICENSE_FILE=	${WRKSRC}/LICENSE
 
 BUILD_DEPENDS=	${PY_SETUPTOOLS} \
 		${PYTHON_PKGNAMEPREFIX}wheel>0:devel/py-wheel@${PY_FLAVOR}
-RUN_DEPENDS=	fping>0:net/fping \
+RUN_DEPENDS=	bash>0:shells/bash \
+		fping>0:net/fping \
 		iperf>0:benchmarks/iperf \
 		netperf>0:benchmarks/netperf
 
-USES=		desktop-file-utils python:3.6+ shared-mime-info
+USES=		desktop-file-utils python:3.6+ shared-mime-info shebangfix
 USE_PYTHON=	pep517 autoplist noflavors
+
+SHEBANG_FILES=	flent/scripts/*.sh
 
 NO_ARCH=	yes
 
