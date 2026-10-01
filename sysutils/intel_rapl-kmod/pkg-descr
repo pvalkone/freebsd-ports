@@ -1,0 +1,18 @@
+Read and set the Intel CPU package power envelope on FreeBSD.
+
+FreeBSD can change CPU frequency through cpufreq(4) and powerd(8), but has no
+interface to the processor's power budget. On a thermally constrained machine
+that distinction matters: frequency capping limits the top of the range
+whether or not there is headroom, while RAPL lets the processor manage its own
+frequency inside a power envelope you choose.
+
+It is also the only way on FreeBSD to answer how many watts a CPU is actually
+drawing, which is often the fastest way to tell a cooling problem from a
+configuration one.
+
+Package domain only. DRAM, PP0 and PP1 domains and the PCI-mapped DPTF
+interface are deliberately out of scope.
+
+Note that many vendors lock the limit register in firmware, after which the
+driver can measure but not intervene. The hw.intel_rapl.locked sysctl reports
+this.

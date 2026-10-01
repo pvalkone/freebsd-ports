@@ -1,0 +1,26 @@
+[
+{ type: install
+  message: <<EOM
+To load intel_rapl at boot, add to /boot/loader.conf:
+
+	intel_rapl_load="YES"
+
+Prefer this over kld_list in /etc/rc.conf if you set any hw.intel_rapl
+value in /etc/sysctl.conf: rc.d/sysctl runs before rc.d/kld, so a module
+loaded from kld_list does not exist yet when those settings are applied.
+
+Then inspect what the hardware reports:
+
+	sysctl hw.intel_rapl
+
+If hw.intel_rapl.locked is 1, the firmware has sealed the power limit
+register and no limit can be changed from the operating system. Reads and
+power measurement still work. Some BIOS setups expose a configurable TDP
+option, which is then the only place to change it.
+
+hw.intel_rapl.power_mw is a rate covering the interval since the previous
+read of that same sysctl, so read it twice a few seconds apart for a figure
+that means anything.
+EOM
+}
+]
