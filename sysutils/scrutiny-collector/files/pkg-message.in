@@ -1,20 +1,21 @@
 [
 { type: install
   message: <<EOM
-The collector sends this host's S.M.A.R.T. data to a Scrutiny web server
-(hub), which is not part of this package.
+The collectors send this host's S.M.A.R.T. and ZFS pool data to a Scrutiny
+web server (hub) of the same version, which is not part of this package.
 
 Set the hub's address and a name for this host in
-%%PREFIX%%/etc/scrutiny/collector.yaml:
+%%PREFIX%%/etc/scrutiny/collector.yaml, which both collectors read:
 
   api:
     endpoint: 'http://scrutiny.example.org:8080'
   host:
     id: 'myhost'
 
-Then run the collector as root, e.g. from /etc/crontab:
+Then run the collectors as root, e.g. from /etc/crontab:
 
   0  0  *  *  *  root  %%PREFIX%%/bin/scrutiny-collector-metrics run
+  0  0  *  *  *  root  %%PREFIX%%/bin/scrutiny-collector-zfs run
 EOM
 }
 ]
