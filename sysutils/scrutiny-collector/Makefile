@@ -1,8 +1,7 @@
 PORTNAME=	scrutiny
 DISTVERSIONPREFIX=	v
 # Maintenance: after updating DISTVERSION, regenerate files/modules.txt
-# with 'go mod vendor' in a copy of the source. GH_TUPLE lists only the
-# modules that 'go list -deps' reports for the GO_TARGET packages.
+# with 'go mod vendor' in a copy of the source.
 DISTVERSION=	1.76.4
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-collector
@@ -20,6 +19,8 @@ USES=		go:modules
 USE_GITHUB=	yes
 GH_ACCOUNT=	Starosdev
 
+# GH_TUPLE only lists the modules that 'go list -deps' reports for the
+# GO_TARGET packages.
 GH_TUPLE=	cpuguy83:go-md2man:v2.0.7:cpuguy83_go_md2man_v2/vendor/github.com/cpuguy83/go-md2man/v2 \
 		fatih:color:v1.19.0:fatih_color/vendor/github.com/fatih/color \
 		fsnotify:fsnotify:v1.10.1:fsnotify_fsnotify/vendor/github.com/fsnotify/fsnotify \
