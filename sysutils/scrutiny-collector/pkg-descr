@@ -1,0 +1,7 @@
+Scrutiny is a hard drive health dashboard and monitoring solution. It
+combines S.M.A.R.T. metrics from smartctl with real-world failure rates
+to warn of failing disks, and keeps a history of each disk's attributes.
+
+This port installs the collector, scrutiny-collector-metrics, which
+reads the S.M.A.R.T. data of the local disks with smartctl and sends it
+to a Scrutiny web server (hub) running elsewhere.
