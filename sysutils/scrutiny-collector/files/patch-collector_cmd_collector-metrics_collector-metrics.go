@@ -1,6 +1,6 @@
---- collector/cmd/collector-metrics/collector-metrics.go.orig	2026-10-13 18:18:28 UTC
+--- collector/cmd/collector-metrics/collector-metrics.go.orig	2026-10-02 13:35:25 UTC
 +++ collector/cmd/collector-metrics/collector-metrics.go
-@@ -301,12 +301,12 @@ func CreateLogger(appConfig config.Interface) (*logrus
+@@ -301,12 +301,30 @@ func CreateLogger(appConfig config.Interface) (*logrus
  	var logFile *os.File
  	var err error
  	if appConfig.IsSet("log.file") && len(appConfig.GetString("log.file")) > 0 {
@@ -10,7 +10,26 @@
  			logger.Logger.Errorf("Failed to open log file %s for output: %s", appConfig.GetString("log.file"), err)
  			return nil, logFile, err
  		}
- 		logger.Logger.SetOutput(io.MultiWriter(os.Stderr, logFile))
+-		logger.Logger.SetOutput(io.MultiWriter(os.Stderr, logFile))
++		logger.Logger.AddHook(&plainFileHook{w: logFile, formatter: &logrus.TextFormatter{DisableColors: true}})
  	}
  	return logger, logFile, nil
++}
++
++type plainFileHook struct {
++	w         io.Writer
++	formatter logrus.Formatter
++}
++
++func (h *plainFileHook) Levels() []logrus.Level {
++	return logrus.AllLevels
++}
++
++func (h *plainFileHook) Fire(entry *logrus.Entry) error {
++	line, err := h.formatter.Format(entry)
++	if err != nil {
++		return err
++	}
++	_, err = h.w.Write(line)
++	return err
  }
