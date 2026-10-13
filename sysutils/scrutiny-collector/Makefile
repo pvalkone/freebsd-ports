@@ -3,6 +3,7 @@ DISTVERSIONPREFIX=	v
 # Maintenance: after updating DISTVERSION, regenerate files/modules.txt
 # with 'go mod vendor' in a copy of the source.
 DISTVERSION=	1.76.4
+PORTREVISION=	1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-collector
 
