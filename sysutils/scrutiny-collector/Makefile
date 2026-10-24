@@ -2,7 +2,7 @@ PORTNAME=	scrutiny
 DISTVERSIONPREFIX=	v
 # Maintenance: after updating DISTVERSION, regenerate files/modules.txt
 # with 'go mod vendor' in a copy of the source.
-DISTVERSION=	1.76.6
+DISTVERSION=	1.76.9
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-collector
 
