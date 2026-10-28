@@ -2,7 +2,7 @@ PORTNAME=	scrutiny
 DISTVERSIONPREFIX=	v
 # Maintenance: after updating DISTVERSION, regenerate files/modules.txt
 # with 'go mod vendor' in a copy of the source.
-DISTVERSION=	1.76.9
+DISTVERSION=	1.77.0
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-collector
 
@@ -27,13 +27,13 @@ GH_TUPLE=	cpuguy83:go-md2man:v2.0.7:cpuguy83_go_md2man_v2/vendor/github.com/cpug
 		go-gorm:gorm:v1.31.2:go_gorm_gorm/vendor/gorm.io/gorm \
 		go-viper:mapstructure:v2.5.0:go_viper_mapstructure_v2/vendor/github.com/go-viper/mapstructure/v2 \
 		go-yaml:yaml:v3.0.1:go_yaml_yaml/vendor/gopkg.in/yaml.v3 \
-		golang:sys:v0.48.0:golang_sys/vendor/golang.org/x/sys \
-		golang:text:v0.42.0:golang_text/vendor/golang.org/x/text \
+		golang:sys:v0.49.0:golang_sys/vendor/golang.org/x/sys \
+		golang:text:v0.43.0:golang_text/vendor/golang.org/x/text \
 		jaypipes:ghw:v0.26.0:jaypipes_ghw/vendor/github.com/jaypipes/ghw \
 		jaypipes:pcidb:v1.1.1:jaypipes_pcidb/vendor/github.com/jaypipes/pcidb \
 		jinzhu:inflection:v1.0.0:jinzhu_inflection/vendor/github.com/jinzhu/inflection \
 		jinzhu:now:v1.1.5:jinzhu_now/vendor/github.com/jinzhu/now \
-		mattn:go-colorable:v0.1.15:mattn_go_colorable/vendor/github.com/mattn/go-colorable \
+		mattn:go-colorable:v0.1.16:mattn_go_colorable/vendor/github.com/mattn/go-colorable \
 		mattn:go-isatty:v0.0.24:mattn_go_isatty/vendor/github.com/mattn/go-isatty \
 		pelletier:go-toml:v2.4.3:pelletier_go_toml_v2/vendor/github.com/pelletier/go-toml/v2 \
 		robfig:cron:v3.0.1:robfig_cron_v3/vendor/github.com/robfig/cron/v3 \
