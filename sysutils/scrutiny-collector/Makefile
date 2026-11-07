@@ -2,7 +2,7 @@ PORTNAME=	scrutiny
 DISTVERSIONPREFIX=	v
 # Maintenance: after updating DISTVERSION, regenerate files/modules.txt
 # with 'go mod vendor' in a copy of the source.
-DISTVERSION=	1.78.0
+DISTVERSION=	1.80.1
 CATEGORIES=	sysutils
 PKGNAMESUFFIX=	-collector
 
@@ -49,7 +49,7 @@ GH_TUPLE=	cpuguy83:go-md2man:v2.0.7:cpuguy83_go_md2man_v2/vendor/github.com/cpug
 		uber-go:automaxprocs:v1.6.0:uber_go_automaxprocs/vendor/go.uber.org/automaxprocs \
 		urfave:cli:v2.27.7:urfave_cli_v2/vendor/github.com/urfave/cli/v2 \
 		xrash:smetrics:686a1a2994c1:xrash_smetrics/vendor/github.com/xrash/smetrics \
-		yaml:go-yaml:v3.0.5:yaml_go_yaml/vendor/go.yaml.in/yaml/v3
+		yaml:go-yaml:v3.0.6:yaml_go_yaml/vendor/go.yaml.in/yaml/v3
 
 GO_TARGET=	./collector/cmd/collector-metrics:scrutiny-collector-metrics \
 		./collector/cmd/collector-zfs:scrutiny-collector-zfs

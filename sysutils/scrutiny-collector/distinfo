@@ -1,6 +1,6 @@
-TIMESTAMP = 1793479270
-SHA256 (Starosdev-scrutiny-v1.78.0_GH0.tar.gz) = 15103c47d38c5b0983680346a76493472a207371c30b4c439efda7b6abc9e28d
-SIZE (Starosdev-scrutiny-v1.78.0_GH0.tar.gz) = 10383111
+TIMESTAMP = 1794048612
+SHA256 (Starosdev-scrutiny-v1.80.1_GH0.tar.gz) = faaadcaa06e8f032e97fb3b762c73ca3044a2a57846ed53079b47223e0aff646
+SIZE (Starosdev-scrutiny-v1.80.1_GH0.tar.gz) = 10460173
 SHA256 (cpuguy83-go-md2man-v2.0.7_GH0.tar.gz) = ca3a5b57e2c01759f5a00ad2a578d034c5370fae9aa7a6c3af5648b2fc802a92
 SIZE (cpuguy83-go-md2man-v2.0.7_GH0.tar.gz) = 11337
 SHA256 (fatih-color-v1.19.0_GH0.tar.gz) = 1ea4633f59411fe3d25d10950f223021c913f4ff4b95286ab94e0bc641c1b246
@@ -57,5 +57,5 @@ SHA256 (urfave-cli-v2.27.7_GH0.tar.gz) = 328901eeafba69fd9c3c9f6bbee5813a5a0faac
 SIZE (urfave-cli-v2.27.7_GH0.tar.gz) = 3485677
 SHA256 (xrash-smetrics-686a1a2994c1_GH0.tar.gz) = 8bc1fb90f87d0e470ca57181d642bbdea786916206cd482d0ab472a55e749bc2
 SIZE (xrash-smetrics-686a1a2994c1_GH0.tar.gz) = 1823556
-SHA256 (yaml-go-yaml-v3.0.5_GH0.tar.gz) = ee53cdc11215b3c9c5edf265dfb1d61c6f763c58e2525ef37284c895cc0a8447
-SIZE (yaml-go-yaml-v3.0.5_GH0.tar.gz) = 94188
+SHA256 (yaml-go-yaml-v3.0.6_GH0.tar.gz) = 596220460fe977c770a00774bd33b0bab46d53945ad5987cdc718e6cbf652a1f
+SIZE (yaml-go-yaml-v3.0.6_GH0.tar.gz) = 94712
